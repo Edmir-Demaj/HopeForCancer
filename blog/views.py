@@ -3,7 +3,7 @@ from django.views import generic
 from .models import Post
 
 
-class PostListView(generic.ListView):
+class BlogPostList(generic.ListView):
     """
     This class uses generic views to render blog page and
     view latest posts in a list by 6 using Post model.
