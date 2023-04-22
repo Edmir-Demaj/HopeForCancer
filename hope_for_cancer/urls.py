@@ -21,6 +21,7 @@ admin.site.site_header = 'HopeForCancer'
 admin.site.site_title = 'HopeForCancer'
 
 urlpatterns = [
+    path('', include('blog.urls'), name='blog'),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
 ]

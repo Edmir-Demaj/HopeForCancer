@@ -10,5 +10,5 @@ class BlogPostList(generic.ListView):
     """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_date')
-    template_name = 'blog.html'
+    template_name = 'blog/blog.html'
     paginate_by = 6
