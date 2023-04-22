@@ -5,10 +5,28 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
+class Category(models.Model):
+    """
+    This class Category defines the structure of Category
+    model in our database and the methods.
+    """
+    category_name = models.CharField(
+        max_length=50, unique=True, blank=False, null=False
+    )
+    slug = models.SlugField(max_length=50, unique=True)
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return self.category_name
+
+
 class Post(models.Model):
     """
     This class Post defines the structure of Post model
-    in our database.
+    in our database and the methods.
     """
     title = models.CharField(
         max_length=200, unique=True, blank=False, null=False,
@@ -43,3 +61,32 @@ class Post(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+# For ease of building this project the code below is kept same
+# as blog walkthrough project in FST module
+
+
+class Comment(models.Model):
+    """
+    This class Comment defines the structure of Comment model
+    in our database and the methods.
+    """
+
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments"
+    )
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        """
+        To order the comments on the created_on field in the ascending order
+        """
+
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment: {self.body} by {self.name}"
