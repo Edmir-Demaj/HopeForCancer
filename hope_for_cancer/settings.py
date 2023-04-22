@@ -87,6 +87,7 @@ WSGI_APPLICATION = 'hope_for_cancer.wsgi.application'
 #     }
 # }
 
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
