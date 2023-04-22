@@ -9,7 +9,6 @@ class PostAdmin(SummernoteModelAdmin):
     Define fields which will use summernote editor in admin panel
     and customize this admin panel.
     """
-
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'category', 'author', 'created_date', 'status')
     search_fields = ['title', 'author__username', 'category__category_name']
@@ -22,7 +21,8 @@ class CategoryAdmin(admin.ModelAdmin):
     """
     Register Category model in admin panel and customize this panel.
     """
-    list_display = ('category_name', 'slug')
+    prepopulated_fields = {'slug': ('category_name',)}
+    list_display = ('category_name', )
     search_fields = ['category_name']
 
 
