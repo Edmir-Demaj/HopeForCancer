@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-STATUS = ((0, "Draft"), (1, "Published"))
+STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Category(models.Model):
@@ -16,8 +16,8 @@ class Category(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
 
     class Meta:
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
 
     def __str__(self):
         return self.category_name
@@ -73,20 +73,20 @@ class Comment(models.Model):
     """
 
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="comments"
+        Post, on_delete=models.CASCADE, related_name='comments'
     )
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_date = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
     class Meta:
         """
-        To order the comments on the created_on field in the ascending order
+        To order the comments on the created_date field in the ascending order
         """
 
-        ordering = ["created_on"]
+        ordering = ['created_date']
 
     def __str__(self):
         return f"Comment: {self.body} by {self.name}"
