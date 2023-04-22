@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['hope-for-cancer.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
