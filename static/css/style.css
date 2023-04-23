@@ -61,6 +61,11 @@ body {
     background-color: #F9F4FB;
 }
 
+.active {
+    color: #8129C1 !important;
+}
+
+
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */
 @media (max-width: 1199px) {
