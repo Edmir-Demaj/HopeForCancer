@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // add class active to home page
+  // add class active to home page and aria-current on DOM load
   document.getElementById("home").classList.add("active");
+  document.getElementById("home").setAttribute("aria-current", "page");
 });
 
 // Get all elements with class="nav-link"
@@ -12,5 +13,6 @@ for (let i = 0; i < navLinks.length; i++) {
     let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
+    this.setAttribute("aria-current", "page");
   });
 }

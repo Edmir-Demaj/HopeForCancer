@@ -62,7 +62,8 @@ body {
 }
 
 .active {
-    color: #8129C1 !important;
+    font-weight: 600;
+    color: #7205c0 !important;
 }
 
 
