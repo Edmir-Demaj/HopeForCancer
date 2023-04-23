@@ -3,15 +3,21 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    list-style-type: none;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: #010B13;
     background-color: #F9F4FB;
-    min-height: 110px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* --------------------------------------------------- Navbar styles */
@@ -63,9 +69,26 @@ body {
 
 .active {
     font-weight: 600;
-    color: #7205c0 !important;
+    color: #32421c !important;
 }
 
+/* --------------------------------------------------- Footer styles */
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/base_images/footer_img.webp) center center/ cover no-repeat;
+    min-height: 280px;
+    margin-top: auto;
+}
+
+#footer-links {
+    margin: 0;
+    padding: 0;
+}
+
+footer p,
+footer li,
+footer address {
+    font-size: 18px;
+}
 
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */
