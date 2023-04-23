@@ -134,6 +134,7 @@ footer address {
     overflow-y: auto;
 }
 
+/* This code was taken from css-trick.com, credits on Readme.md*/
 #scroll-section::-webkit-scrollbar {
     width: 1em;
 }
@@ -149,16 +150,13 @@ footer address {
     border-radius: 5px;
 }
 
-.sticky-section {
-    position: relative;
+#scroll-section .card img {
+    height: 300px;
+    object-fit: cover;
 }
 
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: yellow;
-}
+/* End of copied code */
+
 
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */
