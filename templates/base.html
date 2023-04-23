@@ -38,8 +38,8 @@
     <!-- Header start -->
     <header>
         <!-- Navbar start -->
-        <nav class="navbar navbar-expand-xl">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-xl py-2">
+            <div class="container-fluid p-0">
                 <div id="logo">
                     <a class="navbar-brand" href="#">
                         <img src="{% static 'images/base_images/logo.webp' %}" alt="logo of the web app"
@@ -47,46 +47,51 @@
                     </a>
                 </div>
 
-                <button class="navbar-toggler me-3" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false"
-                    aria-label="Toggle offcanvas navigation">
-                    <span class="navbar-toggler-icon">
+                <button class="menu-toggler d-inline-block d-xl-none me-4 hvr-icon-grow" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                    aria-expanded="false" aria-label="Toggle offcanvas navigation">
+                    <span>
+                        <i class="fa-solid fa-bars hvr-icon"></i>
                     </span>
                 </button>
-                <div class="offcanvas offcanvas-start header-bg" tabindex="-1" id="offcanvasExample">
-                    <button type="button" class="btn-close d-inline d-xl-none" data-bs-dismiss="offcanvas"
-                        aria-label="Close offcanvas"></button>
-                    <ul class="navbar-nav mx-auto my-4 my-xl-0 fs-4 text-center">
-                        <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-center active" aria-current="page" href="#"
-                                aria-label="navbar link to home page">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-center" href="#"
-                                aria-label="navbar link to about us page">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-center" href="#"
-                                aria-label="navbar link to cancer information page">Cancer
-                                information</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-center" href="#"
-                                aria-label="navbar link to blog page">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-center" href="#"
-                                aria-label="navbar link to contact page">Contact</a>
-                        </li>
-                        <li class="nav-item ms-0 ms-xl-5">
-                            <a class="nav-link hvr-underline-from-center" href="#"
-                                aria-label="navbar link to log in page">Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-center" href="#"
-                                aria-label="navbar link to sign up page">Sign Up</a>
-                        </li>
-                    </ul>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+                    <div class="header-bg">
+                        <button type="button" data-bs-dismiss="offcanvas" aria-label="Close offcanvas"
+                            class="close d-inline-block d-xl-none hvr-icon-grow"><i
+                                class="fa-solid fa-xmark hvr-icon"></i></button>
+                        <ul class="navbar-nav mx-auto fs-4 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link hvr-underline-from-center active" aria-current="current page"
+                                    href="#" aria-label="navbar link to home page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-underline-from-center" href="#"
+                                    aria-label="navbar link to about us page">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-underline-from-center" href="#"
+                                    aria-label="navbar link to cancer information page">Cancer
+                                    information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-underline-from-center" href="#"
+                                    aria-label="navbar link to blog page">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-underline-from-center" href="#"
+                                    aria-label="navbar link to contact page">Contact</a>
+                            </li>
+                            <li class="nav-item ms-0 ms-xl-5">
+                                <a class="nav-link hvr-underline-from-center" href="#"
+                                    aria-label="navbar link to log in page">Log In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link hvr-underline-from-center" href="#"
+                                    aria-label="navbar link to sign up page">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>

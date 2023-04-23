@@ -9,7 +9,62 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #010B13;
     background-color: #F9F4FB;
-    min-height: 100vh;
+    min-height: 110px;
     display: flex;
     flex-direction: column;
+}
+
+/* --------------------------------------------------- Navbar styles */
+.nav-item a {
+    color: #010B13;
+    margin: 0 5px;
+}
+
+.header-bg {
+    background-color: #FAB1DC;
+    border-radius: 0 250px 0 250px;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 110px;
+    padding: 8px 0;
+}
+
+.close-offcanva {
+    position: relative;
+    top: -44%;
+    left: 87%;
+    font-size: 2.5em;
+    border: none;
+    color: #8129C1;
+    background-color: transparent;
+}
+
+.offcanvas {
+    background-color: #F9F4FB;
+}
+
+.fa-bars {
+    color: #8129C1;
+    font-size: 2.5em;
+}
+
+.menu-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.hvr-underline-from-center::before {
+    background-color: #F9F4FB;
+}
+
+/* --------------------------------------------------- Media queries */
+/* Large screen media queries */
+@media (max-width: 1199px) {
+    .header-bg {
+        min-height: 100vh;
+    }
 }
