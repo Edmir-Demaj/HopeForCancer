@@ -24,6 +24,10 @@ a {
     color: #e06b02;
 }
 
+.title-wrapper {
+    max-width: 500px;
+}
+
 /* --------------------------------------------------- Navbar styles */
 .nav-item a {
     color: #010B13;
