@@ -1,0 +1,15 @@
+/* --------------------------------------------------- General styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #010B13;
+    background-color: #F9F4FB;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
