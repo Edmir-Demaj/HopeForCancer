@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Post Details {% endblock %}
+{% block content %}
+<!-- Hero section for post detail page -->
+<section id="blog-hero-section" class="text-center d-flex align-items-center justify-content-center mb-5">
+    <h1 class="fw-bold text-white mx-2">
+        Unleashing the<span class="orange-text"> Power</span> of Storytelling
+    </h1>
+</section>
+
+<!-- Post Detail section -->
+<section class="pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="image-container">
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
+                        alt="{{ post.describe_image }}" />
+                    {% else %}
+                    <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.describe_image }}" />
+                    {% endif %}
+                </div>
+                <div class="card-body fs-5 mt-3 mb-5">
+                    <strong class="me-5"><i class="fa-regular fa-heart"></i> {{ post.number_of_likes }}</strong>
+                    <!-- {% with comments.count as total_comments %} -->
+                    <strong>
+                        <i class="fa-regular fa-comment"></i>
+                        {{ comments.count }}
+                    </strong>
+                    <!-- {% endwith %} -->
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 pt-5 pt-lg-0 ps-0 ps-lg-4 ">
+                <!-- Post title goes in these h1 tags -->
+                <h2 class="post-title">{{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}</h2>
+                <p class="card-text text-muted">Category# {{ post.category }}</p>
+                <!-- Post author goes before the | the post's created date goes after -->
+                <p class="card-text pt-1">
+                    {{ post.content | safe }}
+                </p>
+                <div class="card-footer fs-5">
+                    <small class="text-muted me-4">Posted by: {{ post.author }}</small>
+                    <small class="text-muted">{{ post.created_date }}</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-11 col-lg-6"></div>
+            <div class="col-11 col-lg-6"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

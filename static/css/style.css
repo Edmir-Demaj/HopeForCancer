@@ -157,6 +157,17 @@ footer address {
 
 /* End of copied code */
 
+/* --------------------------------------------------- Post Detail page */
+.image-container {
+    height: 500px;
+}
+
+.image-container img {
+    height: 100%;
+    object-fit: cover;
+    outline: 2px solid #010b13;
+    outline-offset: 4px;
+}
 
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */

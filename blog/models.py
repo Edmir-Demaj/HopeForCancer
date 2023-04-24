@@ -63,7 +63,7 @@ class Post(models.Model):
         return self.likes.count()
 
 # For ease of building this project the code below is kept same
-# as blog walkthrough project in FST module
+# as blog walkthrough project in FST module, credits on Readme.md
 
 
 class Comment(models.Model):
