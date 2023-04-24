@@ -1,12 +1,159 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% load static %}
+{% block content %}
+<!-- hero section start -->
+<section>
+    <div id="carouselExampleInterval" class="carousel slide  carousel-fade" data-bs-ride="carousel"
+        data-bs-pause="false" data-bs-touch="true">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <div class="cta text-center">
+                    <h1>Together we can fight cancer</h1>
+                    <button><a href="#">Learn more</a></button>
+                </div>
+                <div class="overlay"></div>
+                <img src="{% static 'images/home/hero_image_1.webp' %}" class="d-block w-100 "
+                    alt="A group of woman holding hands to support cancer">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <div class="cta text-center">
+                    <h1>Believe in the power of hope</h1>
+                    <button><a href="#">Learn more</a></button>
+                </div>
+                <div class="overlay"></div>
+                <img src="{% static 'images/home/hero_image_2.webp' %}" class="d-block w-100"
+                    alt="A group of woman showing hope card to support cancer">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <div class="cta text-center">
+                    <h1>You are not alone, we are one</h1>
+                    <button><a href="#">Learn more</a></button>
+                </div>
+                <div class="overlay"></div>
+                <img src="{% static 'images/home/hero_image_3.webp' %}" class="d-block w-100"
+                    alt="A man holding blue ribbon to support cancer">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="text-center py-5 px-3">
+        <h2 class="fw-bold">We want a life <span class="orange-text">without cancer</span> time to act is <span
+                class="orange-text">now!</span></h2>
+    </div>
+</section>
+<!-- hero section end -->
 
-<head>
-    <title>Other Pages</title>
-</head>
+<!-- card section start -->
+<section>
+    <div class="container">
+        <!-- first card -->
+        <article>
+            <div class="row info-card p-3 p-md-5 mx-0">
+                <div class="col-12 col-lg-6 p-0 pe-lg-5">
+                    <h3 class="fs-2 fw-semibold">What is cancer?</h3>
+                    <p class="fs-5">Cancer is a disease that occurs when abnormal cells in the body grow uncontrollably.
+                        These cells can
+                        form tumors or invade nearby tissues and spread to other parts of the body. While cancer can
+                        affect
+                        people of all ages, it is more common in older adults.</p>
+                    <button type="button" class="btn btn-outline-primary">READ MORE</button>
+                </div>
+                <div class="col-12 col-lg-6 mt-5 mt-lg-0 p-0">
+                    <img src="{% static 'images/home/all_cancers.webp' %}" class="rounded-4 card-img" width="100%"
+                        height="400" alt="All cancers text with light blue background.">
+                </div>
+            </div>
+        </article>
+        <!-- second card -->
+        <article>
+            <div class="row info-card p-3 p-md-5 mx-0 mt-5 ">
+                <div class="col-12 col-lg-6 px-0">
+                    <img src="{% static 'images/home/types_of_cancer.webp' %}" class="rounded-4 card-img" width="100%"
+                        height="400" alt="All types of cancers ribbons with different colours.">
+                </div>
+                <div class="col-12 col-lg-6 mt-5 mt-lg-0 p-0 ps-lg-5">
+                    <h3 class="fs-2 fw-semibold">Types of cancer</h3>
+                    <p class="fs-5">There are many different types of cancer, including breast cancer, lung
+                        cancer,
+                        prostate
+                        cancer, and skin cancer. Each type of cancer has its own set of symptoms, risk factors, and
+                        treatment options. Learning about these different types of cancer can help you understand the
+                        disease better and take steps to reduce your risk.</p>
+                    <button type="button" class="btn btn-outline-primary">READ MORE</button>
+                </div>
+            </div>
+        </article>
+        <!-- third card -->
+        <article>
+            <div class="row info-card p-3 p-md-5 mx-0 mt-5">
+                <div class="col-12 col-lg-6 p-0 pe-lg-5">
+                    <h3 class="fs-2 fw-semibold">Importance of early detection</h3>
+                    <p class="fs-5">Detecting cancer early is crucial to successful treatment and recovery. Regular
+                        cancer
+                        screenings and check-ups can help catch cancer in its early stages when it's easier to treat.
+                        Knowing the signs and symptoms of cancer can also help you detect the disease early and get
+                        prompt
+                        medical attention.</p>
+                    <button type="button" class="btn btn-outline-primary">READ MORE</button>
+                </div>
+                <div class="col-12 col-lg-6 mt-5 mt-lg-0 p-0">
+                    <img src="{% static 'images/home/early_detection.webp' %}" class="rounded-4 card-img" width="100%"
+                        height="400" alt="A female doctor checking a man patient.">
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- card section end -->
 
-<body>
-    <h1>Welcome to Other Pages</h1>
-</body>
+<!-- understand cancer section start -->
+<section>
+    <article>
+        <div class="text-center py-5 px-3">
+            <h2 class="fw-bold"><span class="orange-text">Understanding</span> cancer</h2>
+            <p class="fs-5">I would like to know more about:</p>
+            <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle fs-5" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    What is cancer?
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item"
+                            aria-label="Internal link that bring you to cancer information page, what is cancer section">What
+                            is cancer?</a></li>
+                    <li><a href="#" class="dropdown-item"
+                            aria-label="Internal link that bring you to cancer information page, types of cancer section">Which
+                            are the types of cancer?</a></li>
+                    <li><a href="#" class="dropdown-item"
+                            aria-label="Internal link that bring you to cancer information page, causes of cancer section">What
+                            causes cancer?</a></li>
+                    <li><a href="#" class="dropdown-item"
+                            aria-label="Internal link that bring you to cancer information page, prevent cancer section">How
+                            can I prevent cancer?</a></li>
+                    <li><a href="#" class="dropdown-item"
+                            aria-label="Internal link that bring you to cancer information page, early detection section">Why
+                            is important an early detection?</a></li>
+                </ul>
+            </div>
 
-</html>
+        </div>
+    </article>
+</section>
+<!-- understand cancer section end -->
+
+<!-- latest blog section start -->
+<section>
+    4
+</section>
+<!-- latest blog section end -->
+{% endblock content %}
