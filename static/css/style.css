@@ -33,6 +33,8 @@ p {
     font-size: 1.2em;
 }
 
+
+
 /* --------------------------------------------------- Navbar styles */
 .nav-item a {
     color: #010b13;
@@ -104,6 +106,101 @@ footer address {
     font-size: 18px;
 }
 
+/* --------------------------------------------------- Home page styles */
+
+/* hero section */
+#carouselExampleInterval img {
+    height: calc(100vh - 110px);
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: 0.5;
+}
+
+.cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #edebeb;
+    z-index: 10;
+}
+
+.cta h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3em;
+    min-width: 900px;
+}
+
+.cta button {
+    padding: 8px 30px;
+    margin-top: 40px;
+    background-color: #FAB1DC;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 150px;
+    border: none;
+    box-shadow: 0 0 8px 3px #c29bb3;
+}
+
+.cta button:hover {
+    background-color: #F9F4FB;
+}
+
+/* Card section */
+h2 {
+    text-transform: uppercase;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #8129C1;
+}
+
+.card-img {
+    object-fit: fill;
+}
+
+
+.btn-outline-primary {
+    color: #8129C1 !important;
+    border: 2px solid #8129C1 !important;
+    background-color: #F9F4FB !important;
+    border-radius: 50px;
+    padding: 8px 25px;
+    font-weight: 700;
+}
+
+.btn-outline-primary:hover {
+    color: #F9F4FB !important;
+    background-color: #8129C1 !important;
+}
+
+/* Dropdown section */
+.dropdown>.btn-outline-primary {
+    border-radius: 0px;
+    width: 400px;
+}
+
+.dropdown-menu {
+    width: 400px;
+    border: 1px solid #8129C1;
+    border-radius: 0;
+}
+
+.dropdown-item:hover {
+    background-color: #8129C1;
+    color: #F9F4FB;
+}
+
 /* --------------------------------------------------- Blog page styles */
 #blog-hero-section {
     height: 400px;
@@ -172,7 +269,37 @@ footer address {
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */
 @media (max-width: 1199px) {
+    .cta h1 {
+        font-size: 2.8em;
+        min-width: 700px;
+    }
+
     .header-bg {
         min-height: 100vh;
+    }
+}
+
+/* Medium screen media queries */
+@media (max-width: 889px) {
+    .cta h1 {
+        font-size: 2em;
+        min-width: 500px;
+    }
+
+    .cta button {
+        padding: 5px 20px;
+    }
+}
+
+/* Small screen media queries */
+@media (max-width: 589px) {
+    .cta h1 {
+        font-size: 1.5em;
+        min-width: 300px;
+    }
+
+    .dropdown>.btn-outline-primary,
+    .dropdown-menu {
+        width: 310px;
     }
 }
