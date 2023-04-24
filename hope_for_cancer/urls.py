@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from other_pages.views import index
 
 # Customize Header and Title on admin panel
 admin.site.site_header = 'HopeForCancer'
 admin.site.site_title = 'HopeForCancer'
 
 urlpatterns = [
-    path('', include('blog.urls'), name='blog'),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+    path('', include('other_pages.urls'), name='home'),
+    path('blog/', include('blog.urls'), name='blog'),
 ]

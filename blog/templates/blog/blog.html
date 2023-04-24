@@ -37,8 +37,9 @@
                 <section class="" id="scroll-section">
                     <!-- Blog post entries -->
                     {% for post in post_list %}
-                    <a href="{% url 'post_detail' post.slug %}">
-                        <div class="card mb-5 mx-auto" style="max-width: 35rem">
+                    <div class="card mb-5 mx-auto" style="max-width: 35rem">
+                        <a href="{% url 'post_detail' post.slug %}" class="hvr-shrink"
+                            aria-label="internal link when post is clicked to bring to post details page">
                             {% if "placeholder" in post.featured_image.url %}
                             <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
                                 alt="{{ post.describe_image }}" />
@@ -63,8 +64,8 @@
                                 <small class="text-muted me-4">Posted by: {{ post.author }}</small>
                                 <small class="text-muted">{{ post.created_date }}</small>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                     {% endfor %}
                 </section>
             </div>

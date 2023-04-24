@@ -32,7 +32,7 @@
                     <!-- {% endwith %} -->
                 </div>
             </div>
-            <div class="col-12 col-lg-6 pt-5 pt-lg-0 ps-0 ps-lg-4 ">
+            <div class="col-12 col-lg-6 py-4 pt-lg-0 ps-2 ps-lg-4 ">
                 <!-- Post title goes in these h1 tags -->
                 <h2 class="post-title">{{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}</h2>
                 <p class="card-text text-muted">Category# {{ post.category }}</p>
@@ -46,10 +46,30 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="row">
-            <div class="col-11 col-lg-6"></div>
-            <div class="col-11 col-lg-6"></div>
+            <div class="col-11 col-lg-6">
+                <h3>Comments:</h3>
+                <div class="card-body">
+                    <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                            {{ comment.name }}
+                            <span class=" text-muted font-weight-normal">
+                                <!-- The comment's created date goes here -->
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        <!-- The body of the comment goes before the | -->
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    <!-- Our for loop ends here -->
+                    {% endfor %}
+                </div>
+                <div class="col-11 col-lg-6"></div>
+            </div>
         </div>
-    </div>
 </section>
 {% endblock %}

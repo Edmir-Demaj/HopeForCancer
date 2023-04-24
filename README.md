@@ -298,7 +298,6 @@ Please find my GitHub Kanban Board with all Epics, User Stories and Tasks [here.
 ### Tasks:
 * Design a layout for displaying a single blog post in detail, with clear headings and text.
 * Create a button or link to navigate to the single post page from the main blog page.
-* Add a feature to display related posts or recommended posts on the single post page to keep the user engaged.
 * Ensure that the single post page is responsive to different screen sizes.
 
 </details>
