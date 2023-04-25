@@ -1,5 +1,6 @@
 {% load static %}
-
+{% url 'index' as index %}
+{% url 'blog_page' as blog_page %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,8 +62,8 @@
                                 class="fa-solid fa-xmark hvr-icon"></i></button>
                         <ul class="navbar-nav mx-auto fs-4 text-center">
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" id="home" href="{% url 'index' %}"
-                                    aria-label="navbar link to home page">Home</a>
+                                <a class="nav-link hvr-underline-from-center {% if request.path == index %} active {% endif %}"
+                                    id="home" href="{% url 'index' %}" aria-label="navbar link to home page">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-underline-from-center" href="#"
@@ -74,8 +75,8 @@
                                     information</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" href="{% url 'blog_page' %}"
-                                    aria-label="navbar link to blog page">Blog</a>
+                                <a class="nav-link hvr-underline-from-center {% if request.path == blog_page %} active {% endif %}"
+                                    href="{% url 'blog_page' %}" aria-label="navbar link to blog page">Blog</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-underline-from-center" href="#"
