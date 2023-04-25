@@ -32,10 +32,6 @@ a {
     color: #8129C1;
 }
 
-.title-wrapper {
-    max-width: 500px;
-}
-
 p {
     font-family: 'Merriweather', serif;
 }
@@ -232,6 +228,11 @@ h2 {
 }
 
 /* --------------------------------------------------- Blog page styles */
+.blog-subtitle {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 #blog-hero-section {
     height: 400px;
     width: 100%;
@@ -246,7 +247,7 @@ h2 {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .card {
@@ -263,18 +264,17 @@ h2 {
 
 /* This code was taken from css-trick.com, credits on Readme.md*/
 #scroll-section::-webkit-scrollbar {
-    width: 1em;
+    width: 0.8em;
 }
 
 #scroll-section::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    box-shadow: inset 0 0 8px rgba(39, 101, 20, 0.5);
+    border-radius: 10px;
 }
 
 #scroll-section::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-    border-radius: 5px;
+    background-color: #909090;
+    border-radius: 10px;
 }
 
 #scroll-section .card img {
@@ -328,5 +328,9 @@ h2 {
     .dropdown-btn,
     .dropdown-menu {
         width: 300px;
+    }
+
+    #scroll-section::-webkit-scrollbar {
+        display: none;
     }
 }

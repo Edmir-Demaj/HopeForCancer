@@ -9,7 +9,7 @@
     </h1>
 </section>
 <div>
-    <h2 class="fw-bold text-center title-wrapper mx-auto p-2 mb-5">
+    <h2 class="fw-bold text-center p-2 mb-5 blog-subtitle">
         Discover<span class="orange-text"> Powerful Stories</span> of Hope and
         Courage
     </h2>
@@ -17,23 +17,28 @@
 <!-- Main section for blog page -->
 <section>
     <div class="container-fluid mb-5">
-        <div class="row blog-section">
-            <div class="col-12 col-xl-3 order-1 order-xl-1">
+        <div class="row">
+            <div class="col-12 col-xl-4 order-1 order-xl-1">
                 <!-- Aside card with information -->
-                <aside class="aside-left">
-                    <p class="p-3 m-0">
-                        Find hope in cancer stories. Join us to support and inspire those
-                        impacted by cancer. Let's have meaningful conversations that honor
-                        our purpose and values. Together, we can make a positive impact and
-                        bring light to those in need. At HopeForCancer, we value respectful
-                        and focused discussions that provide accurate information and
-                        support. Let's spread knowledge and hope to those affected by
-                        cancer.
+
+                <aside class="aside-left p-3">
+                    <h4 class="mb-4 fw-semibold">Join the Fight Against Cancer</h4>
+                    <p class="">
+                        Cancer can be a lonely and difficult journey, but you don't have to go through it alone. At
+                        HopeForCancer, we believe that sharing stories and experiences can make a world of difference in
+                        the lives of those impacted by cancer. By joining our community, you'll find hope, inspiration,
+                        and support from others who are fighting the same battle. We value respectful and focused
+                        discussions that provide accurate information and support. Let's spread knowledge and hope to
+                        those affected by cancer and make a positive impact together.
                     </p>
                 </aside>
+                <button type="button" class="card-button my-4">
+                    SHARE YOUR STORY
+                </button>
             </div>
             <div class="col-12 col-xl-6 order-3 order-xl-2">
                 <!-- Posts section -->
+                <h3>Explore peoples cancer stories.</h3>
                 <section class="" id="scroll-section">
                     <!-- Blog post entries -->
                     {% for post in all_posts %}
@@ -69,8 +74,12 @@
                     {% endfor %}
                 </section>
             </div>
-            <div class="col-12 col-xl-3 order-2 order-xl-3">
-                <aside>hello</aside>
+            <div class="col-12 col-xl-2 order-2 order-xl-3">
+                <aside>
+                    <h4>Filter by:</h4>
+                    <P>Category#</P>
+                    <p>Date</p>
+                </aside>
             </div>
         </div>
     </div>
