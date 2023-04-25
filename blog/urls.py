@@ -3,6 +3,6 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('blog/', views.BlogPostList.as_view(), name='blog'),
+    path('', views.BlogPage.as_view(), name='blog_page'),
     path('<slug:slug>/', views.postDetail, name='post_detail'),
 ]

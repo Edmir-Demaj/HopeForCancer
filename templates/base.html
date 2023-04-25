@@ -41,7 +41,7 @@
         <nav class="navbar navbar-expand-xl p-0">
             <div class="container-fluid p-0">
                 <div id="logo">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{% url 'index' %}">
                         <img src="{% static 'images/base_images/logo.webp' %}" alt="logo of the web app"
                             aria-label="web app logo with link to home page">
                     </a>
@@ -61,7 +61,7 @@
                                 class="fa-solid fa-xmark hvr-icon"></i></button>
                         <ul class="navbar-nav mx-auto fs-4 text-center">
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" id="home" href="#"
+                                <a class="nav-link hvr-underline-from-center" id="home" href="{% url 'index' %}"
                                     aria-label="navbar link to home page">Home</a>
                             </li>
                             <li class="nav-item">
@@ -74,7 +74,7 @@
                                     information</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" href="#"
+                                <a class="nav-link hvr-underline-from-center" href="{% url 'blog_page' %}"
                                     aria-label="navbar link to blog page">Blog</a>
                             </li>
                             <li class="nav-item">
@@ -136,7 +136,7 @@
                     <h4 class="fw-bolder">Useful Links</h4>
                     <ul id="footer-links">
                         <li>
-                            <a class="hvr-underline-from-center py-1" href="#"
+                            <a class="hvr-underline-from-center py-1" href="{% url 'index' %}"
                                 aria-label="footer link to home page">Home</a>
                         </li>
                         <li>
@@ -149,7 +149,7 @@
                                 information</a>
                         </li>
                         <li>
-                            <a class="hvr-underline-from-center py-1" href="#"
+                            <a class="hvr-underline-from-center py-1" href="{% url 'blog_page' %}"
                                 aria-label="footer link to blog page">Blog</a>
                         </li>
                         <li>

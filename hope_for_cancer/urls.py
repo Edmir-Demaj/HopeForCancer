@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from other_pages.views import index
+from blog.views import BlogPage, postDetail
 
 # Customize Header and Title on admin panel
 admin.site.site_header = 'HopeForCancer'
@@ -25,5 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('other_pages.urls'), name='home'),
-    path('blog/', include('blog.urls'), name='blog'),
+    path('blog/', include('blog.urls'), name='blog_page'),
 ]

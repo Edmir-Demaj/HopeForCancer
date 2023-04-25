@@ -3,7 +3,7 @@ from django.views import generic
 from .models import Post, Comment
 
 
-class BlogPostList(generic.ListView):
+class BlogPage(generic.ListView):
     """
     This class uses generic views to render blog page and
     view latest posts in a list using Post model data.
@@ -11,7 +11,7 @@ class BlogPostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_date')
     template_name = 'blog/blog.html'
-    context_object_name = 'post_list'
+    context_object_name = 'all_posts'
 
 
 def postDetail(request, slug):

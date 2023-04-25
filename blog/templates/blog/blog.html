@@ -36,7 +36,7 @@
                 <!-- Posts section -->
                 <section class="" id="scroll-section">
                     <!-- Blog post entries -->
-                    {% for post in post_list %}
+                    {% for post in all_posts %}
                     <div class="card mb-5 mx-auto" style="max-width: 35rem">
                         <a href="{% url 'post_detail' post.slug %}" class="hvr-shrink"
                             aria-label="internal link when post is clicked to bring to post details page">
