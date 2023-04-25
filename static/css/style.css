@@ -38,10 +38,7 @@ a {
 
 p {
     font-family: 'Merriweather', serif;
-    /* font-size: 1.2rem; */
 }
-
-
 
 /* --------------------------------------------------- Navbar styles */
 .nav-item a {
@@ -162,7 +159,7 @@ footer address {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     margin-top: 40px;
     outline: 2px solid #ffffff;
     outline-offset: 2px;
@@ -194,6 +191,7 @@ h2 {
     border-radius: 10px;
     padding: 5px 20px;
     font-weight: 600;
+    transition: all 0.4s ease;
 }
 
 .card-button:hover {
@@ -202,20 +200,35 @@ h2 {
 }
 
 /* Dropdown section */
-.dropdown>.btn-outline-primary {
-    border-radius: 0px;
-    width: 400px;
+.dropdown {
+    max-width: 400px;
+
 }
 
+.dropdown-btn,
 .dropdown-menu {
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
     width: 400px;
-    border: 1px solid #8129C1;
-    border-radius: 0;
+    border-radius: 0px;
+    padding: 5px 0;
+    border: 1px solid #e06b02;
+    background-color: #f7f7f7;
+}
+
+.dropdown-btn:hover {
+    transition: all 0.4s ease;
+    background-color: #e06b02;
+    color: #f7f7f7;
+}
+
+.dropdown-item:active {
+    background-color: #f7f7f7;
+    font-weight: 600;
 }
 
 .dropdown-item:hover {
-    background-color: #8129C1;
-    color: #F9F4FB;
+    color: #e06b02;
 }
 
 /* --------------------------------------------------- Blog page styles */
@@ -310,5 +323,10 @@ h2 {
 
     .cta h1 {
         font-size: 1.8rem;
+    }
+
+    .dropdown-btn,
+    .dropdown-menu {
+        width: 300px;
     }
 }
