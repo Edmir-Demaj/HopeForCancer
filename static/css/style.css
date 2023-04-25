@@ -6,6 +6,10 @@
     list-style-type: none;
 }
 
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     color: #010b13;
@@ -30,7 +34,7 @@ a {
 
 p {
     font-family: 'Merriweather', serif;
-    font-size: 1.2em;
+    /* font-size: 1.2rem; */
 }
 
 
@@ -39,6 +43,10 @@ p {
 .nav-item a {
     color: #010b13;
     margin: 0 5px;
+}
+
+.navbar-nav {
+    font-size: 1.1rem;
 }
 
 .header-bg {
@@ -120,7 +128,7 @@ footer address {
     height: 100%;
     z-index: 2;
     background-color: #080d15;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .cta {
@@ -128,30 +136,38 @@ footer address {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #edebeb;
+    color: #f7f7f7;
     z-index: 10;
+    min-width: 300px;
+    width: 1000px;
+
 }
 
 .cta h1 {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 3em;
-    min-width: 900px;
+    font-size: 2.3rem;
 }
 
 .cta button {
-    padding: 8px 30px;
-    margin-top: 40px;
-    background-color: #FAB1DC;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 150px;
+    background-color: #f7f7f7;
+    color: #8129C1;
+    padding: 10px 30px;
+    border-radius: 10px;
     border: none;
-    box-shadow: 0 0 8px 3px #c29bb3;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+    outline: 2px solid #ffffff;
+    outline-offset: 1px;
+
 }
 
 .cta button:hover {
-    background-color: #F9F4FB;
+    background-color: #fab1dc;
+    color: #010b13;
 }
 
 /* Card section */
@@ -269,37 +285,29 @@ h2 {
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */
 @media (max-width: 1199px) {
-    .cta h1 {
-        font-size: 2.8em;
-        min-width: 700px;
-    }
-
     .header-bg {
         min-height: 100vh;
+    }
+
+    .cta {
+        width: 700px;
     }
 }
 
 /* Medium screen media queries */
 @media (max-width: 889px) {
-    .cta h1 {
-        font-size: 2em;
-        min-width: 500px;
-    }
-
-    .cta button {
-        padding: 5px 20px;
+    .cta {
+        width: 500px;
     }
 }
 
 /* Small screen media queries */
 @media (max-width: 589px) {
-    .cta h1 {
-        font-size: 1.5em;
-        min-width: 300px;
+    .cta {
+        width: 330px;
     }
 
-    .dropdown>.btn-outline-primary,
-    .dropdown-menu {
-        width: 310px;
+    .cta h1 {
+        font-size: 1.8rem;
     }
 }
