@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load account socialaccount %}
+{% load widget_tweaks %}
+{% block head_title %} {% trans "Login" %} {% endblock %}
+{% block title %}Login{% endblock title %} {% block content %}
+
+<!-- Login template form -->
+<div class="container p-5">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <img src="{% static 'images/accounts/login_image.webp' %}" id="login-image"
+        alt="Two hands holding a white ribbon to support cancer.">
+    </div>
+    <div class="col-12 col-lg-6">
+      <h1 class="fw-bold fs-2">
+        Welcome to<span class="orange-text"> HopeForCancer!</span>
+      </h1>
+      <p>
+        {% blocktrans %}
+        To leave a comment or like a post, please login. If you have not created an
+        account yet, then
+        <a href="{{ signup_url }}" class="orange-text fw-semibold"
+          aria-label="link to bring to signup page if you don't have an account already">sign up</a>
+        first.{% endblocktrans %}
+      </p>
+      <form class="login mt-5" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+        <!-- <div class="form-group">
+          {{ form.username.label_tag }}
+          {{ form.username|add_class:"form-control" }}
+        </div> -->
+        {% render_field form.username %}
+        <div class="form-group">
+          {{ form.password.label_tag }}
+          {{ form.password|add_class:"form-control" }}
+        </div>
+
+
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="card-button px-5" type="submit">{% trans "Login" %}</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
