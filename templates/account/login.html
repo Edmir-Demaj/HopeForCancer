@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load static %}
-{% load account socialaccount %}
+<!-- widget_tweaks package add classes to django allauth field to style them -->
 {% load widget_tweaks %}
 {% block head_title %} {% trans "Login" %} {% endblock %}
 {% block title %}Login{% endblock title %} {% block content %}
 
-<!-- Login template form -->
+<!-- Login page -->
 <div class="container p-5">
   <div class="row">
     <div class="col-12 col-lg-6">
@@ -23,22 +23,22 @@
         account yet, then
         <a href="{{ signup_url }}" class="orange-text fw-semibold"
           aria-label="link to bring to signup page if you don't have an account already">sign up</a>
-        first.{% endblocktrans %}
+        first.
+        {% endblocktrans %}
       </p>
-      <form class="login mt-5" method="POST" action="{% url 'account_login' %}">
+      <form class="login mt-4" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
-        <!-- {{ form.as_p }} -->
-        <!-- <div class="form-group">
-          {{ form.username.label_tag }}
-          {{ form.username|add_class:"form-control" }}
-        </div> -->
-        {% render_field form.username %}
+        <!-- Login form -->
+        {% for field in form %}
         <div class="form-group">
-          {{ form.password.label_tag }}
-          {{ form.password|add_class:"form-control" }}
+          {{ field.label_tag }}
+          {% if field.name != 'remember' %}
+          {{ field|add_class:"form-control" }}
+          {% else %}
+          {{ field|add_class:"remember-field" }}
+          {% endif %}
         </div>
-
-
+        {% endfor %}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}

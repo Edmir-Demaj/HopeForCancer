@@ -1,6 +1,9 @@
 {% load static %}
+<!-- importing url paths to add active class -->
 {% url 'index' as index %}
 {% url 'blog_page' as blog_page %}
+{% url 'account_login' as login %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +57,7 @@
                         <i class="fa-solid fa-bars hvr-icon"></i>
                     </span>
                 </button>
-
+                <!-- Navbar links -->
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
                     <div class="header-bg">
                         <button type="button" data-bs-dismiss="offcanvas" aria-label="Close offcanvas"
@@ -89,8 +92,8 @@
                             </li>
                             {% else %}
                             <li class="nav-item ms-0 ms-xl-5">
-                                <a class="nav-link hvr-underline-from-center" href="{% url 'account_login' %}"
-                                    aria-label="navbar link to log in page">Login</a>
+                                <a class="nav-link hvr-underline-from-center {% if request.path == login %} active {% endif %}"
+                                    href="{% url 'account_login' %}" aria-label="navbar link to log in page">Login</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-underline-from-center" href="{% url 'account_signup' %}"
@@ -123,6 +126,7 @@
                 <div class="col-12 col-md-4 ps-3 text-start text-md-center">
                     <h4 class="fw-bolder">Follow us</h4>
                     <div class="my-3">
+                        <!-- External connection links & copyrights -->
                         <span><a class="hvr-icon-grow" href="https://twitter.com/?lang=en" target="_blank"
                                 aria-label="footer link to twitter, opens in a new tab">
                                 <i class="fa-brands fa-twitter hvr-icon"></i></a>
@@ -142,6 +146,7 @@
                 </div>
                 <div class="col-12 col-md-4 ps-3 py-4 py-md-0 text-start text-md-center">
                     <h4 class="fw-bolder">Useful Links</h4>
+                    <!-- Useful internal links -->
                     <ul id="footer-links">
                         <li>
                             <a class="hvr-underline-from-center py-1" href="{% url 'index' %}"
@@ -167,6 +172,7 @@
                     </ul>
                 </div>
                 <div class="col-12 col-md-4 ps-3 text-start text-md-center">
+                    <!-- Contact details -->
                     <h4 class="fw-bolder">Contact us</h4>
                     <p>
                         <address class="fst-italic">245 Mary street, Dublin, Ireland</address>
