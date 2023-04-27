@@ -4,18 +4,19 @@
 <!-- widget_tweaks package add classes to django allauth field to style them -->
 {% load widget_tweaks %}
 {% block head_title %} {% trans "Login" %} {% endblock %}
-{% block title %}Login{% endblock title %} {% block content %}
+{% block title %}Login{% endblock title %}
+{% block content %}
 
 <!-- Login page -->
-<div class="container p-5">
+<div class="container p-3 p-lg-5">
   <div class="row">
     <div class="col-12 col-lg-6">
       <img src="{% static 'images/accounts/login_image.webp' %}" id="login-image"
         alt="Two hands holding a white ribbon to support cancer.">
     </div>
-    <div class="col-12 col-lg-6">
-      <h1 class="fw-bold fs-2">
-        Welcome to<span class="orange-text"> HopeForCancer!</span>
+    <div class="col-12 col-lg-6 my-5 my-lg-0">
+      <h1 class="fw-semibold fs-3">
+        Welcome back to<span class="orange-text"> HopeForCancer!</span>
       </h1>
       <p>
         {% blocktrans %}

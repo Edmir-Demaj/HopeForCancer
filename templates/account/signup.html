@@ -1,21 +1,43 @@
-{% extends "account/base.html" %}
-
+{% extends "base.html" %}
 {% load i18n %}
-
+{% load static %}
+{% load widget_tweaks %}
 {% block head_title %}{% trans "Signup" %}{% endblock %}
+{% block title %}Signup{% endblock title %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+<!-- Signup page -->
+<div class="container p-5">
+  <div class="row">
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
+    <div class="col-12 col-lg-6">
+      <h1 class="fw-semibold fs-3">
+        Welcome to <span class="orange-text"> HopeForCancer!</span>
+      </h1>
+      <p>{% blocktrans %}
+        Please fill up all the fields below to register your account.
+        Already have an account? Then please <a href="{{ login_url }}"><span
+            class="orange-text fw-semibold">login.</span></a>{% endblocktrans %}</p>
+      <!-- Signup form -->
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+          {{ field.label_tag }}
+          {{ field|add_class:"form-control" }}
+        </div>
+        {% endfor %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="card-button px-5" type="submit">{% trans "Sign Up" %} &raquo;</button>
+      </form>
+    </div>
+    <div class="col-12 col-lg-6">
+      <img src="{% static 'images/accounts/login_image.webp' %}" id="login-image"
+        alt="Two hands holding a white ribbon to support cancer.">
+    </div>
+  </div>
+</div>
 
 {% endblock %}
