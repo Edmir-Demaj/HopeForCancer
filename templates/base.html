@@ -3,6 +3,7 @@
 {% url 'index' as index %}
 {% url 'blog_page' as blog_page %}
 {% url 'account_login' as login %}
+{% url 'account_signup' as signup %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +97,8 @@
                                     href="{% url 'account_login' %}" aria-label="navbar link to log in page">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" href="{% url 'account_signup' %}"
+                                <a class="nav-link hvr-underline-from-center {% if request.path == signup %} active {% endif %}"
+                                    href="{% url 'account_signup' %}"
                                     aria-label="navbar link to sign up page">Signup</a>
                             </li>
                             {% endif %}
