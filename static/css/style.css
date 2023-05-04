@@ -373,6 +373,22 @@ h2 {
     cursor: pointer;
 }
 
+/* Logout page */
+#decline-logout {
+    color: #e06b02;
+    border: 1.5px solid #e06b02;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+#decline-logout:hover {
+    color: #F9F4FB !important;
+    background-color: #e06b02 !important;
+}
+
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */
 @media (max-width: 1199px) {
