@@ -15,8 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from other_pages.views import index
-from blog.views import BlogPage, postDetail
 
 # Customize Header and Title on admin panel
 admin.site.site_header = 'HopeForCancer Administration'

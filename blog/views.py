@@ -37,23 +37,23 @@ def postDetail(request, slug):
 
 class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
-    Create a blog post only when user is logged in, if is not loggedin will 
+    Create a blog post only when user is logged in, if is not loggedin will
     be redirected to the login page.
     """
     model = Post
     form_class = CreatePostForm
-    template_name = "create_post.html"
+    template_name = "blog/create_post.html"
     success_message = ("Great job! You have successfully added a new post "
                        "and it is now pending approval.")
 
-    def get_success_url(self):
-        """
-        Set the reverse url for the successful addition
-        of the post to the database
-        """
-        return reverse("blog_page")
+    # def get_success_url(self):
+    #     """
+    #     Set the reverse url for the successful addition
+    #     of the post to the database
+    #     """
+    #     return reverse("blog_page")
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        form.slug = slugify(form.instance.title)
-        return super().form_valid(form)
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     form.slug = slugify(form.instance.title)
+    #     return super().form_valid(form)
