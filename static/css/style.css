@@ -32,6 +32,10 @@ a {
     color: #8129C1;
 }
 
+.alert-text {
+    color: #a30b1b;
+}
+
 p {
     font-family: 'Merriweather', serif;
 }

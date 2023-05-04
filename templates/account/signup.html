@@ -22,10 +22,22 @@
       <!-- Signup form -->
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
+        <!-- Iterate non_field_errors and provide error message to user -->
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger" role="alert">
+          {% for error in form.non_field_errors %}
+          {{ error }}
+          {% endfor %}
+        </div>
+        {% endif %}
         {% for field in form %}
         <div class="form-group">
           {{ field.label_tag }}
           {{ field|add_class:"form-control" }}
+          <!-- Provides field_error messages to user -->
+          {% for error in field.errors %}
+          <span class="help-block alert-text">{{ error }}</span>
+          {% endfor %}
         </div>
         {% endfor %}
         {% if redirect_field_value %}
