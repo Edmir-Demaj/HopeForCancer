@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.text import slugify
+
 from .models import Post, Comment
 from .forms import CreatePostForm
 
@@ -46,14 +48,15 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     success_message = ("Great job! You have successfully added a new post "
                        "and it is now pending approval.")
 
-    # def get_success_url(self):
-    #     """
-    #     Set the reverse url for the successful addition
-    #     of the post to the database
-    #     """
-    #     return reverse("blog_page")
+    def get_success_url(self):
+        """
+        Set the reverse url for the successful addition
+        of the post to the database
+        """
+        return reverse("blog_page")
 
-    # def form_valid(self, form):
-    #     form.instance.author = self.request.user
-    #     form.slug = slugify(form.instance.title)
-    #     return super().form_valid(form)
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        if not form.instance.slug:
+            form.instance.slug = slugify(form.instance.title)
+        return super().form_valid(form)

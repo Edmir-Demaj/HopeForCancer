@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 # Customize Header and Title on admin panel
-admin.site.site_header = 'HopeForCancer Administration'
-admin.site.index_title = 'Welcome to HopeForCancer Admin site'
+admin.site.site_header = 'HopeForCancer'
+admin.site.site_title = 'HopeForCancer'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
