@@ -4,6 +4,7 @@
 {% url 'blog_page' as blog_page %}
 {% url 'account_login' as login %}
 {% url 'account_signup' as signup %}
+{% url 'account_logout' as logout %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -88,8 +89,8 @@
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item ms-0 ms-xl-5">
-                                <a class="nav-link hvr-underline-from-center" href="{% url 'account_logout' %}"
-                                    aria-label="navbar link to log in page">Logout</a>
+                                <a class="nav-link hvr-underline-from-center {% if request.path == logout %} active {% endif %}"
+                                    href="{% url 'account_logout' %}" aria-label="navbar link to log in page">Logout</a>
                             </li>
                             {% else %}
                             <li class="nav-item ms-0 ms-xl-5">
@@ -125,7 +126,7 @@
     <footer class="text-white d-flex align-items-center">
         <div class="container-fluid py-5 py-md-0">
             <div class="row">
-                <div class="col-12 col-md-4 ps-3 text-start text-md-center">
+                <div class="col-12 col-md-4 ps-2 text-start text-md-center">
                     <h4 class="fw-bolder">Follow us</h4>
                     <div class="my-3">
                         <!-- External connection links & copyrights -->
@@ -146,7 +147,7 @@
                     <p>For educational purpose only.</p>
 
                 </div>
-                <div class="col-12 col-md-4 ps-3 py-4 py-md-0 text-start text-md-center">
+                <div class="col-12 col-md-4 ps-2 py-4 py-md-0 text-start text-md-center">
                     <h4 class="fw-bolder">Useful Links</h4>
                     <!-- Useful internal links -->
                     <ul id="footer-links">
@@ -173,7 +174,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-4 ps-3 text-start text-md-center">
+                <div class="col-12 col-md-4 ps-2 text-start text-md-center">
                     <!-- Contact details -->
                     <h4 class="fw-bolder">Contact us</h4>
                     <p>
