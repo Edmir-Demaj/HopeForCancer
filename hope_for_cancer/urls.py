@@ -19,8 +19,8 @@ from other_pages.views import index
 from blog.views import BlogPage, postDetail
 
 # Customize Header and Title on admin panel
-admin.site.site_header = 'HopeForCancer'
-admin.site.site_title = 'HopeForCancer'
+admin.site.site_header = 'HopeForCancer Administration'
+admin.site.index_title = 'Welcome to HopeForCancer Admin site'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
