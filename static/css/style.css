@@ -379,9 +379,9 @@ h2 {
 
 /* Logout page */
 #decline-logout {
-    color: #e06b02;
+    background-color: #e06b02;
     border: 1.5px solid #e06b02;
-    background-color: #f7f7f7;
+    color: #f7f7f7;
     border-radius: 10px;
     padding: 5px 20px;
     font-weight: 600;
@@ -389,8 +389,23 @@ h2 {
 }
 
 #decline-logout:hover {
-    color: #F9F4FB !important;
-    background-color: #e06b02 !important;
+    background-color: #F9F4FB !important;
+    color: #e06b02 !important;
+}
+
+/* Create post page */
+#create-post {
+    border-radius: 20px;
+    background-color: #e5e3fa;
+}
+
+input[type="file"] {
+    width: 15rem;
+}
+
+.asteriskField {
+    color: #a30b1b;
+    padding-left: 5px;
 }
 
 /* --------------------------------------------------- Media queries */

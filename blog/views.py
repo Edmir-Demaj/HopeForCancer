@@ -51,11 +51,15 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     def get_success_url(self):
         """
         Set the reverse url for the successful addition
-        of the post to the database
+        of the post to the database, reverse to blog_page
         """
         return reverse("blog_page")
 
     def form_valid(self, form):
+        """
+        This function sets the author field as user when form is submitted
+        and if slug doesnt exist creats a unique slug from its title
+        """
         form.instance.author = self.request.user
         if not form.instance.slug:
             form.instance.slug = slugify(form.instance.title)
