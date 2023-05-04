@@ -27,9 +27,9 @@
         first.
         {% endblocktrans %}
       </p>
+      <!-- Login form -->
       <form class="login mt-4" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
-        <!-- Login form -->
         {% for field in form %}
         <div class="form-group">
           {{ field.label_tag }}
@@ -43,7 +43,8 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="card-button px-5" type="submit">{% trans "Login" %}</button>
+        <button class="card-button px-5" type="submit"
+          aria-label="button to login to the site">{% trans "Login" %}</button>
       </form>
     </div>
   </div>
