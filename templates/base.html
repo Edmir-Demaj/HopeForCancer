@@ -90,8 +90,8 @@
                             {% if user.is_authenticated %}
                             <li class="nav-item ms-0 ms-xl-5">
                                 <a class="nav-link hvr-underline-from-center {% if request.path == logout %} active {% endif %}"
-                                    href="{% url 'account_logout' %}"
-                                    aria-label="navbar link to log out page">Logout</a>
+                                    href="{% url 'account_logout' %}" aria-label="navbar link to log out page">Log
+                                    out</a>
                             </li>
                             {% else %}
                             <li class="nav-item ms-0 ms-xl-5">
@@ -100,8 +100,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-underline-from-center {% if request.path == signup %} active {% endif %}"
-                                    href="{% url 'account_signup' %}"
-                                    aria-label="navbar link to sign up page">Signup</a>
+                                    href="{% url 'account_signup' %}" aria-label="navbar link to sign up page">Sign
+                                    up</a>
                             </li>
                             {% endif %}
                         </ul>
@@ -180,13 +180,13 @@
                     <!-- Contact details -->
                     <h4 class="fw-bolder">Contact us</h4>
                     <p>
-                    <address class="fst-italic">245 Mary street, Dublin, Ireland</address>
+                        <address class="fst-italic">245 Mary street, Dublin, Ireland</address>
                     </p>
                     <p>
                         <phone class="fst-italic">+353 458 900</phone>
                     </p>
                     <p>
-                    <address class="fst-italic">hopeforcancer@email.com</address>
+                        <address class="fst-italic">hopeforcancer@email.com</address>
                     </p>
                 </div>
             </div>
@@ -197,7 +197,7 @@
     <!-- bootstrap javascript link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-        </script>
+    </script>
     <!-- javascript link -->
     <script src="{% static 'js/script.js' %}"></script>
 </body>
