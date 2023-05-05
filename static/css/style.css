@@ -48,7 +48,7 @@ header {
     top: 0;
     left: 0;
     background-color: rgba(249, 244, 251);
-    box-shadow: 2px 4px 6px rgba(67, 38, 60, 0.4);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
     z-index: 50;
 }
 
@@ -192,7 +192,7 @@ h2 {
     height: 100%;
     border: 1px solid #a3a3a3;
     border-radius: 10px;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .card-button {
@@ -247,16 +247,10 @@ h2 {
 }
 
 /* Latest blog posts section */
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fab1dc' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
+.carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fab1dc' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    display: none;
 }
-
-
-
 
 .helper-text {
     max-width: 700px;
@@ -280,14 +274,14 @@ h2 {
     max-width: 900px;
     margin: 0 auto;
     background-color: #ffffff;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 
 .card {
     background-color: #ffffff;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
     border: 1px solid #4d4d4d;
     border-radius: 10px;
 }
@@ -298,10 +292,8 @@ h2 {
 
 .card-img-top {
     object-fit: cover;
-    border: 1px solid #a3a3a3;
     border-radius: 10px 10px 0 0;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
-    height: 13rem !important;
+    height: 15rem !important;
 }
 
 #scroll-section {
@@ -460,6 +452,10 @@ input[type="file"] {
     .dropdown-btn,
     .dropdown-menu {
         width: 300px;
+    }
+
+    .card-img-top {
+        height: 12rem !important;
     }
 
     #scroll-section::-webkit-scrollbar {
