@@ -128,7 +128,7 @@ footer address {
 
 /* --------------------------------------------------- Home page styles */
 
-/* hero section */
+/* Hero section */
 #carouselExampleInterval img {
     height: calc(100vh - 110px);
     object-fit: cover;
@@ -140,7 +140,7 @@ footer address {
     height: 100%;
     z-index: 2;
     background-color: #080d15;
-    opacity: 0.4;
+    opacity: 0.55;
 }
 
 .cta {
@@ -164,8 +164,8 @@ footer address {
 .cta button {
     background-color: #f7f7f7;
     color: #8129C1;
-    padding: 5px 20px;
-    border-radius: 10px;
+    padding: 5px 25px;
+    border-radius: 15px;
     border: none;
     font-size: 1rem;
     font-weight: bold;
@@ -213,7 +213,7 @@ h2 {
 /* Understand cancer section */
 #understand-cancer {
     background-color: #e5e3fa;
-    height: 15rem;
+    height: 18rem;
 }
 
 .dropdown {
@@ -227,7 +227,7 @@ h2 {
     width: 400px;
     border-radius: 0px;
     padding: 5px 0;
-    border: 1px solid #e06b02;
+    border: 2px solid #e06b02;
     background-color: #f7f7f7;
 }
 
