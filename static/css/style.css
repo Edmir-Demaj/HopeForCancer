@@ -246,6 +246,22 @@ h2 {
     color: #e06b02;
 }
 
+/* Latest blog posts section */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fab1dc' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fab1dc' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+
+
+
+.helper-text {
+    max-width: 700px;
+}
+
 /* --------------------------------------------------- Blog page styles */
 .blog-subtitle {
     max-width: 900px;
@@ -285,7 +301,7 @@ h2 {
     border: 1px solid #a3a3a3;
     border-radius: 10px 10px 0 0;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
-    height: 15rem !important;
+    height: 13rem !important;
 }
 
 #scroll-section {

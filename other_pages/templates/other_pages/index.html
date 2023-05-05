@@ -142,7 +142,9 @@
     <article id="understand-cancer" class="d-flex align-items-center my-5">
         <div class="col-10 offset-1 d-flex flex-column align-items-center text-center my-5">
             <h2 class="fw-bold"><span class="orange-text">Understanding</span> cancer</h2>
-            <p class="text-muted">Understanding cancer saves lives by improving treatments, prevention, and outcomes.</p>
+            <p class="text-muted helper-text">Understanding cancer saves lives by improving treatments, prevention, and
+                outcomes.
+            </p>
             <div class="dropdown">
                 <button class="dropdown-btn dropdown-toggle orange-text" type="hidden" data-bs-toggle="dropdown"
                     aria-expanded="false">
@@ -173,21 +175,20 @@
 
 <!-- Latest blog posts section start -->
 <section>
-    <div class="container-fluid">
+    <div class="container-fluid mb-4">
         <div class="text-center mb-5">
             <h2 class="fw-bold"><span class="orange-text">True</span> stories from our Blog</h2>
-            <p class="text-muted w-50 mx-auto">Sharing experiences and insights can help others fight cancer and
-                find hope.
-                Join
-                our
-                community and share your story today.</p>
+            <p class="text-muted helper-text mx-auto">
+                Sharing experiences and insights can help others fight cancer and find hope.
+                Join our community and share your story today.</p>
         </div>
-        <div class="row">
+        <!-- Code to display 3 cards on screens > 1200px-->
+        <div class="row d-none d-xl-flex">
             {% for post in latest_posts %}
             <div class="col-4">
-                <div class="card mb-5 mx-auto" style="max-width: 25rem">
-                    <a href="{% url 'post_detail' post.slug %}" class=""
-                        aria-label="internal link when post is clicked to bring to post details page">
+                <div class="card mb-5 mx-auto" style="max-width: 22rem">
+                    <a href="{% url 'blog_page' %}"
+                        aria-label="internal link when post is clicked to bring to blog post page">
                         {% if "placeholder" in post.featured_image.url %}
                         <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
                             alt="{{ post.describe_image }}" />
@@ -195,7 +196,7 @@
                         <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.describe_image }}" />
                         {% endif %}
                         <div class="card-body pb-0">
-                            <h4 class="card-title post-title fw-bold">
+                            <h4 class="card-title post-title fw-bold fs-5">
                                 {{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}</h4>
                             <p class="card-text text-muted">Category# {{ post.category }}</p>
                             <hr />
@@ -216,7 +217,61 @@
             </div>
             {% endfor %}
         </div>
+        <!-- Code to display 1 card with carousel for screens < 1200px -->
+        <div class="row d-xl-none">
+            <div class="col-12">
+                <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for post in latest_posts %}
+                        <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                            <div class="card mb-5 mx-auto" style="max-width: 22rem">
+                                <a href="{% url 'blog_page' %}"
+                                    aria-label="internal link when post is clicked to bring to blog post page">
+                                    {% if "placeholder" in post.featured_image.url %}
+                                    <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
+                                        alt="{{ post.describe_image }}" />
+                                    {% else %}
+                                    <img src="{{ post.featured_image.url }}" class="card-img-top"
+                                        alt="{{ post.describe_image }}" />
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+                                        <h4 class="card-title post-title fw-bold fs-5">
+                                            {{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}
+                                        </h4>
+                                        <p class="card-text text-muted">Category# {{ post.category }}</p>
+                                        <hr />
+                                        <p class="card-text">
+                                            {{ post.content | slice:":480" | safe }}...
+                                        </p>
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <span class="me-5"><i class="fa-regular fa-heart"></i> 0</span>
+                                        <span><i class="fa-regular fa-comment"></i> 0</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted me-4">Posted by: {{ post.author }}</small>
+                                        <small class="text-muted">{{ post.created_date }}</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
 <!-- Latest blog posts section end -->
 {% endblock content %}
