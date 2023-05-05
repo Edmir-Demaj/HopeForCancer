@@ -5,7 +5,7 @@ from blog.models import Post
 def index(request):
     """
     When this function is called it takes the request and return the
-    response which will render home page or index.html as well as 
+    response which will render home page or index.html as well as
     show the latest 3 blog posts.
     """
     latest_posts = Post.objects.order_by('-created_date')[:3]
