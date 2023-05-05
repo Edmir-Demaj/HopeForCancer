@@ -140,7 +140,7 @@
 
 <!-- Understand cancer section start -->
 <section>
-    <article>
+    <article id="understand-cancer" class="d-flex align-items-center my-5">
         <div class="col-10 offset-1 d-flex flex-column align-items-center text-center my-5">
             <h2 class="fw-bold"><span class="orange-text">Understanding</span> cancer</h2>
             <p class="text-muted">The more we know about cancer, the more lives we can save.</p>
@@ -173,10 +173,18 @@
 <!-- latest blog posts section start -->
 <section>
     <div class="container-fluid">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold"><span class="orange-text">True</span> stories from our Blog</h2>
+            <p class="text-muted w-50 mx-auto">Sharing experiences and insights can help others fight cancer and
+                find hope.
+                Join
+                our
+                community and share your story today.</p>
+        </div>
         <div class="row">
             {% for post in latest_posts %}
             <div class="col-4">
-                <div class="card mb-5 mx-auto" style="max-width: 20rem">
+                <div class="card mb-5 mx-auto" style="max-width: 25rem">
                     <a href="{% url 'post_detail' post.slug %}" class=""
                         aria-label="internal link when post is clicked to bring to post details page">
                         {% if "placeholder" in post.featured_image.url %}

@@ -210,10 +210,14 @@ h2 {
     background-color: #8129C1 !important;
 }
 
-/* Dropdown section */
+/* Understand cancer section */
+#understand-cancer {
+    background-color: #e5e3fa;
+    height: 15rem;
+}
+
 .dropdown {
     max-width: 400px;
-
 }
 
 .dropdown-btn,
@@ -281,7 +285,7 @@ h2 {
     border: 1px solid #a3a3a3;
     border-radius: 10px 10px 0 0;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
-    height: 20rem !important;
+    height: 15rem !important;
 }
 
 #scroll-section {
