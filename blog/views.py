@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
-from .models import Post, Comment
+from .models import *
 from .forms import *
 
 
@@ -65,27 +66,27 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
         return super().form_valid(form)
 
 
-class UpdatePost(LoginRequiredMixin, generic.CreateView):
-
-    def post(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        update_form = UpdatePostForm(data=request.Post)
-        template_name = "blog/update_post.html"
-        context = {
-            "update_form": update_form,
-            "post": post
-        }
-        if request.user.id == post.author.id:
-
-            if update_form.is_valid():
-                update_form.save(commit=False)
-                update_form.instance.author = request.user
-                update_form.instance.slug = slugify(post.title)
-                update_form.instance.status = 1
-                update_form.save()
-            else:
-                messages.error(request, "Failed to update the post.")
-            return render(request, template_name, context)
+@login_required()
+def update_post(request, slug):
+    """
+    Users can update their blog post that they have created
+    """
+    post = get_object_or_404(Post, slug=slug)
+    if post.author != request.user:
+        messages.error(request, 'You are not authorized to edit this post.')
+        return redirect('post_detail', slug=slug)
+        if request.method == "POST":
+            form = UpdatePostForm(request.POST, request.FILES, instance=post)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.author = request.user
+                post.slug = slugify(post.title)
+                post.status = 1
+                form.save()
+                messages.success(request, "Your post updated successfully!")
+                return redirect(reverse("post_detail", kwargs={'slug': post.slug}))
         else:
-            messages.error(request, "Sorry, This is not your post.")
+            form = UpdatePostForm(instance=post)
+
+    context = {"update_form": form, "post": post}
+    return render(request, 'blog/update_post.html', context)

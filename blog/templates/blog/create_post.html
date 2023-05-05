@@ -22,8 +22,8 @@
             <div class="form-group p-3" id="create-post">
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ update_form | crispy }}
-                    <button type="submit" class="btn my-3 px-4" id="decline-logout">Update Post</button>
+                    {{ form | crispy }}
+                    <button type="submit" class="btn my-3 px-4" id="decline-logout">Create Post</button>
                 </form>
             </div>
         </div>
