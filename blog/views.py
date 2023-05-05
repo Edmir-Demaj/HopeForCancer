@@ -4,9 +4,8 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.text import slugify
-
 from .models import Post, Comment
-from .forms import CreatePostForm
+from .forms import *
 
 
 class BlogPage(generic.ListView):
@@ -64,3 +63,29 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
         if not form.instance.slug:
             form.instance.slug = slugify(form.instance.title)
         return super().form_valid(form)
+
+
+class UpdatePost(LoginRequiredMixin, generic.CreateView):
+
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        update_form = UpdatePostForm(data=request.Post)
+        template_name = "blog/update_post.html"
+        context = {
+            "update_form": update_form,
+            "post": post
+        }
+        if request.user.id == post.author.id:
+
+            if update_form.is_valid():
+                update_form.save(commit=False)
+                update_form.instance.author = request.user
+                update_form.instance.slug = slugify(post.title)
+                update_form.instance.status = 1
+                update_form.save()
+            else:
+                messages.error(request, "Failed to update the post.")
+            return render(request, template_name, context)
+        else:
+            messages.error(request, "Sorry, This is not your post.")
