@@ -73,9 +73,36 @@
             </div>
             <div class="col-12 col-xl-3 order-2 order-xl-3">
                 <aside>
-                    <h4 class="mb-4 fw-semibold">Filter posts by:</h4>
-                    <P>Category#</P>
-                    <p>Date</p>
+                    <form method="GET">
+                        <h4 class="mb-4 fw-semibold">Filter Posts by:</h4>
+                        <div class="form-group">
+                            <label for="category">Category:</label>
+                            <select id="category" name="category" class="form-control">
+                                <option value="">All Categories</option>
+                                {% for category in categories %}
+                                <option value="{{ category.slug }}"
+                                    {% if category.slug == request.GET.category %}selected{% endif %}>
+                                    {{ category.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="created_date">Created Date:</label>
+                            <select id="created_date" name="created_date" class="form-control">
+                                <option value="">All Dates</option>
+                                <option value="newest" {% if request.GET.created_date == "newest" %}selected{% endif %}>
+                                    Newest</option>
+                                <option value="oldest" {% if request.GET.created_date == "oldest" %}selected{% endif %}>
+                                    Oldest</option>
+                                <option value="today" {% if request.GET.created_date == "today" %}selected{% endif %}>
+                                    Today</option>
+                                <option value="last_7_days"
+                                    {% if request.GET.created_date == "last_7_days" %}selected{% endif %}>Last 7
+                                    Days</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </form>
                 </aside>
             </div>
         </div>
