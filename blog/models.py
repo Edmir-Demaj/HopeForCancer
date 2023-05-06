@@ -29,18 +29,23 @@ class Post(models.Model):
     in our database and the methods.
     """
     title = models.CharField(
-        max_length=200, unique=True, blank=False, null=False,
-        help_text='Please provide a descriptive title for your post.'
+        max_length=60, unique=True, blank=False, null=False,
+        help_text=(
+            'Please provide a descriptive title for your post. '
+            'Maximum length is 60 characters.'
+        )
     )
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=60, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
     describe_image = models.CharField(
-        max_length=100, default='A beautiful image from the post.'
+        max_length=70, default='A default image.',
+        help_text='Please provide a short description for your image'
     )
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='category_posts'
     )
     content = models.TextField(
+        max_length=500, unique=True, blank=False, null=False,
         help_text="Share your inspiring cancer story with us. "
                   "Your words can make a difference in someone's life."
     )
