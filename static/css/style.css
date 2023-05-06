@@ -420,23 +420,42 @@ h2 {
     color: #f7f7f7;
     border: none;
     border-radius: 20px;
-    line-height: 1.9rem;
+    line-height: 2.2rem;
 }
 
 /* Logout page */
-#decline-logout {
-    background-color: #e06b02;
-    border: 1.5px solid #e06b02;
+.cancel-logout {
+    padding: 13px 46px !important;
+    background-color: #c93f4d;
+    border: 1.5px solid #c93f4d;
     color: #f7f7f7;
     border-radius: 10px;
     padding: 5px 20px;
     font-weight: 600;
     transition: all 0.4s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-#decline-logout:hover {
+.cancel-logout:hover {
     background-color: #F9F4FB !important;
-    color: #e06b02 !important;
+    color: #c93f4d !important;
+}
+
+.confirm-logout {
+    padding: 10px 30px !important;
+    background-color: #238916;
+    border: 1.5px solid #238916;
+    color: #f7f7f7;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.confirm-logout:hover {
+    background-color: #F9F4FB !important;
+    color: #238916 !important;
 }
 
 /* Create post page */
