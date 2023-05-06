@@ -19,7 +19,7 @@
 <section>
     <div class="container-fluid mb-5">
         <div class="row">
-            <div class="col-12 col-xl-4 order-1 order-xl-1 p-2">
+            <div class="col-12 col-xl-4 order-1 order-xl-1 p-2 pt-0">
                 <!-- Aside-left card -->
                 <aside class="aside-left p-3">
                     <h4 class="mb-4 fw-semibold">Join the Fight Against Cancer</h4>
@@ -30,22 +30,24 @@
                         discussions that provide accurate information and support. Let's spread knowledge and hope to
                         those affected by cancer and make a positive impact together.
                     </p>
-                    <a href="{% url 'create-post' %}" class="card-button d-inline-block my-2">Create Post</a>
+                    <a href="{% url 'create-post' %}"
+                        class="create-post-btn hvr-float-shadow d-inline-block my-2">Create Post</a>
                 </aside>
             </div>
-            <div class="col-7 col-xl-6 order-3 order-xl-2 p-2 p-md-0">
+            <div class="col-7 col-xl-5 order-3 order-xl-2 p-2 p-md-0">
                 <!--Blog Posts section -->
                 <section id="scroll-section">
                     <!-- Blog post entries -->
                     {% for post in all_posts %}
-                    <div class="card mb-5 mx-auto" style="max-width: 23rem">
+                    <div class="card mb-5 mx-auto" style="max-width: 24rem">
                         <a href="{% url 'blog_page' %}"
                             aria-label="internal link when post is clicked to bring to blog post page">
                             {% if "placeholder" in post.featured_image.url %}
                             <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
                                 alt="{{ post.describe_image }}" />
                             {% else %}
-                            <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.describe_image }}" />
+                            <img src="{{ post.featured_image.url }}" class="card-img-top"
+                                alt="{{ post.describe_image }}" />
                             {% endif %}
                             <div class="card-body pb-0">
                                 <h4 class="card-title post-title fw-bold fs-5">
