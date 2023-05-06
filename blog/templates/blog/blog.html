@@ -2,6 +2,7 @@
 {% load static %}
 {% block title %} Blog {% endblock %}
 {% block content %}
+
 <!-- Hero section for blog page -->
 <section id="blog-hero-section" class="text-center d-flex align-items-center justify-content-center mb-5">
     <h1 class="fw-bold text-white mx-2">
@@ -20,20 +21,19 @@
         <div class="row">
             <div class="col-12 col-xl-4 order-1 order-xl-1 p-2">
                 <!-- Aside-left card -->
-                <aside class="aside-left p-2">
+                <aside class="aside-left p-3">
                     <h4 class="mb-4 fw-semibold">Join the Fight Against Cancer</h4>
-                    <p class="">
+                    <p>
                         Cancer can be a lonely and difficult journey, but you don't have to go through it alone. At
                         HopeForCancer, we believe that sharing stories and experiences can make a world of difference in
-                        the lives of those impacted by cancer. By joining our community, you'll find hope, inspiration,
-                        and support from others who are fighting the same battle. We value respectful and focused
+                        the lives of those impacted by cancer. We value respectful and focused
                         discussions that provide accurate information and support. Let's spread knowledge and hope to
                         those affected by cancer and make a positive impact together.
                     </p>
-                    <a href="{% url 'create-post' %}" class="card-button my-3">SHARE YOUR STORY</a>
+                    <a href="{% url 'create-post' %}" class="card-button d-inline-block my-2">Create Post</a>
                 </aside>
             </div>
-            <div class="col-12 col-xl-6 order-3 order-xl-2 p-2 p-md-0">
+            <div class="col-7 col-xl-6 order-3 order-xl-2 p-2 p-md-0">
                 <!--Blog Posts section -->
                 <section id="scroll-section">
                     <!-- Blog post entries -->
