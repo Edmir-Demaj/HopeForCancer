@@ -40,7 +40,7 @@
                     <!-- Blog post entries -->
                     {% for post in all_posts %}
                     <div class="card mb-5 mx-auto" style="max-width: 24rem">
-                        <a href="{% url 'blog_page' %}"
+                        <a href="{% url 'post_detail' %}"
                             aria-label="internal link when post is clicked to bring to blog post page">
                             {% if "placeholder" in post.featured_image.url %}
                             <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
@@ -55,7 +55,7 @@
                                 <p class="card-text text-muted">Category# {{ post.category }}</p>
                                 <hr />
                                 <p class="card-text">
-                                    {{ post.content | slice:":450" | safe }}...
+                                    {{ post.content | truncatechars:180 | safe }}
                                 </p>
                             </div>
                             <div class="card-body pb-1">

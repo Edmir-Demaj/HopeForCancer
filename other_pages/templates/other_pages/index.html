@@ -205,7 +205,7 @@
                             <p class="card-text text-muted">Category# {{ post.category }}</p>
                             <hr />
                             <p class="card-text">
-                                {{ post.content | truncatechars:180 }}
+                                {{ post.content | truncatechars:180 | safe }}
                             </p>
                         </div>
                         <div class="card-body pb-1">
@@ -246,7 +246,7 @@
                                         <p class="card-text text-muted">Category# {{ post.category }}</p>
                                         <hr />
                                         <p class="card-text">
-                                            {{ post.content | truncatechars:140 }}
+                                            {{ post.content | truncatechars:140 | safe}}
                                         </p>
                                     </div>
                                     <div class="card-body pb-1">
