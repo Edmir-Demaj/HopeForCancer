@@ -359,15 +359,16 @@ h2 {
 /* End of copied code */
 
 /* --------------------------------------------------- Post Detail page */
-.image-container {
-    height: 500px;
+.image-container-details {
+    height: 25rem;
 }
 
-.image-container img {
+.details-img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
-    outline: 2px solid #010b13;
-    outline-offset: 4px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 /* --------------------------------------------------- Login page */

@@ -85,7 +85,9 @@ def update_post(request, slug):
                 post.status = 1
                 form.save()
                 messages.success(request, "Your post updated successfully!")
-                return redirect(reverse("post_detail", kwargs={'slug': post.slug}))
+                return redirect(reverse(
+                    "post_detail", kwargs={'slug': post.slug}
+                    ))
         else:
             form = UpdatePostForm(instance=post)
 

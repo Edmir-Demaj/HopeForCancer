@@ -40,7 +40,7 @@
                     <!-- Blog post entries -->
                     {% for post in all_posts %}
                     <div class="card mb-5 mx-auto" style="max-width: 24rem">
-                        <a href="{% url 'post_detail' %}"
+                        <a href="{% url 'post_detail' post.slug %}"
                             aria-label="internal link when post is clicked to bring to blog post page">
                             {% if "placeholder" in post.featured_image.url %}
                             <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
