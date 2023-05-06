@@ -38,15 +38,17 @@ class Post(models.Model):
     slug = models.SlugField(max_length=60, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
     describe_image = models.CharField(
-        max_length=70, default='A default image.',
-        help_text='Please provide a short description for your image'
+        max_length=70, default='This is a default image.',
+        help_text=(
+            'Provide a short image description by removing the default text.'
+        )
     )
     category = models.ForeignKey(
-        Category, on_delete=models.CASCADE, related_name='category_posts'
+        Category, on_delete=models.CASCADE, related_name='category_posts',
+        help_text='Select a relevant Category that aligns with your story.'
     )
     content = models.TextField(
-        max_length=500, unique=True, blank=False, null=False,
-        help_text="Share your inspiring cancer story with us. "
+        help_text='Share your inspiring cancer story with us. '
                   "Your words can make a difference in someone's life."
     )
     author = models.ForeignKey(

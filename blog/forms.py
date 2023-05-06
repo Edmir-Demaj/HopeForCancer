@@ -1,5 +1,6 @@
 from .models import Post
 from django import forms
+from django.forms import widgets
 
 
 class CreatePostForm(forms.ModelForm):
