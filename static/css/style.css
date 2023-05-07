@@ -456,7 +456,8 @@ h2 {
     color: #c93f4d !important;
 }
 
-.confirm-logout {
+.confirm-logout,
+.update {
     padding: 10px 30px !important;
     background-color: #238916;
     border: 1.5px solid #238916;

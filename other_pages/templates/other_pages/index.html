@@ -190,7 +190,7 @@
         <div class="row d-none d-xl-flex">
             {% for post in latest_posts %}
             <div class="col-4">
-                <div class="card mb-5 mx-auto" style="max-width: 23rem">
+                <div class="card mb-5 mx-auto" style="max-width: 23rem; ">
                     <a href="{% url 'post_detail' post.slug %}"
                         aria-label="internal link when post is clicked to bring to blog post page">
                         {% if "placeholder" in post.featured_image.url %}

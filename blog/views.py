@@ -73,23 +73,20 @@ def update_post(request, slug):
     Users can update their blog post that they have created
     """
     post = get_object_or_404(Post, slug=slug)
-    if post.author != request.user:
-        messages.error(request, 'You are not authorized to edit this post.')
-        return redirect('post_detail', slug=slug)
-        if request.method == "POST":
-            form = UpdatePostForm(request.POST, request.FILES, instance=post)
-            if form.is_valid():
-                post = form.save(commit=False)
-                post.author = request.user
-                post.slug = slugify(post.title)
-                post.status = 1
-                form.save()
-                messages.success(request, "Your post updated successfully!")
-                return redirect(reverse(
-                    "post_detail", kwargs={'slug': post.slug}
-                    ))
-        else:
-            form = UpdatePostForm(instance=post)
+    if request.method == "POST":
+        form = UpdatePostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.slug = slugify(post.title)
+            post.status = 1
+            form.save()
+            messages.success(request, "Your post updated successfully!")
+            return redirect(reverse(
+                "post_detail", kwargs={'slug': post.slug}
+                ))
+    else:
+        form = UpdatePostForm(instance=post)
 
     context = {"update_form": form, "post": post}
     return render(request, 'blog/update_post.html', context)

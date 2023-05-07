@@ -41,9 +41,10 @@
                     <small class="text-muted me-4">Posted by: {{ post.author }}</small>
                     <small class="text-muted">{{ post.created_date }}</small>
                 </div>
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated and post.author == request.user%}
                 <div class="card-footer fs-5">
-                    <a href="{% url 'update-post' post.slug %}" class="create-post-btn  mt-4 d-inline-block">Edit
+                    <a href="{% url 'update-post' post.slug %}"
+                        class="create-post-btn  mt-4 d-inline-block hvr-float-shadow">Edit
                         Post</a>
                 </div>
                 {% endif %}
