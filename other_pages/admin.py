@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Value
 
-# Register your models here.
+
+@admin.register(Value)
+class ValueAdmin(admin.ModelAdmin):
+    list_display = ('title', 'featured_image', 'content')
+    search_fields = ('title', 'content')
