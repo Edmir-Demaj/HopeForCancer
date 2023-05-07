@@ -215,7 +215,26 @@
                             </p>
                         </div>
                         <div class="card-body pb-1">
-                            <span class="me-4"><i class="fa-regular fa-heart"></i> 0</span>
+                            <strong class="me-4">
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="post_likes" value="{{post.slug}}"
+                                        class="btn-like hvr-icon-pulse"><i
+                                            class="fa-solid fa-thumbs-up hvr-icon"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="post_likes" value="{{post.slug}}"
+                                        class="btn-like hvr-icon-pulse"><i
+                                            class="fa-regular fa-heart hvr-icon"></i></button>
+                                    {% endif %}
+                                </form>
+                                {% else %}
+                                <span><i class="far fa-heart"></i></span>
+                                {% endif %}
+                                <!-- The number of likes goes before the closing strong tag -->
+                                <span>{{ post.number_of_likes }} </span>
+                            </strong>
                             <span><i class="fa-regular fa-comment"></i> 0</span>
                         </div>
                         <div class="card-footer">

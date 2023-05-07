@@ -380,14 +380,14 @@ h2 {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #6a121b;
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #f0031b;
     background: transparent;
     border: none;
 }
