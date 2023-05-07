@@ -20,10 +20,10 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <a href="{% url 'index' %}" class="cancel-logout me-3" role="button"
+        <a href="{% url 'index' %}" class="cancel-btn me-3" role="button"
           aria-label="button not to logout from site, brings back to blog page">No, I don't</a>
 
-        <button class="confirm-logout" type="submit"
+        <button class="confirm-btn" type="submit"
           aria-label="button to logout from the site">{% trans "Yes, I confirm" %}</button>
       </form>
     </div>

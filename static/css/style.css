@@ -438,8 +438,8 @@ h2 {
     line-height: 2.2rem;
 }
 
-/* Logout page */
-.cancel-logout {
+/* --------------------------------------------------- Logout page */
+.cancel-btn {
     padding: 13px 46px !important;
     background-color: #c93f4d;
     border: 1.5px solid #c93f4d;
@@ -451,13 +451,13 @@ h2 {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.cancel-logout:hover {
+.cancel-btn:hover {
     background-color: #F9F4FB !important;
     color: #c93f4d !important;
 }
 
-.confirm-logout,
-.update {
+.confirm-btn,
+.update-btn {
     padding: 10px 30px !important;
     background-color: #238916;
     border: 1.5px solid #238916;
@@ -469,12 +469,13 @@ h2 {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.confirm-logout:hover {
+.confirm-btn:hover,
+.update-btn:hover {
     background-color: #F9F4FB !important;
     color: #238916 !important;
 }
 
-/* Create post page */
+/* --------------------------------------------------- Create Post page */
 #create-post {
     border-radius: 20px;
     background-color: #e5e3fa;
@@ -487,6 +488,19 @@ input[type="file"] {
 .asteriskField {
     color: #a30b1b;
     padding-left: 5px;
+}
+
+/* --------------------------------------------------- Delete Post page */
+.delete-post-btn {
+    background-image: radial-gradient(100% 100% at 100% 0, #ffa8a8 20%, #a30b1b 100%);
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #f7f7f7;
+    border: none;
+    border-radius: 20px;
+    line-height: 2.2rem;
+    padding: 0 30px;
 }
 
 /* --------------------------------------------------- Media queries */

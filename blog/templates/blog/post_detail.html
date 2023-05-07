@@ -44,10 +44,10 @@
                 {% if user.is_authenticated and post.author == request.user%}
                 <div class="card-footer fs-5">
                     <a href="{% url 'update-post' post.slug %}"
-                        class="create-post-btn  mt-4 d-inline-block hvr-float-shadow">Edit
+                        class="create-post-btn me-5 mt-4 d-inline-block hvr-float-shadow">Edit
                         Post</a>
                     <a href="{% url 'delete-post' post.slug %}"
-                        class="create-post-btn  mt-4 d-inline-block hvr-float-shadow">Delete
+                        class="delete-post-btn  mt-4 d-inline-block hvr-float-shadow">Delete
                         Post</a>
                 </div>
                 {% endif %}

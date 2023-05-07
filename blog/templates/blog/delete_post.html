@@ -8,18 +8,18 @@
 <div class="container-fluid my-5">
   <div class="row d-flex justify-content-center align-items-center text-center">
     <div class="col-12 col-lg-6">
-      <h1 class="fw-semibold fs-3">
-        Do you confirm that you wish to <span class="orange-text"> Delete</span>your post
-        named:"{{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}" ?
-      </h1>
+      <h3 class="fw-semibold mb-5">
+        Do you confirm that you wish to <span class="orange-text"> Delete</span> your post
+        named: "{{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}" ?
+      </h3>
       <!-- Logout form -->
       <form method="POST" action="{% url 'delete-post' post.slug %}">
         {% csrf_token %}
-        <h3 class="mt-5"> Hey {{ user }}, <br>Are you sure you want to delete your post named: "{{ post.title }}"?</h3>
-        <a href="{% url 'post_detail' post.slug %}" class="cancel-logout me-3" role="button"
+        <a href="{% url 'post_detail' post.slug %}" class="cancel-btn me-3" role="button"
           aria-label="button not to logout from site, brings back to blog page">No, I don't</a>
-        <button type="submit" class="cancel-logout me-3"
-          aria-label="button to delete post and bring back to blog page">Yes, I confirm</button>
+        <button type="submit" class="confirm-btn me-3"
+          aria-label="button to delete post and bring back to blog page">Yes, I
+          confirm</button>
       </form>
     </div>
   </div>
