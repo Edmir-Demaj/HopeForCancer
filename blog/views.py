@@ -5,6 +5,8 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
+from django.utils.html import format_html
+from django.http import HttpResponseRedirect
 from datetime import datetime, timedelta
 from .models import *
 from .forms import *
@@ -112,3 +114,26 @@ class DeletePost(generic.DeleteView):
         """
         slug = self.kwargs.get('slug')
         return reverse("blog_page")
+
+
+class PostLike(generic.View):
+    """
+    View to make possible for users to like a post
+    """
+    def post(self, request, slug, *args):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            message = format_html(
+                'You disliked this post. '
+                '<i class="fa-regular fa-face-frown"></i>'
+            )
+        else:
+            post.likes.add(request.user)
+            message = format_html(
+                'You liked this post. '
+                '<i class="fa-regular fa-face-smile"></i>'
+            )
+        messages.success(request, message)
+        return HttpResponseRedirect(reverse("post_detail", args=[slug]))
