@@ -12,3 +12,12 @@ def index(request):
     context = {'latest_posts': latest_posts}
     template = 'other_pages/index.html'
     return render(request, template, context)
+
+
+def about_page(request):
+    """
+    When this function is called it takes the request and return the
+    response which will render about page.
+    """
+    template = 'other_pages/about.html'
+    return render(request, template)
