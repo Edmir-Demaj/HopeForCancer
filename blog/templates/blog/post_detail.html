@@ -27,7 +27,9 @@
                     <br>
                     <small class="text-muted"><strong>Created on:</strong> {{ post.created_date }}</small>
                     <br>
-                    {% if post.updated_date != post.created_date %}
+                    {% if post.updated_date == post.created_date %}
+                    <small class="text-muted"><strong>Created on:</strong> {{ post.created_date }}</small>
+                    {% elif post.updated_date != post.created_date %}
                     <small class="text-muted"><strong>Updated on:</strong> {{ post.updated_date }}</small>
                     {% endif %}
                 </div>

@@ -190,6 +190,10 @@
         </div>
         <!-- Code to display 3 cards on screens > 1200px-->
         <div class="row d-none d-xl-flex">
+            {% if latest_posts|length == 0 %}
+            <h3 class="fw-semibold text-center"><span class="orange-text">Unfortunately,</span> there are currently no
+                posts available. <br> Be the first to <span class="orange-text">create a post!</span> </h3>
+            {% else %}
             {% for post in latest_posts %}
             <div class="col-4">
                 <div class="card mb-3 mx-auto" style="max-width: 23rem; ">
@@ -207,7 +211,7 @@
                             <p class="card-text text-muted">Category# {{ post.category }}</p>
                             <hr class="hr" />
                             <p class="card-text">
-                                {{ post.content | truncatechars:150 | safe  | capfirst }}
+                                {{ post.content | truncatechars:150 | safe | capfirst }}
                             </p>
                         </div>
                         <div class="card-body pb-1">
@@ -222,6 +226,7 @@
                 </div>
             </div>
             {% endfor %}
+            {% endif %}
             <div class="text-center">
                 <button type="button" class="info-btn my-4">
                     <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">READ MORE</a>
@@ -234,6 +239,12 @@
                 <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
                     data-bs-touch="true">
                     <div class="carousel-inner">
+                        {% if latest_posts|length == 0 %}
+                        <h3 class="fw-semibold text-center"><span class="orange-text">Unfortunately,</span> there are
+                            currently no
+                            posts available. <br> Be the first to <span class="orange-text">create a
+                                post!</span> </h3>
+                        {% else %}
                         {% for post in latest_posts %}
                         <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
                             <div class="card mb-3 mx-auto" style="max-width: 23rem">
@@ -268,6 +279,7 @@
                             </div>
                         </div>
                         {% endfor %}
+                        {% endif %}
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel"
                         data-bs-slide="prev">
