@@ -201,13 +201,13 @@
                         {% else %}
                         <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.describe_image }}" />
                         {% endif %}
-                        <div class="card-body pb-0">
+                        <div class="card-body card-context pb-0">
                             <h4 class="card-title post-title fw-bold fs-5">
-                                {{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}</h4>
+                                {{ post.title | capfirst }}</h4>
                             <p class="card-text text-muted">Category# {{ post.category }}</p>
-                            <hr />
+                            <hr class="hr" />
                             <p class="card-text">
-                                {{ post.content | truncatechars:180 | safe }}
+                                {{ post.content | truncatechars:150 | safe  | capfirst }}
                             </p>
                         </div>
                         <div class="card-body pb-1">
@@ -224,7 +224,7 @@
             {% endfor %}
             <div class="text-center">
                 <button type="button" class="info-btn my-4">
-                    <a href="{% url 'blog_page' %}" aria-label="buton to bring to blog page">READ MORE</a>
+                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">READ MORE</a>
                 </button>
             </div>
         </div>
@@ -246,7 +246,7 @@
                                     <img src="{{ post.featured_image.url }}" class="card-img-top"
                                         alt="{{ post.describe_image }}" />
                                     {% endif %}
-                                    <div class="card-body pb-0">
+                                    <div class="card-body pb-0" style="height: 16.5rem">
                                         <h4 class="card-title post-title fw-bold fs-5">
                                             {{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}
                                         </h4>
@@ -283,7 +283,7 @@
             </div>
             <div class="text-center">
                 <button type="button" class="info-btn my-4">
-                    READ MORE
+                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">READ MORE</a>
                 </button>
             </div>
         </div>
