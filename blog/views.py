@@ -90,3 +90,22 @@ def update_post(request, slug):
 
     context = {"update_form": form, "post": post}
     return render(request, 'blog/update_post.html', context)
+
+
+class DeletePost(generic.DeleteView):
+    """
+    Class to allow to delete a post
+    """
+    model = Post
+    template_name = "blog/delete_post.html"
+
+    def delete(self, request, *args, **kwargs):
+        return super(DeletePost, self).delete(request, *args, **kwargs)
+
+    def get_success_url(self):
+        """
+        Set the reverse url for the successful delete
+        of the post to the database
+        """
+        slug = self.kwargs.get('slug')
+        return reverse("blog_page")

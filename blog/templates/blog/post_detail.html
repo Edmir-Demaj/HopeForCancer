@@ -46,6 +46,9 @@
                     <a href="{% url 'update-post' post.slug %}"
                         class="create-post-btn  mt-4 d-inline-block hvr-float-shadow">Edit
                         Post</a>
+                    <a href="{% url 'delete-post' post.slug %}"
+                        class="create-post-btn  mt-4 d-inline-block hvr-float-shadow">Delete
+                        Post</a>
                 </div>
                 {% endif %}
             </div>
