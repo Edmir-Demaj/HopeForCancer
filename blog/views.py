@@ -94,7 +94,7 @@ def update_post(request, slug):
 
 class DeletePost(generic.DeleteView):
     """
-    Class to allow to delete a post
+    View to allow users to delete a post
     """
     model = Post
     template_name = "blog/delete_post.html"
@@ -104,8 +104,7 @@ class DeletePost(generic.DeleteView):
 
     def get_success_url(self):
         """
-        Set the reverse url for the successful delete
-        of the post to the database
+        Reverse Url after post is deleted
         """
         slug = self.kwargs.get('slug')
         return reverse("blog_page")
