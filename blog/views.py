@@ -31,9 +31,9 @@ def postDetail(request, slug):
     comments = Comment.objects.filter(post=post).order_by('created_date')
 
     context = {
-        "post": post,
-        "comments": comments,
-        "user": request.user,
+        'post': post,
+        'comments': comments,
+        'user': request.user,
     }
     return render(request, "blog/post_detail.html", context)
 
@@ -46,8 +46,9 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     model = Post
     form_class = CreatePostForm
     template_name = "blog/create_post.html"
-    # success_message = ("Great job! You have successfully added a new post "
-    #                    "and it is now pending approval.")
+    success_message = (
+        "Post added successfully! Awaiting approval from Admin."
+    )
 
     def get_success_url(self):
         """
@@ -85,6 +86,8 @@ def update_post(request, slug):
             return redirect(reverse(
                 "post_detail", kwargs={'slug': post.slug}
                 ))
+        else:
+            messages.error(request, "Failed to update the post.")
     else:
         form = UpdatePostForm(instance=post)
 
@@ -100,6 +103,7 @@ class DeletePost(generic.DeleteView):
     template_name = "blog/delete_post.html"
 
     def delete(self, request, *args, **kwargs):
+        messages.success(request, "Post deleted successfully.")
         return super(DeletePost, self).delete(request, *args, **kwargs)
 
     def get_success_url(self):
