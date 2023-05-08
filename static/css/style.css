@@ -39,6 +39,10 @@ a {
 
 p {
     font-family: 'Merriweather', serif;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 32px;
 }
 
 /* --------------------------------------------------- Navbar styles */
