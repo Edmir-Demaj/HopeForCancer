@@ -8,7 +8,7 @@
   <h1 class="fw-bold text-white mx-2">
     What is<span class="orange-text"> Cancer?</span>
   </h1>
-  <p class="text-white w-50 lead">Find out more about different types of cancers,
+  <p class="text-white helper-text lead">Find out more about different types of cancers,
     prevention, br early detection and cancer treatment.</p>
 </section>
 <!-- Hero section info page end -->
@@ -19,7 +19,7 @@
     <h2 class="fw-bold mb-5">
       Key<span class="orange-text"> Cancer Facts</span>
     </h2>
-    <div class="mb-5">
+    <div class="mb-5 px-2 px-sm-0">
       <img src="{% static 'images/info_page/info_graphics.webp' %}" class="cancer-info-img"
         alt="An image displaying information graphics about cancer worldwide.">
     </div>
@@ -39,13 +39,75 @@
         systems or release hormones that may affect body function.
       </p>
       <button type="button" class="info-btn my-4">
-        <a href="https://www.medicalnewstoday.com/articles/323648" target="_blank"
-          aria-label="button to bring to external link, medical news today,to learn more about what is cancer.Open in a new tab.">READ
+        <a href="https://www.cancer.gov/about-cancer/understanding/what-is-cancer" target="_blank"
+          aria-label="button to bring to external link, National Cancer Institute,to learn more about what is cancer.Open in a new tab.">READ
           MORE</a>
       </button>
     </div>
   </div>
 </div>
-
 <!--  What is cancer section end -->
+
+<article>
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="fw-bold mb-5">
+        Cancer<span class="orange-text"> types</span>
+      </h2>
+      <div class="mb-5 px-2 px-sm-0">
+        <img src="{% static 'images/info_page/types_of_cancer.webp' %}" class="cancer-info-img"
+          alt="An image displaying information graphics about cancer worldwide.">
+      </div>
+    </div>
+  </div>
+</article>
+
+<!--  Causes of cancer section start -->
+<section>
+  <div class="container py-4 mb-5" id="info-container">
+    <div class="row text-center">
+      <h2 class="fw-bold mb-3">
+        <span class="orange-text">Causes</span> of cancer
+      </h2>
+      <p class="text-start info-text">
+        Cancers can be caused by a number of different factors the most important are listed below. It is important to
+        remember that, while some factors cannot be modified, around one third of cancer cases can be prevented by
+        reducing behavioural and dietary risks.
+      </p>
+    </div>
+    <div class="row mt-4 p-0 p-lg-4 pb-lg-0">
+      <div class="col-12 col-lg-6">
+        <h4>Modifiable risk factors include:</h4>
+        <ol class="text-start">
+          <li>Alcohol</li>
+          <li>Being overweight or obese</li>
+          <li>Diet and nutrition</li>
+          <li>Physical activity</li>
+          <li>Tobacco</li>
+          <li>Work place hazards</li>
+          <li>Ionising radiation</li>
+          <li>Infection</li>
+        </ol>
+      </div>
+      <div class="col-12 col-lg-6">
+        <h4>Non-Modifiable risk factors include:</h4>
+        <ol class="text-start">
+          <li>Age</li>
+          <li>Cancer-causing substances</li>
+          <li>Genetics</li>
+          <li>The immune system</li>
+        </ol>
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="button" class="info-btn mb-2">
+        <a href="https://www.cancer.gov/about-cancer/causes-prevention/risk" target="_blank"
+          aria-label="button to bring to external link, National Cancer Institute,to learn more about causes of cancer.Open in a new tab.">READ
+          MORE</a>
+      </button>
+    </div>
+
+  </div>
+</section>
+<!--  Causes of cancer section end -->
 {% endblock content %}

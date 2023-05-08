@@ -334,7 +334,7 @@ h2 {
 }
 
 .cancer-info-img {
-    width: 90%;
+    width: 80%;
     object-fit: cover;
     border: 1px solid #a3a3a3;
     border-radius: 10px;
@@ -348,7 +348,10 @@ h2 {
 
 #info-container {
     background-color: #ffffff;
-    height: 20rem;
+}
+
+ol li {
+    list-style-type: decimal;
 }
 
 /* --------------------------------------------------- Blog page styles */
@@ -614,6 +617,10 @@ input[type="file"] {
     .cta {
         width: 500px;
     }
+
+    .cancer-info-img {
+        width: 100%;
+    }
 }
 
 /* Small screen media queries */
@@ -647,4 +654,5 @@ input[type="file"] {
     .card-context {
         height: 10rem;
     }
+
 }
