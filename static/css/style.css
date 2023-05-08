@@ -299,6 +299,30 @@ h2 {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+.img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.img-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+.img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
 /* --------------------------------------------------- Blog page styles */
 .blog-subtitle {
     max-width: 900px;

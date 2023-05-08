@@ -28,7 +28,6 @@
           alt="Image of different color ribbons to raise cancer awareness." />
       </div>
     </div>
-    <div class="col-12 col-6"></div>
   </div>
 </section>
 <!-- Our mission section end -->
@@ -37,15 +36,15 @@
 <section>
   <div class="container">
     <div class="row">
-      <h2 class="fw-bold fs-3 mt-4">
+      <h2 class="fw-bold fs-3 mt-4 mb-0">
         What are our <span class="orange-text">values?</span> </h2>
-      <div class="row my-5">
+      <div class="row mt-5">
         <!-- Values entry goes here -->
         {% for value in values %}
         <div class="col-12 col-md-5 mb-3 mb-md-5">
           <img src="{{ value.featured_image.url }}" class="card-about-img" alt="{{ value.image_description }}">
         </div>
-        <div class="col-12 col-md-7 ps-4 px-2 mb-5">
+        <div class="col-12 col-md-7 ps-4 px-2 mb-5 mb-md-0">
           <h4 class="fw-semibold">{{ value.title | safe | capfirst}}</h4>
           <p>
             {{ value.content | safe }}
@@ -57,4 +56,53 @@
   </div>
 </section>
 <!-- Our values section end -->
+<hr id="about-hr">
+<!-- Our Team section start -->
+<section>
+  <div class="container mb-4">
+    <h2 class="fw-bold fs-3 my-4">
+      Meet our <span class="orange-text">Team</span></h2>
+    <div class="row card-info p-2">
+      <div class="col-12 col-lg-6 p-1 pe-lg-5 mb-3">
+        <p class="">
+          Welcome to HopeForCancer, behind this web app is <strong>Edmir
+            Demaj</strong>, a Full Stack
+          software development student at
+          Code Institute.
+          Edmir chose to create this project as part of his portfolio because he understands the sensitivity and
+          importance of cancer awareness. Having lost his father to cancer in November of last year, Edmir is driven to
+          raise awareness about this disease and provide resources for those who are affected by it. With HopeForCancer,
+          our goal is to help individuals understand cancer better and empower them to make informed decisions about
+          their health.
+        </p>
+        <div class="div">
+          <h4 class="fw-bold"> Follow Edmir on:</h4>
+          <div class="my-2">
+            <!-- External links & copyrights -->
+            <span><a class="hvr-icon-grow fs-4" href="https://github.com/Edmir-Demaj" target="_blank"
+                aria-label="About us page external link to  author Github, opens in a new tab">
+                <i class="fa-brands fa-github hvr-icon "></i></a>
+            </span>
+            <span><a class="hvr-icon-grow px-5 fs-4"
+                href="https://www.linkedin.com/in/edmir-demaj-full-stack-developer/" target="_blank"
+                aria-label="About us page external link to author Linkedin, opens in a new tab"><i
+                  class="fa-brands fa-linkedin hvr-icon"></i></a>
+            </span>
+            <span><a class="hvr-icon-grow fs-4" href="https://edmir-demaj.github.io/portfolio-Edmir-Demaj/index.html"
+                target="_blank" aria-label="About us page external link to author Portfolio, opens in a new tab"><i
+                  class="fas fa-briefcase hvr-icon"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 p-0 mb-4 text-center img-container">
+        <img src="{% static 'images/about/edmir_pic.webp' %}" class="card-img" style="height: 22rem;"
+          alt="Image of author of this web app." />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Team section end -->
 {% endblock content %}
