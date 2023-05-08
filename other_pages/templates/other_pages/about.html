@@ -12,11 +12,11 @@
   </div>
   <div class="container">
     <div class="row card-info p-2">
-      <div class="col-12 col-lg-6 p-0 pe-lg-5">
+      <div class="col-12 col-lg-6 p-0 pe-lg-5 mb-3">
         <h2 class="fw-bold fs-3">
           Our mission is to raise <span class="orange-text">cancer awareness</span>
         </h2>
-        <p class="mb-4 m-0">
+        <p class="mt-3">
           Our mission is to increase cancer awareness and education, empower individuals to take control of their
           health, and provide support to those affected by cancer. We strive to do this by providing accessible and
           reliable information, fostering a sense of community and support, and promoting early detection and
@@ -24,7 +24,7 @@
         </p>
       </div>
       <div class="col-12 col-lg-6 p-0 mb-4">
-        <img src="{% static 'images/about/cancer_awareness.webp' %}" class="card-img"
+        <img src="{% static 'images/about/cancer_awareness.webp' %}" class="card-img" style="height: 19rem;"
           alt="Image of different color ribbons to raise cancer awareness." />
       </div>
     </div>
@@ -38,23 +38,21 @@
   <div class="container">
     <div class="row">
       <h2 class="fw-bold fs-3 mt-4">
-        What are our <span class="orange-text">values?</span>
-        <div class="row my-5">
-          <!-- Values entry goes here -->
-          {% for value in values %}
-          <div class="col-12 col-md-5 mb-4">
-            <img src="{{ value.featured_image.url }}" class="card-about-img" alt="{{ value.image_description }}">
-          </div>
-          <div class="col-12 col-md-7">
-            <h4>{{ value.title | safe | capfirst}}</h4>
-            <p class="">
-              {{ value.content | safe }}
-            </p>
-          </div>
-          {% endfor %}
+        What are our <span class="orange-text">values?</span> </h2>
+      <div class="row my-5">
+        <!-- Values entry goes here -->
+        {% for value in values %}
+        <div class="col-12 col-md-5 mb-3 mb-md-5">
+          <img src="{{ value.featured_image.url }}" class="card-about-img" alt="{{ value.image_description }}">
         </div>
-
-      </h2>
+        <div class="col-12 col-md-7 ps-4 px-2 mb-5">
+          <h4 class="fw-semibold">{{ value.title | safe | capfirst}}</h4>
+          <p>
+            {{ value.content | safe }}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
