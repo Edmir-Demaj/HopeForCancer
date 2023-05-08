@@ -26,3 +26,12 @@ def about_page(request):
         'values': values,
     }
     return render(request, template, context)
+
+
+def cancer_info_page(request):
+    """
+    When this function is called it takes the request and return the
+    response which will render cancer information page.
+    """
+    template = 'other_pages/cancer_info.html'
+    return render(request, template)
