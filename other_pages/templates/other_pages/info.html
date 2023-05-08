@@ -16,7 +16,7 @@
 <!-- What is cancer section start -->
 <div class="container">
   <div class="row text-center">
-    <h2 class="fw-bold mb-5">
+    <h2 class="fw-bold mb-4">
       Key<span class="orange-text"> Cancer Facts</span>
     </h2>
     <div class="mb-5 px-2 px-sm-0">
@@ -48,19 +48,28 @@
 </div>
 <!--  What is cancer section end -->
 
-<article>
+<!-- Cancer types section start -->
+<section>
   <div class="container">
     <div class="row text-center">
-      <h2 class="fw-bold mb-5">
+      <h2 class="fw-bold mb-4">
         Cancer<span class="orange-text"> types</span>
       </h2>
-      <div class="mb-5 px-2 px-sm-0">
+      <div class="mb-4 px-2 px-sm-0">
         <img src="{% static 'images/info_page/types_of_cancer.webp' %}" class="cancer-info-img"
           alt="An image displaying information graphics about cancer worldwide.">
       </div>
+      <div class="text-center mb-5">
+        <button type="button" class="info-btn">
+          <a href="https://www.cancer.gov/types" target="_blank"
+            aria-label="button to bring to external link, National Cancer Institute,to learn more about cancer types.Open in a new tab.">READ
+            MORE</a>
+        </button>
+      </div>
     </div>
   </div>
-</article>
+</section>
+<!-- Cancer types section end -->
 
 <!--  Causes of cancer section start -->
 <section>
@@ -106,8 +115,72 @@
           MORE</a>
       </button>
     </div>
-
   </div>
 </section>
 <!--  Causes of cancer section end -->
+
+<!-- Early detection section start -->
+<div class="container">
+  <div class="row mb-5 py-4" id="info-container">
+    <div class="text-center col-12 col-lg-6">
+      <h2 class="fw-bold text-center pt-3">
+        <span class="orange-text">Early detection</span> of cancer
+      </h2>
+      <p class="text-start info-text my-3 ps-0 ps-md-3">
+        Some ways to detect cancer early include:
+      </p>
+      <div>
+        <ol class="text-start mb-0 ps-4 ps-lg-5">
+          <li><strong>Regular screening tests:</strong>Depending on your age and risk factors, your doctor may recommend
+            regular screening tests, such as mammograms, colonoscopies, or Pap tests.</li>
+          <li><strong>Know your body:</strong> Be aware of any changes in your body, such as new lumps, moles, or
+            changes
+            in bowel habits.</li>
+          <li><strong>Talk to your doctor:</strong>If you have any concerns or questions about your health, talk to your
+            doctor. They can help determine if any further testing or screenings are necessary.</li>
+          <li><strong>Skin checks:</strong>Regular skin checks can help detect skin cancer early. You can perform
+            self-examinations at home or see a dermatologist for a full-body exam. Be aware of any new moles, growths,
+            or
+            changes in existing moles.</li>
+        </ol>
+      </div>
+      <button type="button" class="info-btn my-4">
+        <a href="https://www.cancer.gov/research/areas/diagnosis#the-importance-of-cancer-detection-and-diagnosis-research"
+          target="_blank"
+          aria-label="button to bring to external link, National Cancer Institute,to learn more about early detection of cancer.Open in a new tab.">READ
+          MORE</a>
+      </button>
+    </div>
+    <div class="text-center col-12 col-lg-6">
+      <h2 class="fw-bold text-center pt-3">
+        Ways to <span class="orange-text">Prevent</span> cancer
+      </h2>
+      <p class="text-start info-text my-3 ps-0 ps-md-3">
+        Some ways to prevent cancer include:
+      </p>
+      <div class="list-container">
+        <ol class="text-start mb-0 ps-4 ps-lg-5">
+          <li><strong>Maintain a healthy diet:</strong>Eating a diet that is rich in fruits, vegetables, whole grains,
+            and
+            lean protein can help reduce the risk of cancer.</li>
+          <li><strong>Exercise regularly:</strong> Regular physical activity can help maintain a healthy weight, reduce
+            inflammation, and lower the risk of cancer.</li>
+          <li><strong>Avoid tobacco and limit alcohol consumption:</strong>Tobacco use and excessive alcohol consumption
+            are known to increase the risk of cancer.</li>
+          <li><strong>Protect your skin:</strong>Avoid excessive sun exposure and use sunscreen and protective clothing
+            when you are outside.</li>
+          <li><strong>Get vaccinated:</strong>Some viruses, such as HPV and hepatitis B, can increase the risk of
+            certain
+            cancers. Getting vaccinated can help reduce the risk.</li>
+        </ol>
+      </div>
+      <button type="button" class="info-btn my-4">
+        <a href="https://www.cancer.gov/about-cancer/causes-prevention/patient-prevention-overview-pdq" target="_blank"
+          aria-label="button to bring to external link, National Cancer Institute,to learn more about ways to prevent cancer.Open in a new tab.">READ
+          MORE</a>
+      </button>
+    </div>
+  </div>
+</div>
+<!--  Early detection section end -->
 {% endblock content %}
