@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from blog.models import Post
+from .models import Value
 
 
 def index(request):
@@ -19,5 +20,10 @@ def about_page(request):
     When this function is called it takes the request and return the
     response which will render about page.
     """
+    values = Value.objects.all()
     template = 'other_pages/about.html'
-    return render(request, template)
+    context = {
+        'values': values,
+    }
+    return render(request, template, context)
+

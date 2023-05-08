@@ -3,6 +3,7 @@
 {% load static %}
 {% block content %}
 
+<!-- Our mission section start -->
 <section>
   <div class="div">
     <h1 class="fw-bold text-center my-5">
@@ -30,19 +31,34 @@
     <div class="col-12 col-6"></div>
   </div>
 </section>
+<!-- Our mission section end -->
 <hr id="about-hr">
-
+<!-- Our values section start -->
 <section>
   <div class="container">
     <div class="row">
-      <h2 class="fw-bold fs-3 my-3">
+      <h2 class="fw-bold fs-3 mt-4">
         What are our <span class="orange-text">values?</span>
-
+        <div class="row my-5">
+          <!-- Values entry goes here -->
+          {% for value in values %}
+          <div class="col-12 col-md-4 mb-4">
+            <img src="{{ value.featured_image.url }}" class="card-img"
+              alt="Image of different color ribbons to raise cancer awareness." />
+          </div>
+          <div class="col-12 col-md-8">
+            <p class="lead">
+              {{ value.content | safe }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
 
       </h2>
     </div>
   </div>
 </section>
+<!-- Our values section end -->
 
 
 
