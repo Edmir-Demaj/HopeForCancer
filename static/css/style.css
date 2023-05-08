@@ -115,7 +115,7 @@ header {
 /* --------------------------------------------------- Footer styles */
 footer {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url(/static/images/base_images/footer_img.webp) center center/ cover no-repeat;
+        url(./images/base_images/footer_img.webp) center center/ cover no-repeat;
     min-height: 350px;
     margin-top: auto;
 }
