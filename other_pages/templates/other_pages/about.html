@@ -43,8 +43,8 @@
           <!-- Values entry goes here -->
           {% for value in values %}
           <div class="col-12 col-md-4 mb-4">
-            <img src="{{ value.featured_image.url }}" class="card-img"
-              alt="Image of different color ribbons to raise cancer awareness." />
+            <img src="{{ value.featured_image.url }}" class="card-img" alt="{{ value.image_description }}">
+
           </div>
           <div class="col-12 col-md-8">
             <p class="lead">
