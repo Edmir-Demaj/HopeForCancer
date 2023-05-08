@@ -2,6 +2,7 @@
 <!-- url paths imported to add active class -->
 {% url 'index' as index %}
 {% url 'about' as about %}
+{% url 'info' as info %}
 {% url 'blog_page' as blog_page %}
 {% url 'account_login' as login %}
 {% url 'account_signup' as signup %}
@@ -76,8 +77,8 @@
                                     href="{% url 'about' %}" aria-label="navbar link to about us page">About us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" href="{% url 'cancer-info' %}"
-                                    aria-label="navbar link to cancer information page">Cancer
+                                <a class="nav-link hvr-underline-from-center {% if request.path == info %} active {% endif %}"
+                                    href="{% url 'info' %}" aria-label="navbar link to cancer information page">Cancer
                                     information</a>
                             </li>
                             <li class="nav-item">

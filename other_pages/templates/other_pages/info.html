@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Cancer Info{% endblock title %}
+{% load static %}
+{% block content %}
+
+<!-- Hero section info page start -->
+<section id="info-hero-section" class="text-center d-flex flex-column align-items-center justify-content-center mb-5">
+  <h1 class="fw-bold text-white mx-2">
+    What is<span class="orange-text"> Cancer?</span>
+  </h1>
+  <p class="text-white w-50 lead">Find out more about different types of cancers,
+    prevention, br early detection and cancer treatment.</p>
+</section>
+<!-- Hero section info page end -->
+
+<!-- What is cancer section start -->
+<div class="container">
+  <div class="row text-center">
+    <h2 class="fw-bold mb-5">
+      Key<span class="orange-text"> Cancer Facts</span>
+    </h2>
+    <div class="mb-4">
+      <img src="{% static 'images/info_page/info_graphics.webp' %}" class="cancer-info-img"
+        alt="An image displaying information graphics about cancer worldwide.">
+    </div>
+  </div>
+</div>
+
+<!--  What is cancer section end -->
+{% endblock content %}
