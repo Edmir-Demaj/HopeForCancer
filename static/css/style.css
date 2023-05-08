@@ -354,6 +354,10 @@ ol li {
     list-style-type: decimal;
 }
 
+#oredered-text li {
+    list-style-type: disc;
+}
+
 /* --------------------------------------------------- Blog page styles */
 .blog-subtitle {
     max-width: 900px;
