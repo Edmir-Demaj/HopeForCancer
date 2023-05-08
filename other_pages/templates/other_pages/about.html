@@ -44,11 +44,11 @@
           {% for value in values %}
           <div class="col-12 col-md-4 mb-4">
             <img src="{{ value.featured_image.url }}" class="card-img" alt="{{ value.image_description }}">
-
           </div>
           <div class="col-12 col-md-8">
-            <p class="lead">
-              {{ value.content | safe }}
+            <h4>{{ value.title | safe | capfirst}}</h4>
+            <p class="">
+              {{ value.content }}
             </p>
           </div>
           {% endfor %}
@@ -59,8 +59,4 @@
   </div>
 </section>
 <!-- Our values section end -->
-
-
-
-
 {% endblock content %}

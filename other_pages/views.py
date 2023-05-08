@@ -26,4 +26,3 @@ def about_page(request):
         'values': values,
     }
     return render(request, template, context)
-
