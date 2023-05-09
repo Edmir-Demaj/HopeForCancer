@@ -47,8 +47,6 @@ p {
 
 /* --------------------------------------------------- Navbar styles */
 header {
-    overflow-x: hidden;
-    width: 100vw;
     position: sticky;
     top: 0;
     left: 0;
@@ -116,11 +114,9 @@ header {
 footer {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://res.cloudinary.com/dxlqthpli/image/upload/v1683567179/static/images/base_images/footer_img.da8f2c0ff5b4.webp") center center/cover no-repeat;
-    min-height: 350px;
+    min-height: 300px;
     margin-top: auto;
 }
-
-
 
 #footer-links {
     margin: 0;
@@ -134,7 +130,6 @@ footer address {
 }
 
 /* --------------------------------------------------- Home page styles */
-
 /* Hero section */
 #carouselExampleInterval img {
     height: calc(100vh - 110px);
@@ -482,7 +477,6 @@ ol li {
 }
 
 /* --------------------------------------------------- Login page */
-
 #login-image {
     width: 100%;
     height: 100%;
@@ -668,5 +662,4 @@ input[type="file"] {
     .card-context {
         height: 10rem;
     }
-
 }
