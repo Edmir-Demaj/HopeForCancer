@@ -255,7 +255,7 @@
                             <span><i class="fa-regular fa-comment"></i> 0</span>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted me-4">Posted by: {{ post.author | title}}</small>
+                            <small class="text-muted">Posted by: {{ post.author | title}} |</small>
                             <small class="text-muted">{{ post.created_date }}</small>
                         </div>
                     </a>
@@ -308,7 +308,7 @@
                                         <span><i class="fa-regular fa-comment"></i> 0</span>
                                     </div>
                                     <div class="card-footer">
-                                        <small class="text-muted me-4">Posted by: {{ post.author | title}}</small>
+                                        <small class="text-muted">Posted by: {{ post.author | title}} |</small>
                                         <small class="text-muted">{{ post.created_date }}</small>
                                     </div>
                                 </a>
@@ -337,6 +337,5 @@
         </div>
     </div>
 </section>
-
 <!-- Latest blog posts section end -->
 {% endblock content %}
