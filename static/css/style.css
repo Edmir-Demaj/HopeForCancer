@@ -254,6 +254,7 @@ h2 {
     padding: 5px 0;
     border: 2px solid #e06b02;
     background-color: #f7f7f7;
+    z-index: 48;
 }
 
 .dropdown-btn:hover {

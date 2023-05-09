@@ -9,7 +9,7 @@ def index(request):
     response which will render home page or index.html as well as
     show the latest 3 blog posts.
     """
-    latest_posts = Post.objects.order_by('-created_date')[:3]
+    latest_posts = Post.objects.filter(status=1).order_by('-created_date')[:3]
     context = {'latest_posts': latest_posts}
     template = 'other_pages/index.html'
     return render(request, template, context)
