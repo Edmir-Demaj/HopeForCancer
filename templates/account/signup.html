@@ -7,17 +7,16 @@
 {% block title %}Signup{% endblock title %}
 {% block content %}
 
-<!-- Signup page -->
+<!-- Signup page start-->
 <div class="container py-5 px-2 p-xl-5">
   <div class="row">
-
     <div class="col-12 col-lg-6">
       <h1 class="fw-semibold fs-3">
         Welcome to <span class="orange-text"> HopeForCancer!</span>
       </h1>
       <p>{% blocktrans %}
         To create an account, kindly provide the required information in the fields below. If you already have an
-        account, please proceed to <a href="{{ login_url }}"><span
+        account, please proceed to <a href="{{ login_url }}" aria-label="link to log in page"><span
             class="orange-text fw-semibold">login.</span></a>{% endblocktrans %}</p>
       <!-- Signup form -->
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
@@ -30,6 +29,7 @@
           {% endfor %}
         </div>
         {% endif %}
+        <!-- add custom css style classes using widget_tweaks -->
         {% for field in form %}
         <div class="form-group">
           {{ field.label_tag }}
@@ -52,5 +52,5 @@
     </div>
   </div>
 </div>
-
+<!-- Signup page end-->
 {% endblock %}

@@ -7,7 +7,7 @@
 {% block title %}Login{% endblock title %}
 {% block content %}
 
-<!-- Login page -->
+<!-- Login page start-->
 <div class="container py-5 px-2 p-xl-5">
   <div class="row">
     <div class="col-12 col-lg-6 mt-5 mt-lg-0 order-2 order-lg-1">
@@ -48,12 +48,13 @@
           {% else %}
           {{ field|add_class:"remember-field" }}
           {% endif %}
-          <!-- Provides field_error messages to user -->
+          <!-- provides field_error messages to user -->
           {% for error in field.errors %}
           <span class="help-block alert-text">{{ error }}</span>
           {% endfor %}
         </div>
         {% endfor %}
+        <!-- redirect after login -->
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
@@ -63,4 +64,5 @@
     </div>
   </div>
 </div>
+<!-- Login page end-->
 {% endblock %}

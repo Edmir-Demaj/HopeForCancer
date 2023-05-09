@@ -4,7 +4,7 @@
 {% block title %}Logout{% endblock title %}
 {% block content %}
 
-<!-- Logout page -->
+<!-- Logout page start-->
 <div class="container-fluid my-5">
   <div class="row d-flex justify-content-center align-items-center text-center">
     <div class="col-12 col-lg-6">
@@ -21,15 +21,14 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <a href="{% url 'index' %}" class="cancel-btn me-3" role="button"
-          aria-label="button not to logout from site, brings back to blog page">No, I don't</a>
-
+          aria-label="button not to logout from the site and redirect to home page">No, I don't</a>
         <button class="confirm-btn" type="submit"
-          aria-label="button to logout from the site">{% trans "Yes, I confirm" %}</button>
+          aria-label="button to logout from the site and redirect to home page">{% trans "Yes, I confirm" %}</button>
       </form>
     </div>
   </div>
 </div>
-
+<!-- Logout page end-->
 
 
 
