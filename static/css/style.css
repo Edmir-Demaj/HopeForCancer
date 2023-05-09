@@ -115,7 +115,7 @@ header {
 /* --------------------------------------------------- Footer styles */
 footer {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683567179/static/images/base_images/footer_img.da8f2c0ff5b4.webp) center center/ cover no-repeat;
+        url(/static/images/base_images/footer_img.webp) center center/ cover no-repeat;
     min-height: 350px;
     margin-top: auto;
 }
@@ -288,7 +288,7 @@ h2 {
     height: 400px;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683567157/static/images/about_page/about_hero_image.c597dd266f0f.webp) center center/ cover no-repeat;
+        url(/static/images/about_page/about_hero_image.webp) center center/ cover no-repeat;
     position: relative;
 }
 
@@ -337,7 +337,7 @@ h2 {
     height: 400px;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683567163/static/images/info_page/info_hero_section.0d7810db3c7f.webp) center center/ cover no-repeat;
+        url(/static/images/info_page/info_hero_section.webp) center center/ cover no-repeat;
     position: relative;
 }
 
@@ -376,7 +376,7 @@ ol li {
     height: 400px;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683567182/static/images/blog_images/blog_hero_section.2338daf5026a.webp) center center/ cover no-repeat;
+        url(/static/images/blog_images/blog_hero_section.webp) center center/ cover no-repeat;
     position: relative;
 }
 
