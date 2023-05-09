@@ -13,7 +13,7 @@
                 <div class="cta text-center">
                     <h1>Together we can fight cancer</h1>
                     <button class="cta-btn">
-                        <a href="#"
+                        <a href="{% url 'info' %}"
                             aria-label="call to action button on home page which brings to cancer information page">Learn
                             more</a>
                     </button>
@@ -26,7 +26,9 @@
             <div class="carousel-item" data-bs-interval="4000">
                 <div class="cta text-center">
                     <h1>Believe in the power of hope</h1>
-                    <button class="cta-btn"><a href="#">Learn more</a></button>
+                    <button class="cta-btn"><a href="{% url 'info' %}"
+                            aria-label="call to action button on home page which brings to cancer information page">Learn
+                            more</a></button>
                 </div>
                 <div class="overlay"></div>
                 <img src="{% static 'images/home/hero_image_2.webp' %}" class="d-block w-100"
@@ -36,7 +38,9 @@
             <div class="carousel-item" data-bs-interval="4000">
                 <div class="cta text-center">
                     <h1>You are not alone we are one</h1>
-                    <button class="cta-btn"><a href="#">Learn more</a></button>
+                    <button class="cta-btn"><a href="{% url 'info' %}"
+                            aria-label="call to action button on home page which brings to cancer information page">Learn
+                            more</a></button>
                 </div>
                 <div class="overlay"></div>
                 <img src="{% static 'images/home/hero_image_3.webp' %}" class="d-block w-100"
@@ -84,7 +88,9 @@
                         people of all ages, it is more common in older adults...
                     </p>
                     <button type="button" class="info-btn my-4">
-                        READ MORE
+                        <a href="{% url 'info' %}"
+                            aria-label="button on home page which brings to cancer information page to read more what is cancer.">READ
+                            MORE</a>
                     </button>
                 </div>
                 <div class="col-12 col-lg-6 p-0">
@@ -110,7 +116,9 @@
                         understand the disease better and take steps to reduce your risk...
                     </p>
                     <button type="button" class="info-btn my-4">
-                        READ MORE
+                        <a href="{% url 'info' %}#cancer-types"
+                            aria-label="button on home page which brings to cancer information page, section cancer types.">READ
+                            MORE</a>
                     </button>
                 </div>
         </article>
@@ -128,7 +136,9 @@
                         early and get prompt medical attention...
                     </p>
                     <button type="button" class="info-btn my-4">
-                        READ MORE
+                        <a href="{% url 'info' %}#early-detection"
+                            aria-label="button on home page which brings to cancer information page, early detection section to learn more.">READ
+                            MORE</a>
                     </button>
                 </div>
                 <div class="col-12 col-lg-6 p-0">
