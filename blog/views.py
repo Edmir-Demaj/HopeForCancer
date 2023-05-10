@@ -21,6 +21,7 @@ class BlogPage(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_date')
     template_name = 'blog/blog.html'
     context_object_name = 'all_posts'
+    paginate_by = 3
 
 
 def postDetail(request, slug):

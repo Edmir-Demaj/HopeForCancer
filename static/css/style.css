@@ -406,7 +406,7 @@ ol li {
 }
 
 .card-context {
-    height: 16rem;
+    height: 15.5rem;
 }
 
 .hr {
@@ -422,34 +422,6 @@ ol li {
     border-radius: 10px 10px 0 0;
     height: 14rem !important;
 }
-
-
-#scroll-section {
-    height: 100vh;
-    overflow-y: auto;
-}
-
-/* This code was taken from css-trick.com, credits on Readme.md*/
-#scroll-section::-webkit-scrollbar {
-    width: 0.8em;
-}
-
-#scroll-section::-webkit-scrollbar-track {
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-radius: 5px;
-}
-
-#scroll-section::-webkit-scrollbar-thumb {
-    background-color: #909090d6;
-    border-radius: 5px;
-}
-
-#scroll-section .card img {
-    height: 300px;
-    object-fit: cover;
-}
-
-/* End of copied code */
 
 /* --------------------------------------------------- Post Detail page */
 .image-container-details {
