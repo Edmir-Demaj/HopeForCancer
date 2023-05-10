@@ -238,12 +238,12 @@
                                     {% csrf_token %}
                                     {% if liked %}
                                     <button type="submit" name="post_likes" value="{{post.slug}}"
-                                        class="btn-like hvr-icon-pulse"><i
-                                            class="fa-solid fa-thumbs-up hvr-icon"></i></button>
+                                        class="btn-like hvr-icon-pulse"><i class="fa-solid fa-thumbs-up hvr-icon"></i>
+                                    </button>
                                     {% else %}
                                     <button type="submit" name="post_likes" value="{{post.slug}}"
-                                        class="btn-like hvr-icon-pulse"><i
-                                            class="fa-regular fa-heart hvr-icon"></i></button>
+                                        class="btn-like hvr-icon-pulse"><i class="fa-regular fa-heart hvr-icon"></i>
+                                    </button>
                                     {% endif %}
                                 </form>
                                 {% else %}
@@ -293,14 +293,14 @@
                                     <img src="{{ post.featured_image.url }}" class="card-img-top"
                                         alt="{{ post.describe_image }}" />
                                     {% endif %}
-                                    <div class="card-body pb-0" style="height: 16.5rem">
+                                    <div class="card-body card-context pb-0">
                                         <h4 class="card-title post-title fw-bold fs-5">
-                                            {{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}
+                                            {{ post.title | capfirst }}
                                         </h4>
                                         <p class="card-text text-muted">Category# {{ post.category }}</p>
                                         <hr />
                                         <p class="card-text">
-                                            {{ post.content | truncatechars:140 | safe}}
+                                            {{ post.content | truncatechars:150 | safe | capfirst }}
                                         </p>
                                     </div>
                                     <div class="card-body pb-1">

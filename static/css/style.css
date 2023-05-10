@@ -41,8 +41,6 @@ p {
     font-family: 'Merriweather', serif;
     text-transform: none;
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 32px;
 }
 
 /* --------------------------------------------------- Navbar styles */
@@ -407,12 +405,12 @@ ol li {
     border-radius: 10px;
 }
 
-.hr {
-    margin-bottom: 0.5rem;
+.card-context {
+    height: 16rem;
 }
 
-.card-context {
-    height: 15.5rem;
+.hr {
+    margin-bottom: 0.5rem;
 }
 
 .post-title:hover {
@@ -424,6 +422,7 @@ ol li {
     border-radius: 10px 10px 0 0;
     height: 14rem !important;
 }
+
 
 #scroll-section {
     height: 100vh;
@@ -659,9 +658,5 @@ input[type="file"] {
     #top-btn {
         bottom: 30px;
         right: 15px;
-    }
-
-    .card-context {
-        height: 10rem;
     }
 }
