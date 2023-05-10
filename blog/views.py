@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views import generic
+from django.views import generic, View
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -117,11 +117,11 @@ class DeletePost(generic.DeleteView):
         return reverse("blog_page")
 
 
-class PostLike(generic.View):
+class PostLike(View):
     """
     View to make possible for users to like a post
     """
-    def post(self, request, slug, *args):
+    def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
 
         if post.likes.filter(id=request.user.id).exists():

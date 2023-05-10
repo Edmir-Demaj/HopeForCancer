@@ -57,7 +57,9 @@ class Post(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='post_likes', blank=True)
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True
+    )
     comment_counter = models.IntegerField(default=0)
 
     class Meta:
