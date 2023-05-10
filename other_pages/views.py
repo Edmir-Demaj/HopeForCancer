@@ -35,3 +35,7 @@ def info_page(request):
     """
     template = 'other_pages/info.html'
     return render(request, template)
+
+
+def my_view(request):
+    return render(request, '404.html')

@@ -577,6 +577,17 @@ input[type="file"] {
     padding: 0 30px;
 }
 
+/* --------------------------------------------------- Error 404 page */
+.error-section {
+    height: calc(100vh - 110px);
+}
+
+.error-img {
+    width: 100%;
+    height: calc(100vh - 110px);
+    object-fit: cover;
+    scale: 0.9;
+}
 
 /* --------------------------------------------------- Media queries */
 /* Large screen media queries */
