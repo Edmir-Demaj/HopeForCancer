@@ -579,14 +579,10 @@ input[type="file"] {
 
 /* --------------------------------------------------- Error 404 page */
 .error-section {
-    height: calc(100vh - 110px);
-}
-
-.error-img {
-    width: 100%;
-    height: calc(100vh - 110px);
-    object-fit: cover;
-    scale: 0.9;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683742149/404_dzdhcn.webp) center center/ cover no-repeat;
 }
 
 /* --------------------------------------------------- Media queries */
