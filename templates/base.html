@@ -94,6 +94,11 @@
                                     href="{% url 'account_logout' %}" aria-label="navbar link to log out page">Log
                                     out</a>
                             </li>
+                            <li class="">
+                                <a class="nav-link hvr-underline-from-center" href="{% url 'blog_page' %}"
+                                    aria-label="navbar link to log out page"> <i class="fa-regular fa-user"></i>
+                                    {{ user | title}}</a>
+                            </li>
                             {% else %}
                             <li class="nav-item ms-0 ms-xl-5">
                                 <a class="nav-link hvr-underline-from-center {% if request.path == login %} active {% endif %}"
