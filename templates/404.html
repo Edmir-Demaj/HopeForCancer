@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Page Not Found {% endblock %}
+{% block content %}
+<!-- Error 404 page -->
+<section class="error-section">
+  <div class="go-back-404">
+  </div>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Are you lost?
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">It looks like is nothing here <i
+              class="fa-regular fa-face-frown"></i></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Lets go back home <i class="fa-regular fa-face-smile-beam"></i></h5>
+        </div>
+        <div class="modal-footer">
+          <a class="go-back-btn px-4 hvr-wobble-horizontal me-4" href="{% url 'blog_page' %}" role="button"
+            aria-label="button to go back to blog page" title="Go Back">
+            &laquo; GO BACK </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  setTimeout(function () {
+    let modal = document.getElementsByClassName(".modal").myModal.show();;
+  }, 2000);
+</script>
+{% endblock %}
