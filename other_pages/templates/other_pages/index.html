@@ -317,16 +317,22 @@
                         {% endfor %}
                         {% endif %}
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <div class="col-12 text-center mt-3">
+                        <span class="me-2 hvr-wobble-horizontal">
+                            <a class="account-btn mb-3 mr-1 px-4 py-1" href="#carouselExampleIndicators2" role="button"
+                                data-bs-target="#blogCarousel" data-bs-slide="prev" aria-hidden="true"
+                                title="Move Left">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                        </span>
+                        <span class="hvr-wobble-horizontal">
+                            <a class="account-btn mb-3 mr-1 px-4 py-1" href="#carouselExampleIndicators2" role="button"
+                                data-bs-target="#blogCarousel" data-bs-slide="next" aria-hidden="true"
+                                title="Move Right">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="text-center">
