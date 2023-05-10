@@ -13,12 +13,10 @@
                 Welcome to HopeForCancer <span class="orange-text">{{ user | title }}!</span>
             </h1>
             <p class="mt-3 mb-5 text-center px-3">Sharing your cancer story can offer hope and inspiration to
-                others in
-                their
-                fight
-                against
-                this disease. Join us in supporting each other and raising awareness about the importance of cancer
-                prevention and treatment.</p>
+                others in their fight against this disease. Join us in supporting each other and raising awareness about
+                the importance of cancer prevention and treatment.
+            </p>
+            <!-- Craete post form -->
             <div class="form-group p-3" id="create-post">
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
