@@ -15,17 +15,27 @@
         Courage <i class="fa-sharp fa-solid fa-arrow-down"></i>
     </h2>
 </div>
+<div class="text-center mb-4">
+    <a href="{% url 'create-post' %}" class="create-post-btn hvr-float-shadow d-inline-block">
+        Create Post</a>
+</div>
+
 <!-- Main section for blog page -->
 <section>
-
     <div class="container-fluid">
         <div class="row">
             <!-- Blog post entries -->
-            <div class="col-12 mt-3 left">
-                <div class="row">
+            <div class="col-12 mt-3 p-0">
+                <div class="row mx-auto">
+                    {% if all_posts|length == 0 %}
+                    <h3 class="fw-semibold text-center"><span class="orange-text">Unfortunately,</span> there are
+                        currently no posts available. <br> Be the first to <span class="orange-text">create a
+                            post!</span>
+                    </h3>
+                    {% else %}
                     {% for post in all_posts %}
-                    <div class="col-lg-4">
-                        <div class="card mb-5 mx-auto" style="max-width: 24rem">
+                    <div class="col-xl-12">
+                        <div class="card mb-5 mx-auto" style="max-width: 24rem;">
                             <a href="{% url 'post_detail' post.slug %}"
                                 aria-label="internal link when post is clicked to bring to blog post page">
                                 {% if "placeholder" in post.featured_image.url %}
@@ -74,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:3 %}
+                    {% if forloop.counter|divisibleby:5 %}
                 </div>
                 <div class="row">
                     {% endif %}
@@ -84,31 +94,23 @@
         </div>
         {% if is_paginated %}
         <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
+            <ul class="pagination justify-content-center mb-4">
                 {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link my-3">&laquo; PREV </a>
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}"
+                        class="go-back-btn px-5 hvr-wobble-horizontal">&laquo; PREV </a>
                 </li>
                 {% endif %}
                 {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link my-3"> NEXT &raquo;</a>
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}" class="go-back-btn px-5 hvr-wobble-horizontal">
+                        NEXT &raquo;</a>
                 </li>
                 {% endif %}
             </ul>
         </nav>
         {% endif%}
     </div>
-    <div class="col-md-6 mx-auto col-xl-5 order-3 order-xl-2 p-2 p-md-0">
-        <!--Blog Posts section -->
-        <section id="scroll-section">
-            <!-- Blog post entries -->
-            {% for post in all_posts %}
-
-            {% endfor %}
-        </section>
-    </div>
-    <div class="col-12 col-xl-2 col-xxl-3  order-2 order-xl-3">
-        <aside>
-        </aside>
-    </div>
+    {% endif %}
 </section>
 {% endblock %}
