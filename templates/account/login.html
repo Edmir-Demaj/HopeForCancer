@@ -21,12 +21,10 @@
       <p>
         {% blocktrans %}
         To create, edit, delete a post or to engage with our community by leaving a like or comment, please login to
-        your
-        account. If you don't have an account yet, please
-        <a href="{{ signup_url }}" class="orange-text fw-semibold"
-          aria-label="link to bring to signup page if you don't have an account already">sign up</a>
-        to join our community.
-        {% endblocktrans %}
+        your account. If you don't have an account yet, please <a href="{{ signup_url }}"
+          class="orange-text fw-semibold"
+          aria-label="link to bring to signup page if you don't have an account already">sign up</a> to join our
+        community. {% endblocktrans %}
       </p>
       <!-- Login form -->
       <form class="login mt-4" method="POST" action="{% url 'account_login' %}">
@@ -59,7 +57,8 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="account-btn button-21 px-5 hvr-float-shadow" type="submit"
-          aria-label="button to login to the site">{% trans "Login" %}</button>
+          aria-label="button to login to the site">{% trans "Login" %}
+        </button>
       </form>
     </div>
   </div>
