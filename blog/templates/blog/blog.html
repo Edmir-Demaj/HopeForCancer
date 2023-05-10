@@ -35,9 +35,10 @@
             <div class="col-12 mt-3 p-0">
                 <div class="row mx-auto">
                     {% if all_posts|length == 0 %}
-                    <h3 class="fw-semibold text-center"><span class="orange-text">Unfortunately,</span> there are
-                        currently no posts available. <br> Be the first to <span class="orange-text">create a
-                            post!</span>
+                    <h3 class=" text-center mb-5" id="no-post-msg">
+                        There are currently no posts available. <br> Be the first to <span class="orange-text">
+                            <a href="{% url 'create-post' %}">Create Post!</a></span>
+                        <i class="fa-regular fa-face-smile-beam"></i>
                     </h3>
                     {% else %}
                     {% for post in all_posts %}
@@ -104,14 +105,14 @@
             <ul class="pagination justify-content-center mb-4">
                 {% if page_obj.has_previous %}
                 <li>
-                    <a href="?page={{ page_obj.previous_page_number }}"
-                        class="go-back-btn px-5 hvr-wobble-horizontal">&laquo; PREV </a>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="go-back-btn px-5 hvr-wobble-horizontal"
+                        title="Prev Page">&laquo; PREV </a>
                 </li>
                 {% endif %}
                 {% if page_obj.has_next %}
                 <li>
-                    <a href="?page={{ page_obj.next_page_number }}" class="go-back-btn px-5 hvr-wobble-horizontal">
-                        NEXT &raquo;</a>
+                    <a href="?page={{ page_obj.next_page_number }}" class="go-back-btn px-5 hvr-wobble-horizontal"
+                        title="Next Page"> NEXT &raquo;</a>
                 </li>
                 {% endif %}
             </ul>

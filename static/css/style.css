@@ -280,6 +280,11 @@ h2 {
     max-width: 700px;
 }
 
+#no-post-msg {
+    background-color: #ffffff;
+    padding: 2rem 0.5rem;
+}
+
 /* --------------------------------------------------- About us page style */
 #about-hero-section {
     height: 400px;
