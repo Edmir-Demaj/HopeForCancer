@@ -530,7 +530,8 @@ ol li {
     cursor: pointer;
 }
 
-.account-btn {
+.account-btn,
+.go-back-btn {
     /* color and shadow for this btn taken from https://getcssscan.com/ 
     credits on Readme.md */
     background-image: radial-gradient(100% 100% at 100% 0, #81cdff 20%, #7236fe 100%);

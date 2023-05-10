@@ -55,12 +55,6 @@
                     </strong>
                     <span><i class="fa-regular fa-comment"></i> 0</span>
                 </div>
-                <div class="my-3 hvr-wobble-horizontal account-btn px-4">
-                    <a class="" href="{% url 'blog_page' %}" role="button" data-bs-target="#blogCarousel"
-                        data-bs-slide="prev" aria-label="button to go back to blog page" title="Go Back">
-                        &laquo; GO BACK
-                    </a>
-                </div>
             </div>
             <div class="col-12 col-lg-6 py-4 py-lg-0 ps-2 ps-lg-4">
                 <!-- Post title goes in these h1 tags -->
@@ -82,6 +76,13 @@
                         Post</a>
                 </div>
                 {% endif %}
+            </div>
+            <div class="mt-1 mt-lg-4 text-start">
+                <a class="go-back-btn px-4 hvr-wobble-horizontal" href="{% url 'blog_page' %}" role="button"
+                    data-bs-target="#blogCarousel" data-bs-slide="prev" aria-label="button to go back to blog page"
+                    title="Go Back">
+                    &laquo; GO BACK
+                </a>
             </div>
         </div>
         <hr class="mt-4">
