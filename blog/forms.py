@@ -1,4 +1,4 @@
-from .models import Post
+from .models import Post, Comment
 from django import forms
 from django.forms import widgets
 
@@ -10,11 +10,11 @@ class CreatePostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = (
-            "title",
-            "featured_image",
-            "describe_image",
-            "category",
-            "content",
+            'title',
+            'featured_image',
+            'describe_image',
+            'category',
+            'content',
         )
 
 
@@ -25,9 +25,18 @@ class UpdatePostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = (
-            "title",
-            "featured_image",
-            "describe_image",
-            "category",
-            "content",
+            'title',
+            'featured_image',
+            'describe_image',
+            'category',
+            'content',
         )
+
+
+class CommentForm(forms.ModelForm):
+    """
+    Form for users to comment a post.
+    """
+    class Meta:
+        model = Comment
+        fields = ('body',)

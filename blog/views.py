@@ -37,6 +37,7 @@ def postDetail(request, slug):
         'post': post,
         'comments': comments,
         'user': request.user,
+        'comment_form': CommentForm,
     }
     return render(request, "blog/post_detail.html", context)
 
