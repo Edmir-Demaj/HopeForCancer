@@ -17,4 +17,5 @@ urlpatterns = [
         views.PostLike.as_view(),
         name="post_like",
     ),
+    path("add_comment/<int:post_id>", views.add_comment, name="add_comment"),
 ]
