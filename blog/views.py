@@ -31,8 +31,10 @@ def postDetail(request, slug):
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
-    comments = Comment.objects.filter(post=post).order_by('created_date')
-
+    comments = (Comment.objects
+                .filter(post=post)
+                .filter(approved=True)
+                .order_by('created_date'))
     context = {
         'post': post,
         'comments': comments,
