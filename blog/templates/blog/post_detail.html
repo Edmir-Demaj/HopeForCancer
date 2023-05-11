@@ -88,27 +88,26 @@
         <hr class="mt-4">
         <div class="row mb-5">
             <div class="col-12 col-lg-6">
-                <h3>Comments:</h3>
+                <h3 class="mb-3">Comments:</h3>
                 <div class="card-body">
-                    <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                    <!-- message for user if there are no comments -->
+                    {% if not comments %}
+                    <h5 class="mt-4">No comments yet!</h5>
+                    {% else %}
+                    <!-- Iterate throught comments related to thsi post to display them -->
                     {% for comment in comments %}
-                    <div class="comments" style="padding: 10px;">
-                        <p class="font-weight-bold">
-                            <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                            {{ comment.name }}
-                            <span class=" text-muted font-weight-normal">
-                                <!-- The comment's created date goes here -->
-                                {{ comment.created_on }}
-                            </span> wrote:
-                        </p>
-                        <!-- The body of the comment goes before the | -->
-                        {{ comment.body | linebreaks }}
+                    <div class="comment mb-2">
+                        <span class="fw-semibold">{{ comment.name }}</span>
+                        <p class="my-2">{{ comment.body | capfirst }}</p>
+                        <small class="text-muted mt-2">{{ comment.created_date }}</small>
+                        <!-- <hr style="margin-bottom: 0;"> -->
                     </div>
                     <!-- Our for loop ends here -->
                     {% endfor %}
+                    {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 mt-5 mt-lg-0">
                 {% if user.is_authenticated %}
                 <!-- if user is loggedin can leave a comment -->
                 <p class="lead">Commenting as: {{ user.username }}</p>

@@ -41,7 +41,7 @@ def postDetail(request, slug):
         'user': request.user,
         'comment_form': CommentForm(),
     }
-    return render(request, "blog/post_detail.html", context)
+    return render(request, 'blog/post_detail.html', context)
 
 
 class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
@@ -51,9 +51,9 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
     model = Post
     form_class = CreatePostForm
-    template_name = "blog/create_post.html"
+    template_name = 'blog/create_post.html'
     success_message = (
-        "Post added successfully! Awaiting approval from Admin."
+        'Post added successfully! Awaiting approval from Admin.'
     )
 
     def get_success_url(self):
@@ -61,7 +61,7 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
         Set the reverse url for the successful addition
         of the post to the database, reverse to blog_page
         """
-        return reverse("blog_page")
+        return reverse('blog_page')
 
     def form_valid(self, form):
         """
@@ -80,7 +80,7 @@ def update_post(request, slug):
     Users can update their blog post that they have created
     """
     post = get_object_or_404(Post, slug=slug)
-    if request.method == "POST":
+    if request.method == 'POST':
         form = UpdatePostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post = form.save(commit=False)
@@ -88,16 +88,16 @@ def update_post(request, slug):
             post.slug = slugify(post.title)
             post.status = 1
             form.save()
-            messages.success(request, "Your post updated successfully!")
+            messages.success(request, 'Your post updated successfully!')
             return redirect(reverse(
-                "post_detail", kwargs={'slug': post.slug}
+                'post_detail', kwargs={'slug': post.slug}
                 ))
         else:
-            messages.error(request, "Failed to update the post.")
+            messages.error(request, 'Failed to update the post.')
     else:
         form = UpdatePostForm(instance=post)
 
-    context = {"update_form": form, "post": post}
+    context = {'update_form': form, 'post': post}
     return render(request, 'blog/update_post.html', context)
 
 
@@ -106,10 +106,10 @@ class DeletePost(generic.DeleteView):
     View to allow users to delete a post
     """
     model = Post
-    template_name = "blog/delete_post.html"
+    template_name = 'blog/delete_post.html'
 
     def delete(self, request, *args, **kwargs):
-        messages.success(request, "Post deleted successfully.")
+        messages.success(request, 'Post deleted successfully.')
         return super(DeletePost, self).delete(request, *args, **kwargs)
 
     def get_success_url(self):
@@ -117,7 +117,7 @@ class DeletePost(generic.DeleteView):
         Reverse Url after post is deleted
         """
         slug = self.kwargs.get('slug')
-        return reverse("blog_page")
+        return reverse('blog_page')
 
 
 class PostLike(View):
@@ -140,7 +140,7 @@ class PostLike(View):
                 '<i class="fa-regular fa-face-smile"></i>'
             )
         messages.success(request, message)
-        return HttpResponseRedirect(reverse("post_detail", args=[slug]))
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
 def add_comment(request, post_id):
@@ -157,9 +157,9 @@ def add_comment(request, post_id):
         comment.post = post
         comment.save()
         messages.success(
-            request, "Comment added successfully!"
+            request, 'Comment added successfully! Awaiting approval from Admin'
         )
-        return redirect(reverse("post_detail", args=(post.slug,)))
+        return redirect(reverse('post_detail', args=(post.slug,)))
     else:
         comment_form = CommentForm()
-    return render(request, "post_detail.html", {"comment_form": comment_form})
+    return render(request, 'post_detail.html', {'comment_form': comment_form})

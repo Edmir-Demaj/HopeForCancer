@@ -8,14 +8,14 @@ urlpatterns = [
     path('create_post/', views.CreatePost.as_view(), name='create-post'),
     path('update_post/<slug:slug>/', views.update_post, name='update-post'),
     path(
-        "delete_post/<slug:slug>/",
+        'delete_post/<slug:slug>/',
         views.DeletePost.as_view(),
-        name="delete-post",
+        name='delete-post',
     ),
     path(
-        "like/<slug:slug>/",
+        'like/<slug:slug>/',
         views.PostLike.as_view(),
-        name="post_like",
+        name='post_like',
     ),
-    path("add_comment/<int:post_id>", views.add_comment, name="add_comment"),
+    path('add_comment/<int:post_id>', views.add_comment, name='add_comment'),
 ]
