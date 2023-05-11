@@ -139,3 +139,25 @@ class PostLike(View):
             )
         messages.success(request, message)
         return HttpResponseRedirect(reverse("post_detail", args=[slug]))
+
+
+def add_comment(request, post_id):
+    """
+    In this view we get the post where the comment is related to and save the
+    comment in DB. Before saving we validate the form.
+    """
+    post = Post.objects.get(id=post_id)
+    comment_form = CommentForm(data=request.POST)
+    if comment_form.is_valid():
+        comment_form.instance.email = request.user.email
+        comment_form.instance.name = request.user.username
+        comment = comment_form.save(commit=False)
+        comment.post = post
+        comment.save()
+        messages.success(
+            request, "Comment added successfully!"
+        )
+        return redirect(reverse("post_detail", args=(post.slug,)))
+    else:
+        comment_form = CommentForm()
+    return render(request, "post_detail.html", {"comment_form": comment_form})
