@@ -37,6 +37,15 @@ class CommentForm(forms.ModelForm):
     """
     Form for users to comment a post.
     """
+    body = forms.CharField(
+        label='Leave a comment:',
+        widget=forms.TextInput(
+            attrs={
+                'placeholder': 'Write your comment here',
+                }
+            )
+    )
+
     class Meta:
         model = Comment
         fields = ('body',)

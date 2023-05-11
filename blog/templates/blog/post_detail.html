@@ -86,8 +86,8 @@
             </div>
         </div>
         <hr class="mt-4">
-        <div class="row">
-            <div class="col-11 col-lg-6">
+        <div class="row mb-5">
+            <div class="col-12 col-lg-6">
                 <h3>Comments:</h3>
                 <div class="card-body">
                     <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -107,8 +107,20 @@
                     <!-- Our for loop ends here -->
                     {% endfor %}
                 </div>
-                <div class="col-11 col-lg-6"></div>
+            </div>
+            <div class="col-12 col-lg-6">
+                {% if user.is_authenticated %}
+                <!-- if user is loggedin can leave a comment -->
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post">
+                    <!-- comment form and button to submit -->
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="create-post-btn hvr-float-shadow">Submit</button>
+                </form>
+                {% endif %}
             </div>
         </div>
+    </div>
 </section>
 {% endblock %}
