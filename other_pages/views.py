@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from blog.models import Post
+from blog.models import Post, Comment
 from .models import Value
 
 
@@ -10,6 +10,8 @@ def index(request):
     show the latest 3 blog posts.
     """
     latest_posts = Post.objects.filter(status=1).order_by('-created_date')[:3]
+    for post in latest_posts:
+        post.num_comments = Comment.objects.filter(post=post).count()
     context = {'latest_posts': latest_posts}
     template = 'other_pages/index.html'
     return render(request, template, context)

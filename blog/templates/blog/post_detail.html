@@ -53,10 +53,13 @@
                         <!-- The number of likes goes before the closing strong tag -->
                         <span>{{ post.number_of_likes }} </span>
                     </strong>
-                    <span><i class="fa-regular fa-comment"></i> 0</span>
+                    <!-- counts number of comments -->
+                    {% with comments.count as total_comments %}
+                    <span><strong><i class="far fa-comments"></i> {{ total_comments }}</strong></span>
+                    {% endwith %}
                 </div>
                 <div class="text-start">
-                    <a class="go-back-btn px-4 hvr-wobble-horizontal me-4" href="{% url 'blog_page' %}" role="button"
+                    <a class="go-back-btn px-3 hvr-wobble-horizontal me-1" href="{% url 'blog_page' %}" role="button"
                         aria-label="button to go back to blog page" title="Go Back"> &laquo; GO BACK
                     </a>
                     <a href="{% url 'create-post' %}" class="create-post-btn hvr-float-shadow d-inline-block">

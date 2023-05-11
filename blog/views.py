@@ -159,6 +159,9 @@ def add_comment(request, post_id):
         messages.success(
             request, 'Comment added successfully! Awaiting approval from Admin'
         )
+        # Increment the comment_counter field of the Post model
+        post.comment_counter += 1
+        post.save()
         return redirect(reverse('post_detail', args=(post.slug,)))
     else:
         comment_form = CommentForm()
