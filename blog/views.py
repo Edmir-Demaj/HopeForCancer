@@ -162,4 +162,8 @@ def add_comment(request, post_id):
         return redirect(reverse('post_detail', args=(post.slug,)))
     else:
         comment_form = CommentForm()
-    return render(request, 'post_detail.html', {'comment_form': comment_form})
+        messages.error(
+            request, '<i class="fa-solid fa-triangle-exclamation"></i>\
+                    Comment failed to submit! Try again please '
+        )
+    return redirect(reverse('post_detail', args=(post.slug,)))
