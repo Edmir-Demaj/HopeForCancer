@@ -4,6 +4,7 @@
 {% url 'about' as about %}
 {% url 'info' as info %}
 {% url 'blog_page' as blog_page %}
+{% url 'contact' as contact %}
 {% url 'account_login' as login %}
 {% url 'account_signup' as signup %}
 {% url 'account_logout' as logout %}
@@ -85,8 +86,8 @@
                                     href="{% url 'blog_page' %}" aria-label="navbar link to blog page">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" href="{% url 'contact' %}"
-                                    aria-label="navbar link to contact page">Contact</a>
+                                <a class="nav-link hvr-underline-from-center {% if request.path == contact %} active {% endif %}"
+                                    href="{% url 'contact' %}" aria-label="navbar link to contact page">Contact</a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item ms-0 ms-xl-5">
