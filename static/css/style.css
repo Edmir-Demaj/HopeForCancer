@@ -390,7 +390,7 @@ ol li {
     color: #f7f7f7;
     border: none;
     border-radius: 20px;
-    line-height: 2.2rem;
+    line-height: 2rem;
     padding: 0 30px;
 }
 
@@ -460,7 +460,7 @@ ol li {
     color: #f7f7f7;
     border: none;
     border-radius: 20px;
-    line-height: 2.2rem;
+    line-height: 2rem;
     padding: 0 30px;
 }
 
@@ -471,7 +471,6 @@ ol li {
 }
 
 #edit-comment a {
-    border-radius: 10px;
     line-height: 1.5rem;
     padding: 0 0.8rem;
     font-size: 0.8rem;
@@ -541,7 +540,7 @@ ol li {
     color: #f7f7f7;
     border: none;
     border-radius: 20px;
-    line-height: 2.2rem;
+    line-height: 2rem;
 }
 
 /* --------------------------------------------------- Logout page */
@@ -605,7 +604,7 @@ input[type="file"] {
     color: #f7f7f7;
     border: none;
     border-radius: 20px;
-    line-height: 2.2rem;
+    line-height: 2rem;
     padding: 0 30px;
 }
 

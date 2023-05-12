@@ -18,7 +18,28 @@
           <!-- comment form and button to submit -->
           {{ form | crispy }}
           {% csrf_token %}
-          <button type="submit" class="submit-btn hvr-float-shadow">Update</button>
+          <button type="submit" class="submit-btn hvr-float-shadow me-3">Update</button>
+          <button type="button" class="delete-post-btn hvr-float-shadow" data-bs-toggle="modal"
+            data-bs-target="#delete-comment">Delete</button>
+          <!-- Delete comment bootstrap modal-->
+          <div class="modal fade" id="delete-comment" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title alert-text" id="staticBackdropLabel">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Delete Comment</h5>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to delete your comment?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="submit-btn hvr-float-shadow me-3" data-bs-dismiss="modal">Close</button>
+                  <a href="{% url 'delete_comment' comment.id %}" class="delete-post-btn hvr-float-shadow"
+                    aria-label="Delete Comment">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
