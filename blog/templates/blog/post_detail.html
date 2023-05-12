@@ -103,6 +103,7 @@
                         <div class="d-flex justify-content-between">
                             <small class="text-muted mt-2 d-inline-block">{{ comment.created_date }}</small>
                             {% if user.is_authenticated and comment.name == request.user.username%}
+
                             <small id="edit-comment">
                                 <a href="{% url 'edit_comment' comment.pk  %}"
                                     class="create-post-btn d-inline-block hvr-float-shadow">Edit</a>
