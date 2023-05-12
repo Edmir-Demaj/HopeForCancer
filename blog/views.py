@@ -197,6 +197,9 @@ def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
     messages.success(request, 'Comment deleted successfully!')
+    # Increment the comment_counter field of the Post model
+    post.comment_counter -= 1
+    post.save()
     return HttpResponseRedirect(
         reverse('post_detail', args=[comment.post.slug])
     )
