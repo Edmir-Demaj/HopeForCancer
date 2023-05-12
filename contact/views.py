@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, redirect
 from django.contrib import messages
 from .models import *
 from .forms import ContactForm
@@ -15,6 +15,7 @@ def contact(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message was sent successfully!')
+            return redirect(reverse('contact'))
         else:
             messages.error(
                 request, '<i class="fa-solid fa-triangle-exclamation"></i>\
