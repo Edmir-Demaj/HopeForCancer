@@ -43,6 +43,10 @@ p {
     font-weight: 400;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 /* --------------------------------------------------- Navbar styles */
 header {
     position: sticky;
@@ -287,7 +291,7 @@ h2 {
 
 /* --------------------------------------------------- About us page style */
 #about-hero-section {
-    height: 400px;
+    height: 18rem;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683567157/static/images/about_page/about_hero_image.c597dd266f0f.webp) center center/ cover no-repeat;
@@ -336,7 +340,7 @@ h2 {
 
 /* --------------------------------------------------- Cancer information page style */
 #info-hero-section {
-    height: 400px;
+    height: 18rem;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("https://res.cloudinary.com/dxlqthpli/image/upload/v1683567163/static/images/info_page/info_hero_section.0d7810db3c7f.webp") center center/ cover no-repeat;
@@ -375,7 +379,7 @@ ol li {
 }
 
 #blog-hero-section {
-    height: 400px;
+    height: 18rem;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683567182/static/images/blog_images/blog_hero_section.2338daf5026a.webp) center center/ cover no-repeat;
@@ -606,6 +610,15 @@ input[type="file"] {
     border-radius: 20px;
     line-height: 2rem;
     padding: 0 30px;
+}
+
+/* --------------------------------------------------- Contact page */
+#contact-hero-section {
+    height: 18rem;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(https://res.cloudinary.com/dxlqthpli/image/upload/v1683900733/contact_lqp8xn.webp) -10px center/ cover no-repeat;
+    position: relative;
 }
 
 /* --------------------------------------------------- Error 404 page */
