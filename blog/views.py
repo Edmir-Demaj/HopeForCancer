@@ -174,12 +174,12 @@ def add_comment(request, post_id):
 
 class EditComment(SuccessMessageMixin, generic.UpdateView):
     """
-    Edit comment
+    View to edit a comment and provide a message if update is successfull
     """
     model = Comment
-    template_name = "blog/edit_comment.html"
+    template_name = 'blog/edit_comment.html'
     form_class = CommentForm
-    success_message = "Your comment updated successfully!"
+    success_message = 'Your comment updated successfully!'
 
     def get_success_url(self):
         """
@@ -188,3 +188,15 @@ class EditComment(SuccessMessageMixin, generic.UpdateView):
         comment = self.get_object()
         post = comment.post
         return reverse('post_detail', args=[post.slug])
+
+
+def delete_comment(request, comment_id):
+    """
+    Delete comment and provide a message to user
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    messages.success(request, 'Comment deleted successfully!')
+    return HttpResponseRedirect(
+        reverse('post_detail', args=[comment.post.slug])
+    )
