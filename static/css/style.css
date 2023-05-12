@@ -621,6 +621,21 @@ input[type="file"] {
     position: relative;
 }
 
+.faq-btn {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 3rem;
+    background-color: #ffffff;
+    border: none;
+}
+
+.faq-content {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
 /* --------------------------------------------------- Error 404 page */
 .error-section {
     height: 100vh;
