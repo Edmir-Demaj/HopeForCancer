@@ -14,7 +14,7 @@ class ContactAdmin(SummernoteModelAdmin):
 
 
 @admin.register(FAQ)
-class CategoryAdmin(admin.ModelAdmin):
+class FaqAdmin(SummernoteModelAdmin):
     """
     Register FAQ model in admin panel and customize this panel.
     """
