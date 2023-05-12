@@ -85,7 +85,7 @@
                                     href="{% url 'blog_page' %}" aria-label="navbar link to blog page">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link hvr-underline-from-center" href="#"
+                                <a class="nav-link hvr-underline-from-center" href="{% url 'contact' %}"
                                     aria-label="navbar link to contact page">Contact</a>
                             </li>
                             {% if user.is_authenticated %}
