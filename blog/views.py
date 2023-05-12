@@ -170,3 +170,21 @@ def add_comment(request, post_id):
                     Comment failed to submit! Try again please '
         )
     return redirect(reverse('post_detail', args=(post.slug,)))
+
+
+class EditComment(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
+    """
+    Edit comment
+    """
+    model = Comment
+    template_name = "blog/edit_comment.html"
+    form_class = CommentForm
+    success_message = "The comment updated successfully!"
+
+    def get_success_url(self):
+        """
+        Reverse Url after comment is updated
+        """
+        comment = self.get_object()
+        post = comment.post
+        return reverse('post_detail', args=[post.slug])

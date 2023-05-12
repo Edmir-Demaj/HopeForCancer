@@ -18,4 +18,9 @@ urlpatterns = [
         name='post_like',
     ),
     path('add_comment/<int:post_id>', views.add_comment, name='add_comment'),
+    path(
+        "edit_comment/<int:pk>",
+        views.EditComment.as_view(),
+        name="edit_comment",
+    ),
 ]
