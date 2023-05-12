@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'crispy_forms',
     'blog',
+    'contact',
     'other_pages',
 ]
 
