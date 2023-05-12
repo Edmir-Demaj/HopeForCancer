@@ -402,7 +402,7 @@ ol li {
 }
 
 .card-context {
-    height: 15rem;
+    height: 15.5rem;
 }
 
 .hr {
@@ -450,6 +450,31 @@ ol li {
     border-radius: 10px;
     background-color: #fcfcfc;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.submit-btn {
+    background-image: radial-gradient(100% 100% at 100% 0, #acffa8 20%, #168f1e 100%);
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #f7f7f7;
+    border: none;
+    border-radius: 20px;
+    line-height: 2.2rem;
+    padding: 0 30px;
+}
+
+#edit-comment {
+    border-style: none;
+    background: transparent;
+    margin: 10px 10px 0 0;
+}
+
+#edit-comment a {
+    border-radius: 10px;
+    line-height: 1.5rem;
+    padding: 0 0.8rem;
+    font-size: 0.8rem;
 }
 
 /* --------------------------------------------------- Login page */

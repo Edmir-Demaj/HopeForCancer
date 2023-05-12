@@ -53,10 +53,8 @@
                         <!-- The number of likes goes before the closing strong tag -->
                         <span>{{ post.number_of_likes }} </span>
                     </strong>
-                    <!-- counts number of comments -->
-                    {% with comments.count as total_comments %}
-                    <span><strong><i class="far fa-comments"></i> {{ total_comments }}</strong></span>
-                    {% endwith %}
+                    <!-- shows number of comments -->
+                    <span><strong><i class="far fa-comments"></i> {{ post.comment_counter }}</strong></span>
                 </div>
                 <div class="text-start">
                     <a class="go-back-btn px-3 hvr-wobble-horizontal me-1" href="{% url 'blog_page' %}" role="button"
@@ -102,8 +100,58 @@
                     <div class="comment mb-2">
                         <span class="fw-semibold">{{ comment.name }}</span>
                         <p class="my-2">{{ comment.body | capfirst }}</p>
-                        <small class="text-muted mt-2">{{ comment.created_date }}</small>
-                        <!-- <hr style="margin-bottom: 0;"> -->
+                        <div class="">
+                            <small class="text-muted mt-2 d-block">{{ comment.created_date }}</small>
+                            {% if user.is_authenticated and comment.name == request.user.username %}
+                            <!-- modal to edit or delete a comment -->
+                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Show a second modal and hide this one with the button below.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                                data-bs-toggle="modal">Open second modal</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Hide this modal and show the first with the button below.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
+                                                data-bs-toggle="modal">Back to first</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button data-bs-target="#exampleModalToggle" data-bs-toggle="modal" id="edit-comment">
+                                    <a href="#" class="create-post-btn d-inline-block hvr-float-shadow">Edit</a>
+                                </button>
+                                <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" id="edit-comment">
+                                    <a href="#" class="delete-post-btn d-inline-block hvr-float-shadow">Delete</a>
+                                </button>
+                            </div>
+                            {% endif %}
+                        </div>
                     </div>
                     <!-- Our for loop ends here -->
                     {% endfor %}
@@ -118,7 +166,7 @@
                     <!-- comment form and button to submit -->
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="create-post-btn hvr-float-shadow">Submit</button>
+                    <button type="submit" class="submit-btn hvr-float-shadow">Submit</button>
                 </form>
                 {% endif %}
             </div>
