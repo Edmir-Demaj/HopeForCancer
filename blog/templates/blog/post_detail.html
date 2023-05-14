@@ -14,8 +14,9 @@
 <section class="pt-5">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
                 <div class="image-container-details">
+                    <!-- image of post or default image -->
                     {% if "placeholder" in post.featured_image.url %}
                     <img src="{% static 'images/blog_images/support_image.webp' %}" class="details-img"
                         alt="{{ post.describe_image }}" />
@@ -24,10 +25,12 @@
                     {% endif %}
                 </div>
                 <div class="fs-5 mt-4">
+                    <!-- post details: author, date -->
                     <small class="text-muted me-4"><strong>Posted by:</strong> {{ post.author | title}}</small>
                     <br>
                     <small class="text-muted"><strong>Created on:</strong> {{ post.created_date }}</small>
                     <br>
+                    <!-- check if post is updated -->
                     {% if post.updated_date == post.created_date %}
                     <small class="text-muted"><strong>Created on:</strong> {{ post.created_date }}</small>
                     {% elif post.updated_date != post.created_date %}
@@ -36,6 +39,7 @@
                 </div>
                 <div class="card-body fs-5 mt-3 mb-4">
                     <strong class="me-4">
+                        <!-- if user is authenticated can like a post -->
                         {% if user.is_authenticated %}
                         <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                             {% csrf_token %}
@@ -50,74 +54,75 @@
                         {% else %}
                         <span><i class="far fa-heart"></i></span>
                         {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
+                        <!-- The number of likes -->
                         <span>{{ post.number_of_likes }} </span>
                     </strong>
-                    <!-- shows number of comments -->
+                    <!-- The number of comments -->
                     <span><strong><i class="far fa-comments"></i> {{ post.comment_counter }}</strong></span>
                 </div>
                 <div class="text-start">
                     <a class="go-back-btn px-3 hvr-wobble-horizontal me-1" href="{% url 'blog_page' %}" role="button"
                         aria-label="button to go back to blog page" title="Go Back"> &laquo; GO BACK
                     </a>
-                    <a href="{% url 'create-post' %}" class="create-post-btn hvr-float-shadow d-inline-block">
+                    <a href="{% url 'create-post' %}"
+                        aria-label="button to create post or go to login page in not loggedin yet"
+                        class="create-post-btn hvr-float-shadow d-inline-block">
                         Create Post</a>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 py-4 py-lg-0 ps-2 ps-lg-4">
-                <!-- Post title goes in these h1 tags -->
+            <div class="col-12 col-lg-6 py-4 py-lg-0 ps-2 ps-lg-4" data-aos="fade-left" data-aos-duration="1000"
+                data-aos-once="true">
+                <!-- Post title -->
                 <h3 class="card-title fw-bold">
-                    {{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}</h3>
+                    {{ post.title | capfirst }}</h3>
                 <p class="card-text text-muted mt-3">Category# {{ post.category }}</p>
                 <hr />
-                <!-- Post author goes before the | the post's created date goes after -->
+                <!-- Post content -->
                 <p class="card-text pt-1">
                     {{ post.content | safe }}
                 </p>
+                <!-- if user is same as post author show edit and delete button -->
                 {% if user.is_authenticated and post.author == request.user%}
                 <div class="card-footer fs-5">
-                    <a href="{% url 'update-post' post.slug %}"
-                        class="create-post-btn me-5 mt-4 d-inline-block hvr-float-shadow">Edit
-                        Post</a>
-                    <a href="{% url 'delete-post' post.slug %}"
-                        class="delete-post-btn  mt-4 d-inline-block hvr-float-shadow">Delete
-                        Post</a>
+                    <a href="{% url 'update-post' post.slug %}" aria-label="link to edit this post"
+                        class="create-post-btn me-5 mt-4 d-inline-block hvr-float-shadow">Edit Post</a>
+                    <a href="{% url 'delete-post' post.slug %}" aria-label="link to delete this post"
+                        class="delete-post-btn  mt-4 d-inline-block hvr-float-shadow">Delete Post</a>
                 </div>
                 {% endif %}
             </div>
         </div>
         <hr class="mt-4">
+        <!-- Comment section -->
         <div class="row mb-5">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <h3 class="mb-3">Comments:</h3>
                 <div class="card-body">
                     <!-- message for user if there are no comments -->
                     {% if not comments %}
                     <h5 class="mt-4">No comments yet!</h5>
                     {% else %}
-                    <!-- Iterate throught comments related to thsi post to display them -->
+                    <!-- Iterate throught comments related to this post to display them -->
                     {% for comment in comments %}
                     <div class="comment mb-2">
                         <span class="fw-semibold">{{ comment.name }}</span>
                         <p class="my-2">{{ comment.body | capfirst }}</p>
                         <div class="d-flex justify-content-between">
                             <small class="text-muted mt-2 d-inline-block">{{ comment.created_date }}</small>
+                            <!-- if user is authenticated and is same with comment author can edit comment -->
                             {% if user.is_authenticated and comment.name == request.user.username%}
-
                             <small id="edit-comment">
-                                <a href="{% url 'edit_comment' comment.pk  %}"
+                                <a href="{% url 'edit_comment' comment.pk  %}" aria-label="link to edit comment page"
                                     class="create-post-btn d-inline-block hvr-float-shadow">Edit</a>
                             </small>
                             {% endif %}
                         </div>
-
                     </div>
-                    <!-- Our for loop ends here -->
                     {% endfor %}
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+            <div class="col-12 col-lg-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 {% if user.is_authenticated %}
                 <!-- if user is loggedin can leave a comment -->
                 <p class="lead">Commenting as: {{ user.username }}</p>
@@ -125,7 +130,8 @@
                     <!-- comment form and button to submit -->
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="submit-btn hvr-float-shadow">Submit</button>
+                    <button type="submit" class="submit-btn hvr-float-shadow"
+                        aria-label="button to submit a comment">Submit</button>
                 </form>
                 {% endif %}
             </div>

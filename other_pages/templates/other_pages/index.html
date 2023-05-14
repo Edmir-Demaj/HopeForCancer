@@ -233,7 +233,7 @@
             {% else %}
             <!-- Retrieve latest 3 posts and display them -->
             {% for post in latest_posts %}
-            <div class="col-4">
+            <div class="col-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <div class="card mb-3 mx-auto" style="max-width: 23rem; ">
                     <a href="{% url 'post_detail' post.slug %}"
                         aria-label="internal link when post is clicked to bring to blog post page">
