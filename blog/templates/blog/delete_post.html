@@ -7,16 +7,16 @@
 <!-- Delete post page -->
 <div class="container-fluid my-5">
   <div class="row d-flex justify-content-center align-items-center text-center">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-7">
       <h3 class="fw-semibold mb-5">
         Do you confirm that you wish to <span class="alert-text"> Delete</span> your post
-        named: "{{ post.title | slice:":1" | upper }}{{ post.title|slice:"1:" }}" ?
+        named: "{{ post.title | capfirst }}" ?
       </h3>
-      <!-- Logout form -->
+      <!-- Delete post form -->
       <form method="POST" action="{% url 'delete-post' post.slug %}">
         {% csrf_token %}
-        <a href="{% url 'post_detail' post.slug %}" class="cancel-btn me-3" role="button"
-          aria-label="button not to logout from site, brings back to blog page">No, I don't</a>
+        <a href="{% url 'post_detail' post.slug %}" class="cancel-btn me-3 mb-2 d-inline-block" role="button"
+          aria-label="link to post detail, doesnt delete post">No, I don't</a>
         <button type="submit" class="confirm-btn me-3"
           aria-label="button to delete post and bring back to blog page">Yes, I
           confirm</button>
