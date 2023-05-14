@@ -38,7 +38,7 @@
         type="text/css" />
     <!-- favicon link -->
     <link rel="icon" href="{% static 'favicon.ico' %}">
-    <!-- Animation library link -->
+    <!-- animation library link -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- css link -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -62,6 +62,7 @@
                     aria-expanded="false" aria-label="Toggle offcanvas navigation">
                     <span> <i class="fa-solid fa-bars hvr-icon"></i> </span>
                 </button>
+                <!-- Offcanvas for navbar mobile version -->
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
                     <div class="header-bg">
                         <button type="button" data-bs-dismiss="offcanvas" aria-label="Close offcanvas"
@@ -91,16 +92,17 @@
                                 <a class="nav-link hvr-underline-from-center {% if request.path == contact %} active {% endif %}"
                                     href="{% url 'contact' %}" aria-label="navbar link to contact page">Contact</a>
                             </li>
+                            <!-- Depending on user status display authentication links aswell -->
                             {% if user.is_authenticated %}
                             <li class="nav-item ms-0 ms-xl-5">
                                 <a class="nav-link hvr-underline-from-center {% if request.path == logout %} active {% endif %}"
-                                    href="{% url 'account_logout' %}" aria-label="navbar link to log out page">Log
-                                    out</a>
+                                    href="{% url 'account_logout' %}"
+                                    aria-label="navbar link to log out page">Logout</a>
                             </li>
-                            <li class="">
+                            <li>
                                 <a class="nav-link hvr-underline-from-center" href="{% url 'blog_page' %}"
-                                    aria-label="navbar link to log out page"> <i class="fa-regular fa-user"></i>
-                                    {{ user | title}}</a>
+                                    aria-label="user icon with username and link to blog page" style="color: #010b13">
+                                    <i class="fa-regular fa-user"></i> {{ user | title}}</a>
                             </li>
                             {% else %}
                             <li class="nav-item ms-0 ms-xl-5">
@@ -109,8 +111,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link hvr-underline-from-center {% if request.path == signup %} active {% endif %}"
-                                    href="{% url 'account_signup' %}" aria-label="navbar link to sign up page">Sign
-                                    up</a>
+                                    href="{% url 'account_signup' %}" aria-label="navbar link to sign up page">
+                                    Sign up</a>
                             </li>
                             {% endif %}
                         </ul>
@@ -176,15 +178,15 @@
                         </li>
                         <li>
                             <a class="hvr-underline-from-center py-1" href="{% url 'info' %}"
-                                aria-label="footer link to cancer information page">Cancer
-                                information</a>
+                                aria-label="footer link to cancer information page">
+                                Cancer information</a>
                         </li>
                         <li>
                             <a class="hvr-underline-from-center py-1" href="{% url 'blog_page' %}"
                                 aria-label="footer link to blog page">Blog</a>
                         </li>
                         <li>
-                            <a class="hvr-underline-from-center py-1" href="#"
+                            <a class="hvr-underline-from-center py-1" href="{% url 'contact' %}"
                                 aria-label="footer link to contact page">Contact</a>
                         </li>
                     </ul>
@@ -192,7 +194,7 @@
                 <div class="col-12 col-md-4 ps-2 text-start text-md-center">
                     <h4 class="fw-bolder">Follow us</h4>
                     <div class="my-3">
-                        <!-- External links & copyrights -->
+                        <!-- External social media links & copyrights -->
                         <span>
                             <a class="hvr-icon-grow" href="https://twitter.com/?lang=en" target="_blank"
                                 aria-label="footer link to twitter, opens in a new tab">
@@ -212,7 +214,7 @@
                     <p>
                         <i class="fa-regular fa-copyright"></i> Copyrights Reserved 2023 | Edmir Demaj
                     </p>
-                    <p>For educational purpose only.</p>
+                    <p>For educational purpose only!</p>
                 </div>
             </div>
         </div>
@@ -225,7 +227,7 @@
     </script>
     <!-- javascript link -->
     <script src="{% static 'js/script.js' %}"></script>
-    <!-- javascript for messages to close automatically -->
+    <!-- javascript code for messages to close automatically -->
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg{{ forloop.counter }}');
@@ -233,7 +235,7 @@
             alert.close();
         }, 3000);
     </script>
-    <!-- Animation jacascript link -->
+    <!-- animation javascript link -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();

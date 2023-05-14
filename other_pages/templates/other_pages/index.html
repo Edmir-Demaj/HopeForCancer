@@ -106,11 +106,12 @@
         <!-- Second card -->
         <article>
             <div class="row card-info p-2 mx-0 mt-5">
-                <div class="col-12 col-lg-6 p-0 order-2 order-lg-1">
+                <div class="col-12 col-lg-6 p-0 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
                     <img src="{% static 'images/home/types_of_cancer.webp' %}" class="card-img"
                         alt="All types of cancers ribbons with different colours." />
                 </div>
-                <div class="col-12 col-lg-6 p-0 ps-lg-5 order-1 order-lg-2">
+                <div class="col-12 col-lg-6 p-0 ps-lg-5 order-1 order-lg-2" data-aos="fade-left"
+                    data-aos-duration="1000">
                     <h3 class="fs-2">Types of cancer.</h3>
                     <p class="m-0">
                         There are many different types of cancer, including breast cancer,
@@ -129,7 +130,7 @@
         <!-- Third card -->
         <article>
             <div class="row card-info p-2 mx-0 mt-5">
-                <div class="col-12 col-lg-6 p-0 pe-lg-5">
+                <div class="col-12 col-lg-6 p-0 pe-lg-5" data-aos="fade-right" data-aos-duration="1000">
                     <h3 class="fs-2">Importance of early detection.</h3>
                     <p class="m-0">
                         Detecting cancer early is crucial to successful treatment and
@@ -144,7 +145,7 @@
                             READ MORE</a>
                     </button>
                 </div>
-                <div class="col-12 col-lg-6 p-0">
+                <div class="col-12 col-lg-6 p-0" data-aos="fade-left" data-aos-duration="1000">
                     <img src="{% static 'images/home/early_detection.webp' %}" class="card-img"
                         alt="A female doctor checking a man patient." />
                 </div>
@@ -157,7 +158,8 @@
 <!-- Understand cancer section start -->
 <section>
     <article id="understand-cancer" class="d-flex align-items-center my-5">
-        <div class="col-10 offset-1 d-flex flex-column align-items-center text-center my-5">
+        <div class="col-10 offset-1 d-flex flex-column align-items-center text-center my-5" data-aos="fade-up"
+            data-aos-duration="1000">
             <h2 class="fw-bold"><span class="orange-text">Understanding</span> cancer</h2>
             <p class="text-muted helper-text">Understanding cancer can save lives. Check out the links below to access
                 additional resources and expand your knowledge.
@@ -207,13 +209,11 @@
 <!-- Latest blog posts section start -->
 <section>
     <div class="container-fluid mb-4">
-        <div class="text-center mb-4">
+        <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="fw-bold"><span class="orange-text">True</span> stories from our Blog</h2>
             <p class="text-muted helper-text mx-auto">
                 Sharing experiences and insights can help others fight cancer and find hope.
                 Join our community and share your story today.</p>
-        </div>
-        <div class="text-center mb-4">
             <a href="{% url 'create-post' %}" class="create-post-btn hvr-float-shadow d-inline-block">
                 Create Post</a>
         </div>
