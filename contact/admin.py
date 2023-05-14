@@ -8,8 +8,8 @@ class ContactAdmin(SummernoteModelAdmin):
     """
     Register Contact model to admin page and customize this panel.
     """
-    list_display = ('name', 'email', 'subject')
-    search_fields = ['name', 'email', 'subject']
+    list_display = ('name', 'email', 'subject', 'content', 'created_date')
+    search_fields = ['name', 'email', 'subject', 'created_date']
     summernote_fields = 'content'
 
 
