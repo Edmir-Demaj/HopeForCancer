@@ -15,7 +15,7 @@
 <section>
   <div class="container">
     <div class="row card-info p-2 mb-2">
-      <div class="col-12 col-lg-6 p-0 pe-lg-5 mb-3">
+      <div class="col-12 col-lg-6 p-0 pe-lg-5 mb-3" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
         <h2 class="fw-bold fs-3">
           Our mission is to raise <span class="orange-text">cancer awareness</span>
         </h2>
@@ -26,7 +26,7 @@
           prevention.
         </p>
       </div>
-      <div class="col-12 col-lg-6 p-0 mb-4">
+      <div class="col-12 col-lg-6 p-0 mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
         <img src="{% static 'images/about_page/cancer_awareness.webp' %}" class="card-img" style="height: 19rem;"
           alt="Image of different color ribbons to raise cancer awareness." />
       </div>
@@ -35,6 +35,7 @@
 </section>
 <!-- Our mission section end -->
 <hr id="about-hr">
+
 <!-- Btn to move to top of page -->
 <button onclick="moveTop()" id="top-btn" class="hvr-icon-up" title="Go to top"
   aria-label="button that appears after scrolling and brings to top of page">
@@ -48,12 +49,14 @@
       What are our <span class="orange-text">values?</span>
     </h2>
     <div class="row mt-5">
-      <!-- Values entry goes here -->
+      <!-- Retreieve values and display them -->
       {% for value in values %}
-      <div class="col-12 col-md-5 mb-3 mb-md-5 p-2 p-md-0">
+      <div class="col-12 col-md-5 mb-3 mb-md-5 p-2 p-md-0" data-aos="fade-up" data-aos-duration="1000"
+        data-aos-once="true">
         <img src="{{ value.featured_image.url }}" class="card-about-img" alt="{{ value.image_description }}">
       </div>
-      <div class="col-12 col-md-7 px-2 px-md-5 mb-4 mb-md-0">
+      <div class="col-12 col-md-7 px-2 px-md-5 mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="1000"
+        data-aos-once="true">
         <h4 class="fw-semibold">{{ value.title | safe | capfirst}}</h4>
         <p>
           {{ value.content | safe }}
@@ -65,6 +68,7 @@
 </section>
 <!-- Our values section end -->
 <hr id="about-hr">
+
 <!-- Our Team section start -->
 <section>
   <div class="container mb-4">
@@ -72,7 +76,7 @@
       Meet our <span class="orange-text">Team</span>
     </h2>
     <div class="row card-info p-2">
-      <div class="col-12 col-lg-6 p-1 pe-lg-5 mb-3">
+      <div class="col-12 col-lg-6 p-1 pe-lg-5 mb-3" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
         <p>
           Welcome to HopeForCancer, behind this web app is <strong>Edmir Demaj</strong>,
           a Full Stack software development student at Code Institute.
@@ -85,25 +89,26 @@
         <div class="div">
           <h4 class="fw-bold"> Follow <span class="orange-text">Edmir</span> on:</h4>
           <div class="my-2">
-            <!-- External links & copyrights -->
-            <span><a class="hvr-icon-grow fs-5" href="https://github.com/Edmir-Demaj" target="_blank"
-                aria-label="About us page external link to  author Github, opens in a new tab">
+            <!-- Links to follow author of the website -->
+            <span><a class="hvr-icon-grow fs-4" href="https://github.com/Edmir-Demaj" target="_blank"
+                aria-label="About us page, external link to  author Github, opens in a new tab">
                 <i class="fa-brands fa-github hvr-icon "></i></a>
             </span>
-            <span><a class="hvr-icon-grow px-5 fs-5"
+            <span><a class="hvr-icon-grow px-5 fs-4"
                 href="https://www.linkedin.com/in/edmir-demaj-full-stack-developer/" target="_blank"
-                aria-label="About us page external link to author Linkedin, opens in a new tab">
+                aria-label="About us page, external link to author Linkedin, opens in a new tab">
                 <i class="fa-brands fa-linkedin hvr-icon"></i></a>
             </span>
-            <span><a class="hvr-icon-grow fs-5" href="https://edmir-demaj.github.io/portfolio-Edmir-Demaj/index.html"
-                target="_blank" aria-label="About us page external link to author Portfolio, opens in a new tab">
+            <span><a class="hvr-icon-grow fs-4" href="https://edmir-demaj.github.io/portfolio-Edmir-Demaj/index.html"
+                target="_blank" aria-label="About us page, external link to author Portfolio, opens in a new tab">
                 <i class="fas fa-briefcase hvr-icon"></i>
               </a>
             </span>
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6 p-0 mb-4 text-center img-container">
+      <div class="col-12 col-lg-6 p-0 mb-4 text-center img-container" data-aos="fade-left" data-aos-duration="1000"
+        data-aos-once="true">
         <img src="{% static 'images/about_page/edmir_pic.webp' %}" class="card-img" style="height: 22rem;"
           alt="Image of author of this web app." />
       </div>
