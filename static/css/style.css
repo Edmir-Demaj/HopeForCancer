@@ -43,7 +43,7 @@ p {
     font-weight: 400;
 }
 
-h1 {
+h2 {
     text-transform: uppercase;
 }
 
@@ -209,10 +209,6 @@ footer address {
 }
 
 /* Card section */
-h2 {
-    text-transform: uppercase;
-}
-
 .card-img {
     object-fit: cover;
     height: 100%;

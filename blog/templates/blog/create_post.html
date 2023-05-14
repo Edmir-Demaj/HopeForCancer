@@ -21,7 +21,8 @@
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <button type="submit" class="create-post-btn hvr-float-shadow my-3 px-4">Create Post</button>
+                    <button type="submit" class="create-post-btn hvr-float-shadow my-3 px-4"
+                        aria-label="Button to create a post">Create Post</button>
                 </form>
             </div>
         </div>

@@ -4,13 +4,13 @@
 <!-- widget_tweaks package add classes to django allauth field to style them -->
 {% load widget_tweaks %}
 {% block head_title %}{% trans "Signup" %}{% endblock %}
-{% block title %}Signup{% endblock title %}
+{% block title %}Sign up{% endblock title %}
 {% block content %}
 
 <!-- Signup page start-->
 <div class="container py-5 px-2 p-xl-5">
   <div class="row">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
       <h1 class="fw-semibold fs-3">
         Welcome to <span class="orange-text"> HopeForCancer!</span>
       </h1>
@@ -21,7 +21,7 @@
       <!-- Signup form -->
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
-        <!-- Iterate non_field_errors and provide error message to user -->
+        <!-- show non_field_error messages to user -->
         {% if form.non_field_errors %}
         <div class="alert alert-danger" role="alert">
           {% for error in form.non_field_errors %}
@@ -34,19 +34,20 @@
         <div class="form-group">
           {{ field.label_tag }}
           {{ field|add_class:"form-control" }}
-          <!-- Provides field_error messages to user -->
+          <!-- provides field_error messages to user -->
           {% for error in field.errors %}
           <span class="help-block alert-text">{{ error }}</span>
           {% endfor %}
         </div>
         {% endfor %}
+        <!-- redirect after sign up -->
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="account-btn hvr-float-shadow px-5" type="submit">{% trans "Sign Up" %} &raquo;</button>
       </form>
     </div>
-    <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+    <div class="col-12 col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
       <img src="{% static 'images/accounts/signup_image.webp' %}" id="login-image"
         alt="Two hands holding a white ribbon to support cancer.">
     </div>
