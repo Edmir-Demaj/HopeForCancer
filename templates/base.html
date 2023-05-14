@@ -38,6 +38,8 @@
         type="text/css" />
     <!-- favicon link -->
     <link rel="icon" href="{% static 'favicon.ico' %}">
+    <!-- Animation library link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- css link -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>HopeForCancer | {% block title %}{% endblock title %}</title>
@@ -230,6 +232,11 @@
             let alert = new bootstrap.Alert(messages);
             alert.close();
         }, 3000);
+    </script>
+    <!-- Animation jacascript link -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
