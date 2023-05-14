@@ -9,15 +9,13 @@
         Unleashing the<span class="orange-text"> Power</span> of Storytelling
     </h1>
 </section>
-<div>
-    <h2 class="fw-bold text-center p-2 mb-4 blog-subtitle fs-3">
+<div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <h2 class="fw-bold p-2 mb-4 blog-subtitle fs-3">
         Discover<span class="orange-text"> Powerful Stories</span> of Hope and
         Courage <i class="fa-sharp fa-solid fa-arrow-down"></i>
     </h2>
-</div>
-<div class="text-center mb-4">
-    <a href="{% url 'create-post' %}" class="create-post-btn hvr-float-shadow d-inline-block">
-        Create Post</a>
+    <a href="{% url 'create-post' %}" aria-label="link to create post page or log in page if you are not logged in"
+        class="create-post-btn hvr-float-shadow d-inline-block">Create Post</a>
 </div>
 
 <!-- Btn to move to top of page -->
@@ -41,9 +39,11 @@
                         <i class="fa-regular fa-face-smile-beam"></i>
                     </h3>
                     {% else %}
+                    <!-- Retreive all posts and display them -->
                     {% for post in all_posts %}
                     <div class="col-xl-12">
-                        <div class="card mb-5 mx-auto" style="max-width: 24rem;">
+                        <div class="card mb-5 mx-auto" style="max-width: 24rem;" data-aos="fade-up"
+                            data-aos-duration="1000" data-aos-once="true">
                             <a href="{% url 'post_detail' post.slug %}"
                                 aria-label="internal link when post is clicked to bring to blog post page">
                                 {% if "placeholder" in post.featured_image.url %}
@@ -59,32 +59,33 @@
                                     <p class="card-text text-muted">Category# {{ post.category }}</p>
                                     <hr />
                                     <p class="card-text">
-                                        {{ post.content | truncatechars:180 | safe }}
+                                        {{ post.content | truncatechars:180 | safe | capfirst }}
                                     </p>
                                 </div>
                             </a>
                             <div class="card-body pb-1">
                                 <strong class="me-4">
+                                    <!-- if user is authenticated can like a post -->
                                     {% if user.is_authenticated %}
                                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                         {% csrf_token %}
                                         {% if liked %}
                                         <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                                            class="btn-like hvr-icon-pulse"><i
-                                                class="fas fa-heart hvr-icon"></i></button>
+                                            class="btn-like hvr-icon-pulse"><i class="fas fa-heart hvr-icon"></i>
+                                        </button>
                                         {% else %}
                                         <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                                            class="btn-like hvr-icon-pulse"><i
-                                                class="far fa-heart hvr-icon"></i></button>
+                                            class="btn-like hvr-icon-pulse"><i class="far fa-heart hvr-icon"></i>
+                                        </button>
                                         {% endif %}
                                     </form>
                                     {% else %}
                                     <span><i class="far fa-heart"></i></span>
                                     {% endif %}
-                                    <!-- The number of likes goes before the closing strong tag -->
+                                    <!-- The number of likes -->
                                     <span>{{ post.number_of_likes }} </span>
                                 </strong>
-                                <!-- shows number of comments -->
+                                <!-- The number of comments -->
                                 <span><strong><i class="far fa-comments"></i> {{ post.comment_counter }}</strong></span>
                             </div>
                             <div class="card-footer">
@@ -93,6 +94,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Divide by 5 post cards per page displaying a pagination after -->
                     {% if forloop.counter|divisibleby:5 %}
                 </div>
                 <div class="row">
@@ -101,19 +103,20 @@
                 </div>
             </div>
         </div>
+        <!-- Pagination buttons-->
         {% if is_paginated %}
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center mb-4">
                 {% if page_obj.has_previous %}
                 <li>
-                    <a href="?page={{ page_obj.previous_page_number }}" class="go-back-btn px-5 hvr-wobble-horizontal"
-                        title="Prev Page">&laquo; PREV </a>
+                    <a href="?page={{ page_obj.previous_page_number }}" aria-label="previos page link"
+                        class="go-back-btn px-5 hvr-wobble-horizontal" title="Prev Page">&laquo; PREV </a>
                 </li>
                 {% endif %}
                 {% if page_obj.has_next %}
                 <li>
-                    <a href="?page={{ page_obj.next_page_number }}" class="go-back-btn px-5 hvr-wobble-horizontal"
-                        title="Next Page"> NEXT &raquo;</a>
+                    <a href="?page={{ page_obj.next_page_number }}" aria-label="next page link"
+                        class="go-back-btn px-5 hvr-wobble-horizontal" title="Next Page"> NEXT &raquo;</a>
                 </li>
                 {% endif %}
             </ul>
