@@ -39,11 +39,12 @@ class CommentForm(forms.ModelForm):
     """
     body = forms.CharField(
         label='Leave a comment:',
-        widget=forms.TextInput(
+        widget=forms.Textarea(
             attrs={
                 'placeholder': 'Write your comment here',
-                }
-            )
+                'rows': 4,
+            }
+        )
     )
 
     class Meta:

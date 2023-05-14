@@ -36,7 +36,8 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="submit-btn hvr-float-shadow me-3" data-bs-dismiss="modal">Close</button>
-                  <a href="{% url 'delete_comment' comment.id %}" aria-label="Delete Comment">Delete</a>
+                  <a href="{% url 'delete_comment' comment.id %}" class="delete-post-btn hvr-float-shadow"
+                    aria-label="Delete Comment">Delete</a>
                 </div>
               </div>
             </div>

@@ -94,7 +94,6 @@ class Comment(models.Model):
         """
         To order the comments on the created_date field in the ascending order
         """
-
         ordering = ['created_date']
 
     def __str__(self):
