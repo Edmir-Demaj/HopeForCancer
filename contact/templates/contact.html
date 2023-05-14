@@ -12,17 +12,20 @@
   </h1>
   <div class="container mb-5">
     <div class="row">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
         <p>If you have any questions don't hesitate to contact us.</p>
         <form method="post">
           <!-- contact form and button to submit -->
           {{ form | crispy }}
           {% csrf_token %}
-          <button type="submit" class="submit-btn hvr-float-shadow">Submit</button>
+          <button type="submit" aria-label="button to submit contact form"
+            class="submit-btn hvr-float-shadow">Submit</button>
         </form>
       </div>
-      <div class="col-12 col-lg-6 mt-4 px-0">
+      <!-- FAQs section -->
+      <div class="col-12 col-lg-6 mt-4 px-0" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
         <h3 class="text-center mb-3 fw-semibold">FAQs</h3>
+        <!-- Retrieve FAQs from Databse and display them -->
         {% for faqs in faq %}
         <div class="mb-3">
           <p class="mb-0">
@@ -37,7 +40,6 @@
             </div>
           </div>
         </div>
-
         {% endfor %}
       </div>
     </div>
