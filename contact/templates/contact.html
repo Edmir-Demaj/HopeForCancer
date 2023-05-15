@@ -23,12 +23,12 @@
         </form>
       </div>
       <!-- FAQs section -->
-      <div class="col-12 col-lg-6 mt-5 px-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <div class="col-12 col-lg-6 mt-4 px-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <h3 class="text-center mb-3 fw-semibold">FAQs</h3>
         <!-- Retrieve FAQs from Databse and display them -->
         {% for faqs in faq %}
         <div class="mb-3">
-          <p class="mb-0" id="title-container">
+          <p class="mb-0">
             <button class="faq-btn" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseExample{{ faqs.id }}" aria-expanded="false" aria-controls="collapseExample">
               {{ faqs.title | safe }} <i class="fa-solid fa-chevron-down orange-text"></i>
@@ -36,7 +36,6 @@
           </p>
           <div class="collapse" id="collapseExample{{ faqs.id }}">
             <div class="faq-content">
-              <hr class="">
               <p>{{ faqs.content | safe }}</p>
             </div>
           </div>
