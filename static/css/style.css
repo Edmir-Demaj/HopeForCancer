@@ -8,6 +8,7 @@
 
 html {
     font-size: calc(15px + 0.390625vw);
+    overflow-x: hidden;
 }
 
 body {
@@ -239,15 +240,10 @@ footer address {
     height: 18rem;
 }
 
-.dropdown {
-    max-width: 400px;
-}
-
 .dropdown-btn,
 .dropdown-menu {
     font-family: 'Merriweather', serif;
     font-size: 0.9rem;
-    width: 400px;
     border-radius: 0px;
     padding: 5px 0;
     border: 2px solid #e06b02;
@@ -257,7 +253,7 @@ footer address {
 
 .dropdown-btn:hover {
     transition: all 0.4s ease;
-    background-color: #e06b02;
+    background-color: #a04b00;
     color: #f7f7f7;
 }
 
