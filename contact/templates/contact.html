@@ -7,12 +7,12 @@
 <div id="contact-hero-section"></div>
 <!-- Contact page start -->
 <section>
-  <h1 class="fw-bold text-center my-4 fs-3">
+  <h1 class="fw-bold text-center my-4 fs-3" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
     Get <span class="orange-text"> In Touch</span>
   </h1>
   <div class="container mb-5">
     <div class="row">
-      <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+      <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <p>If you have any questions don't hesitate to contact us.</p>
         <form method="post">
           <!-- contact form and button to submit -->
@@ -23,12 +23,12 @@
         </form>
       </div>
       <!-- FAQs section -->
-      <div class="col-12 col-lg-6 mt-4 px-0" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+      <div class="col-12 col-lg-6 mt-5 px-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <h3 class="text-center mb-3 fw-semibold">FAQs</h3>
         <!-- Retrieve FAQs from Databse and display them -->
         {% for faqs in faq %}
         <div class="mb-3">
-          <p class="mb-0">
+          <p class="mb-0" id="title-container">
             <button class="faq-btn" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseExample{{ faqs.id }}" aria-expanded="false" aria-controls="collapseExample">
               {{ faqs.title | safe }} <i class="fa-solid fa-chevron-down orange-text"></i>
@@ -36,6 +36,7 @@
           </p>
           <div class="collapse" id="collapseExample{{ faqs.id }}">
             <div class="faq-content">
+              <hr class="">
               <p>{{ faqs.content | safe }}</p>
             </div>
           </div>
