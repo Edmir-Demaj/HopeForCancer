@@ -387,7 +387,7 @@ ol li {
     border: none;
     border-radius: 20px;
     line-height: 2rem;
-    padding: 0 30px;
+    padding: 0 25px;
 }
 
 .card {
@@ -541,7 +541,7 @@ ol li {
 
 /* --------------------------------------------------- Logout page */
 .cancel-btn {
-    padding: 11px 46px !important;
+    padding: 10px 30px !important;
     background-color: #c93f4d;
     border: 1.5px solid #c93f4d;
     color: #f7f7f7;
@@ -560,8 +560,8 @@ ol li {
 .confirm-btn,
 .update-btn {
     padding: 10px 30px !important;
-    background-color: #238916;
-    border: 1.5px solid #238916;
+    background-color: #0e7501;
+    border: 1.5px solid #0e7501;
     color: #f7f7f7;
     border-radius: 10px;
     padding: 5px 20px;
@@ -573,7 +573,7 @@ ol li {
 .confirm-btn:hover,
 .update-btn:hover {
     background-color: #F9F4FB !important;
-    color: #238916 !important;
+    color: #0e7501 !important;
 }
 
 /* --------------------------------------------------- Create Post page */
