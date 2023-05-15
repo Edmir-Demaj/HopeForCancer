@@ -6,6 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Value)
 class ValueAdmin(SummernoteModelAdmin):
     """
+    Register value model with admin panel.
     Define which field will use summernote editor in admin panel
     and customize this admin panel for Value model.
     """

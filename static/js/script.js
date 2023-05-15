@@ -5,7 +5,7 @@ let topButton = document.getElementById("top-btn");
 window.addEventListener("scroll", showButton);
 
 function showButton() {
-  // write the code for all browsers and for safari to hide or display btn
+  // code for all browsers and for safari to hide or display btn
   if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) {
     topButton.style.display = "block";
   } else {

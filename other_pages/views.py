@@ -5,7 +5,7 @@ from .models import Value
 
 def index(request):
     """
-    When this function is called it takes the request and return the
+    When this view is called it takes the request and return the
     response which will render home page or index.html as well as
     show the latest 3 blog posts.
     """
@@ -19,8 +19,8 @@ def index(request):
 
 def about_page(request):
     """
-    When this function is called it takes the request and return the
-    response which will render about page.
+    When this view is called it takes the request and return the
+    response which will render about page and items from value model
     """
     values = Value.objects.all()
     template = 'other_pages/about.html'
@@ -32,7 +32,7 @@ def about_page(request):
 
 def info_page(request):
     """
-    When this function is called it takes the request and return the
+    When this view is called it takes the request and return the
     response which will render cancer information page.
     """
     template = 'other_pages/info.html'

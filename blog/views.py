@@ -47,7 +47,7 @@ def postDetail(request, slug):
 class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     """
     Create a blog post only when user is logged in, if is not loggedin will
-    be redirected to the login page.
+    be redirected to the login page. Provide message to user.
     """
     model = Post
     form_class = CreatePostForm
@@ -66,7 +66,7 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     def form_valid(self, form):
         """
         This function sets the author field as user when form is submitted
-        and if slug doesnt exist creats a unique slug from its title
+        and if slug doesn't exist creats a unique slug from its title
         """
         form.instance.author = self.request.user
         if not form.instance.slug:
@@ -77,7 +77,8 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
 @login_required()
 def update_post(request, slug):
     """
-    Users can update their blog post that they have created
+    Users can update their blog post that they have created,
+    requires user to be loggedin and provide message to user.
     """
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
@@ -103,7 +104,7 @@ def update_post(request, slug):
 
 class DeletePost(generic.DeleteView):
     """
-    View to allow users to delete a post
+    View to allow users to delete a post and provide a message.
     """
     model = Post
     template_name = 'blog/delete_post.html'
@@ -122,7 +123,8 @@ class DeletePost(generic.DeleteView):
 
 class PostLike(View):
     """
-    View to make possible for users to like a post
+    View to make possible for users to like a post displaying a message.
+    Has url to redirect as well.
     """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
@@ -146,7 +148,8 @@ class PostLike(View):
 def add_comment(request, post_id):
     """
     In this view we get the post where the comment is related to and save the
-    comment in DB. Before saving we validate the form.
+    comment in DB. Before saving we validate the form.Provide message depending
+    on status of validation and increase number of comments.
     """
     post = Post.objects.get(id=post_id)
     comment_form = CommentForm(data=request.POST)

@@ -6,8 +6,9 @@ from .forms import ContactForm
 
 def contact(request):
     """
-    When this function is called it takes the request and return the
-    response which will rendercontact page.
+    When this view is called it takes the request and return the
+    response which will render contact page, validate contact form on
+    submittion and retreive faqs from databse to display in frontend.
     """
     faq = FAQ.objects.all()
     if request.method == 'POST':

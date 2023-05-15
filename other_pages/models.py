@@ -4,6 +4,9 @@ from cloudinary.models import CloudinaryField
 
 
 class Value(models.Model):
+    """
+    Value model used in about page to render images and text
+    """
     featured_image = CloudinaryField('image')
     image_description = models.CharField(
         max_length=100, blank=True, null=True,

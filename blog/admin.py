@@ -6,8 +6,8 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
-    Define fields which will use summernote editor in admin panel
-    and customize this admin panel.
+    Register Post model to Admin panel and define fields which will
+    use summernote editor as well as customize admin panel.
     """
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'category', 'author', 'created_date', 'status')

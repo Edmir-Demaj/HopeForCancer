@@ -7,8 +7,8 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 class Category(models.Model):
     """
-    This class Category defines the structure of Category
-    model in our database and the methods.
+    This Category class defines the structure of Category
+    model in our database and its defined by its name.
     """
     category_name = models.CharField(
         max_length=50, unique=True, blank=False, null=False
@@ -25,8 +25,8 @@ class Category(models.Model):
 
 class Post(models.Model):
     """
-    This class Post defines the structure of Post model
-    in our database and the methods.
+    This Post class defines the structure of Post model
+    in our database and the methods used.
     """
     title = models.CharField(
         max_length=60, unique=True, blank=False, null=False,
@@ -77,7 +77,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     """
-    This class Comment defines the structure of Comment model
+    This Comment class defines the structure of Comment model
     in our database and the methods.
     """
 
@@ -92,7 +92,7 @@ class Comment(models.Model):
 
     class Meta:
         """
-        To order the comments on the created_date field in the ascending order
+        Order the comments on the created_date field in the ascending order
         """
         ordering = ['created_date']
 

@@ -1,7 +1,7 @@
 from . import views
 from django.urls import path
 
-
+# all urls used for blog app, each one triggers a specific view
 urlpatterns = [
     path('', views.BlogPage.as_view(), name='blog_page'),
     path('post_detail/<slug:slug>/', views.postDetail, name='post_detail'),
