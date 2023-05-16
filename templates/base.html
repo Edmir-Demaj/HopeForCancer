@@ -214,11 +214,13 @@
                     <p>
                         <i class="fa-regular fa-copyright"></i> Copyrights Reserved 2023 | Edmir Demaj
                     </p>
-                    <!-- Button trigger modal privacy and policy-->
-                    <button type="button" class="privacy-policy-btn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        Privacy & Policy
-                    </button>
+                    <p>
+                        <a href="{% static 'privacy_policy.pdf' %}" target="_blank"
+                            aria-label="link to download privacy & policy, open in a different tab">
+                            Privacy & Policy
+                        </a>
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -240,10 +242,10 @@
         }, 3000);
     </script>
     <!-- animation link -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
+    </script> -->
 </body>
 
 </html>
