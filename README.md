@@ -6,7 +6,7 @@ This is an informational blog webapp created using the Django Framework and rela
 **Our Story**  
 HopeForCancer is a web application that aims to raise awareness about cancer and provide resources to those affected by it. The idea for the project originated from a personal experience: the founder, **Edmir Demaj**, lost his father to cancer in November 2022. Recognizing the need for a comprehensive and user-friendly resource for those affected by cancer, Edmir set out to create a platform that would do just that. The mission of HopeForCancer is to provide support and information to cancer patients, survivors, and their families, and to spread awareness about the importance of early detection and prevention.
 
-You can view the live site here: [HopeForCancer](https://www.youtube.com/watch?v=6-XXvUENY_8&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=5)
+You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokuapp.com/)
 
 ![Screenshot showcasing the responsive design of my web app](image/path)
 
@@ -29,21 +29,38 @@ You can view the live site here: [HopeForCancer](https://www.youtube.com/watch?v
     - [Home Page](#home-page)
       - [Navbar](#navbar)
       - [Hero Image](#hero-image)
-      - [Destination Section](#destination-section)
+      - [Cancer Information](#cancer-information)
+      - [Understanding Cancer](#understanding-cancer)
+      - [Latest Blog Post](#lates-blog-post)
       - [Footer](#footer)
-    - [User Page](#user-page)
-    - [About Page](#about-page)
+    - [About us Page](#about-us-page)
+      - [Hero Image](#hero-image)
+      - [Our Mission](#our-mission)
+      - [Our Values](#our-values)
+      - [Our Team](#our-team)
+    - [Cancer Info Page](#cancer-info-page)
+      - [Hero Image](#hero-image)
+      - [Cancer Facts](#cancer-facts)
+      - [Cancer Types](#cancer-types)
+      - [Detection & Prevent](#detection-&-prevent)
     - [Blog Page](#blog-page)
+      - [Hero Image](#hero-image)
+      - [Blog Post](#blog-post)
       - [Blog Details](#blog-details)
       - [Blog Comments](#blog-comments)
-    - [Register](#register)
-    - [Login](#login)
-    - [Logout](#logout)
+    - [Contact Page](#contact-page)
+      - [Hero Image](#hero-image)
+      - [Contact Form](#contact-form)
+      - [FAQs](#faqs)
+    - [Accounts](#register)
+      - [Login](#login)
+      - [Logout](#logout)
+      - [Signup](#signup)
     - [Alert Messages](#alert-messages)      
-  - [Admin Panel/Superuser](#admin-panelsuperuser)
+  - [Admin Panel](#admin-panel)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
-    - [Django Packages](#django-packages)
+    - [Packages](#packages)
     - [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
   - [Testing](#testing)
       - [Validation](#validation)
@@ -93,12 +110,12 @@ The Agile methodology was chosen for this project to ensure flexibility and resp
 Please find my GitHub Kanban Board with all Epics, User Stories and Tasks [here.](https://github.com/users/Edmir-Demaj/projects/4)
 
 <details><summary>Please find my Epic & User Story templates:</summary>
-<img src="#" alt="Epic default template">
-<img src="#" alt="User Story default template">
+<img src="media/readme_images/epic_template.webp" alt="Epic default template">
+<img src="media/readme_images/user_story_template.webp" alt="User Story default template">
 </details>
 
 <details><summary>Please find my Milestone project:</summary>
-<img src="#" alt="Milestone project">
+<img src="media/readme_images/milestone_project.webp" alt="Milestone project">
 </details>
 
 ## Epics and User Stories
@@ -385,27 +402,27 @@ Please find my GitHub Kanban Board with all Epics, User Stories and Tasks [here.
 
 ## Colours
 
-The color palette for this project features five colors:  
+The color palette for this project features five main colors:  
 #010B13 - this is a very dark blue, almost black color  
 #F9F4FB - this is a very light pinkish-white color  
 #FAB1DC - this is a light pink color often associated with breast cancer awareness  
-#E06B02 - this is an orange color often associated with kidney and leukemia cancer 
+#E06B02 - this is an orange color often associated with kidney and leukemia cancer  
 #8129C1 - this is a bright purple color, often associated with cancer awareness   
 
 The background of the site is set to light-pinkish, creating a calm and clean atmosphere. The navbar uses light pink, which is the color commonly associated with breast cancer awareness. The color bright orange is used to emphasize important words or keywords on the site. Bright purple is another color that is used for emphasis,mostly buttons, and is often associated with all types of  cancer. Lastly, dark blue is used for text to provide a good contrast against the background and improve readability.  Overall, the color palette is designed to create a visually appealing and informative experience for users.
 
-![Color Palette](#)
+![Color Palette](media/readme_images/colour_palette.webp)
 
 ## Typography
 
 For typography, the web app uses Google Fonts. The header font is Montserrat, which has a modern and clean style that creates a great visual impact. For the body text, Merriweather is used, a font that enhances readability and provides a comfortable reading experience. As a backup fonts are used Sans-Serif and Serif. Together, these fonts create a professional and visually pleasing design that aligns with the web app's mission of raising awareness about cancer.
 
-![Montserrat Font Style](#)
-![Merriweather Font Style](#)
+![Montserrat Font Style](media/readme_images/montserrat.webp)
+![Merriweather Font Style](media/readme_images/merriweather.webp)
 
 ## Imagery
 
-All images used on this project are free copyrights. They are used to convey a message or evoke a particular emotion related to the subject of cancer. Also they are used to add visual interest to the website and to help break up text-heavy pages like about or info page. Imagery is relevant to the content and mission of the website and is also appropriately sized and optimized for web use to ensure fast page loading times.
+All images used on this project are free copyrights. They are used to convey a message or evoke a particular emotion related to the subject of cancer. Also they are used to add visual interest to the website and to help break up text-heavy pages like about or info page. Imagery is relevant to the content and mission of the website and is also appropriately sized and optimized for web use to ensure fast page loading times.All images are in .webp format.
 
 ## Wireframes
 
