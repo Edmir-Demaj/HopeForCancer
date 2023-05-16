@@ -133,6 +133,14 @@ footer address {
     font-size: 0.9rem;
 }
 
+.privacy-btn {
+    border: none;
+    background-color: transparent;
+    font-family: 'Merriweather', serif;
+    color: inherit;
+    padding-bottom: 5px;
+}
+
 /* --------------------------------------------------- Home page styles */
 /* Hero section */
 #carouselExampleInterval img {
