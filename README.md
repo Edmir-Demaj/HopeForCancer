@@ -31,25 +31,25 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
       - [Hero Image](#hero-image)
       - [Cancer Information](#cancer-information)
       - [Understanding Cancer](#understanding-cancer)
-      - [Latest Blog Post](#lates-blog-post)
+      - [Latest Blog Post](#latest-blog-post)
       - [Footer](#footer)
     - [About us Page](#about-us-page)
-      - [Hero Image](#hero-image)
+      - [Hero Image About](#hero-image-about)
       - [Our Mission](#our-mission)
       - [Our Values](#our-values)
       - [Our Team](#our-team)
     - [Cancer Info Page](#cancer-info-page)
-      - [Hero Image](#hero-image)
+      - [Hero Image Info](#hero-image-info)
       - [Cancer Facts](#cancer-facts)
       - [Cancer Types](#cancer-types)
-      - [Detection & Prevent](#detection-&-prevent)
+      - [Detection and Prevention](#detection-and-prevention)
     - [Blog Page](#blog-page)
-      - [Hero Image](#hero-image)
+      - [Hero Image Blog](#hero-image-blog)
       - [Blog Post](#blog-post)
-      - [Blog Details](#blog-details)
+      - [Post Details](#post-details)
       - [Blog Comments](#blog-comments)
     - [Contact Page](#contact-page)
-      - [Hero Image](#hero-image)
+      - [Hero Image Contact](#hero-image-contact)
       - [Contact Form](#contact-form)
       - [FAQs](#faqs)
     - [Accounts](#register)
@@ -494,7 +494,130 @@ In this section, users can find the three most recent blog posts, fostering a de
 Footer is positioned at the very bottom of the page and remains consistent across all pages to facilitate easy navigation for users. It contains contact details for reaching the website team, useful links for navigating to different pages, social media links, and copyrights information. Additionally, a Privacy Policy link is included, which opens in a modal window for ease of access.
 ![Footer](media/features/home/footer.webp)
 
-# Admin Panel/Superuser
+## About us Page
+
+### Hero Image About
+
+To enhance user comprehension, a captivating hero image accompanies every page, conveying the essence of the message while complementing a descriptive heading.
+![Hero Image About](media/features/about/hero_image.webp)
+
+### Our Mission
+
+In order to ensure a clear understanding of the website's mission, a concise paragraph is included. To further reinforce this message, an accompanying image is used to provide visual support for the mission section, which is crucial for users.
+![Our Mission](media/features/about/our_mission.webp)
+
+### Our Values
+
+Our values feature presents the website's core values to the user. To incorporate these values is utilized a database model, allowing administrator to apply CRUD operations as needed for updating values over time. Each value is thoughtfully represented by an accompanying image, enhancing the user experience.
+![Our Values](media/features/about/our_values.webp)
+
+### Our Team
+
+Our team feature provides information about the person behind this website, creating a personal and engaging connection with the user. An image of the author is included to foster familiarity. Furthermore, links to follow the author on his social platforms, enabling users to connect and interact with him directly.
+![Our Team](media/features/about/our_team.webp)
+
+[Back to top ⇧](#content)
+
+## Cancer Information
+
+### Hero Image Info
+
+The cancer information page utilizes a hero image accompanied by a clear and descriptive heading to convey the page's subject to users with ease.
+![Hero Image Info](media/features/info/hero_image_info.webp)
+
+### Cancer Facts
+
+The cancer facts feature presents users with cancer infographics, allowing for easier visualization and understanding compared to lengthy text-based information. Additionally, a brief explanation of what cancer is provided, along with a button that redirects users to specialized websites where they can read more detailed information about cancer.
+![Cancer Facts](media/features/info/cancer_facts.webp)
+
+### Detection and Prevention
+
+This feature comprises two sections, each displaying information to users through visually appealing lists. The first section focuses on early detection of cancer, while the second section provides ways to prevent cancer. Each section is accompanied by a button that users can click to read more about the topic, redirecting them to specialized websites for cancer information.
+![Detection and Prevention](media/features/info/detection_prevention.webp)
+
+## Blog Page
+
+### Hero Image Blog
+
+The blog page incorporates a captivating hero image, adding significance to the page's content. Complemented by a descriptive heading, the image enhances the overall visual appeal and meaning of the blog.
+![Hero Image Blog](media/features/blog/hero_image_blog.webp)
+
+### Blog Post
+
+The blog post section presents users with a collection of blog posts displayed as cards. Each card includes an image uploaded from user (if none uploaded a default image will display) the post's title, category, a snippet of the content, the number of likes and comments it has received, the author's name, and the publication date. If the user is logged in, they have the ability to like or dislike posts. Clicking on a card redirects the user to a detailed post page where they can explore the full content and leave a comment. A smooth fade-up animation is used to display the cards in an elegant manner. The posts are organized in a column layout, with a maximum of five posts per column. A pagination button appears when there are additional posts available for browsing.
+![Blog Post](media/features/blog/blog_post.webp)
+
+### Post Details
+
+In the post detail page, users can access the complete content of the post, view any comments associated with it, and explore related details. If a user is logged in, they have the option to like the post or leave a comment. However, if the logged-in user is also the author of the post, two additional buttons, "Edit" and "Delete," will be displayed. These buttons allow the author to modify or remove their own post according to their preferences. A "Go Back" button is used so users can return back to blog page.
+![Post Details](media/features/blog/post_detail.webp)
+
+### Additional features related to Blog Page
+As the main page offering a wide range of functionality, the blog page incorporates several additional features to enhance the user experience. Alongside the core CRUD (Create, Read, Update, Delete) functionality, here are some additional features related to the blog page:
+<details><summary>Create Post: Logged in users can create post. After submitting redirect to blog page and need approval from Admin in order to display.</summary>
+<img src="media/features/blog/create_post.webp" alt="Create Post">
+</details>
+<details><summary>Edit Post: Author of post is able to edit their post when they are logged in.</summary>
+<img src="media/features/blog/edit_post.webp" alt="Edit Post">
+</details>
+<details><summary>Delete Post: Logged-in authors have the ability to delete their own posts. To ensure safety, an additional confirmation step is implemented where users are asked to confirm the deletion before it is executed.</summary>
+<img src="media/features/blog/delete_post.webp" alt="Delete Post">
+</details>
+
+----
+
+### Blog Comments
+
+The comment feature allows users to view comments in ascending order. When logged in, users have the ability to leave comments on posts. If a user is also the author of a comment, an edit button will be displayed, giving them the option to edit their own comment if desired.
+![Blog Comments](media/features/blog/comment_image.webp)
+
+#### Edit Comment:
+
+When the author of a comment clicks on the "Edit" button next to their comment, edit comment form will appear, providing them with the option to edit the comment or delete it if they choose to do so.
+![Edit Comment](media/features/blog/edit_comment.webp)
+
+#### Delete Comment:
+
+Before executing the delete function, an additional step is introduced to ask users to confirm their intention to delete the comment. This confirmation ensures that users are certain about deleting the comment before it is permanently removed.
+![Delete Comment](media/features/blog/delete_comment.webp)
+
+[Back to top ⇧](#content)
+
+## Contact Page
+
+### Hero Image Contact
+
+The contact page features a visually stunning image in the hero section, enhancing user-friendliness and creating a more engaging experience for visitors.
+![Hero Image Contact](media/features/contact/hero_image_contact.webp)
+
+### Contact Form
+
+A contact form is implemented to facilitate seamless communication between users and the website's team. Users can easily reach out with any questions, suggestions, or other topics they need assistance with. The contact form utilizes Django validation to ensure accurate information before submission. Additionally, all messages are stored in a database, allowing administrator to conveniently view them from the admin panel.
+![Contact Form](media/features/contact/contact_form.webp)
+
+### FAQs
+
+An important feature is the FAQs section, which enables users to access frequently asked questions through a user-friendly dropdown button. The FAQs are managed through a database, allowing site administrator to easily update or add new questions as needed. This ensures that users have access to the most up-to-date and relevant information.
+![FAQs](media/features/contact/faqs.webp)
+
+## Accounts
+
+### Login
+
+The login page incorporates a secure login form created using Django allauth. This form includes fields for users to enter their credentials and utilizes built-in validation mechanisms to enhance the security of the site by preventing unauthorized access.
+![Login](media/features/accounts/login.webp)
+
+### Logout
+
+Before allowing users to log out, a confirmation message is presented to ensure they genuinely intend to leave the site. This extra step serves as a precautionary measure to prevent accidental logouts and ensures user satisfaction with their decision. Upon confirmation, users are redirected to the home page after logging out.
+![Logout](media/features/accounts/logout.webp)
+
+### Signup
+
+The sign-up page features a secure sign-up form created with Django allauth. This form allows users to input their registration information and incorporates built-in validation methods to increase the site's security by preventing unauthorized sign-ups.
+![Signup](media/features/accounts/sign_up.webp)
+
+# Admin Panel
 
 # Technologies Used
 
