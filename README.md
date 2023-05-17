@@ -61,7 +61,7 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
   - [Admin Panel](#admin-panel)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
-    - [Packages](#packages)
+    - [Django Packages](#django-packages)
     - [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
   - [Testing](#testing)
       - [Validation](#validation)
@@ -637,11 +637,62 @@ Non field errors:
 Field errors:
 ![Signup failed](media/features/messages/signup_failed.webp)
 
+## Error 404 
+
+A customized 404 error page has been designed specifically to handle the most common error, ensuring a pleasant user experience (UX) with a visually appealing user interface (UI). This error page includes a "Need Help" button, which opens a modal displaying a message and a "Go back" button to return users to the home page effortlessly.
+![Error 404](media/features/messages/error_404.webp)
+
 [Back to top ⇧](#content)
 
 # Admin Panel
 
+- The admin dashboard, built with Django, offers access to the project through the admin panel using a superuser account that requires a username and password for authentication. This grants administrator seamless management and viewing capabilities within the admin dashboard. To enhance the user experience (UX) and user interface (UI), the admin panel is customized using the Django library called Jazzmine, providing a personalized and visually appealing style. View Admin dashboard [here.](media/features/admin/admin_panel.webp)
+- A superuser "Admin" was created for this project to manage it.
+- On the Admin Panel, as an admin I have full access to CRUD functionality so I can view, create, edit and delete the following ones:
+  - Posts
+  - Comments
+  - Categories
+  - Users
+  - Email addresses
+  - Contact messages
+  - FAQs
+  - Values
+
+- As admin I can also approve comments, posts and change their status and give other permissions to the users.
+
 # Technologies Used
+
+## Languages Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML)- was utilized in this project to structure the web pages in a semantically meaningful way, prioritizing better accessibility.
+* [CSS3](https://en.wikipedia.org/wiki/CSS)- was used in this project to leverage its advanced styling capabilities and enhance the visual appearance of the website.
+* [JavaScript](https://www.javascript.com/)- in this project, JavaScript code is kept minimal. It is primarily utilized to automatically hide alert messages after 3 seconds and display a "Move to Top" button upon scrolling.
+* [Python](https://www.python.org/)- was utilized to create database models, create all the views for web app funcionality, create forms used throughout the website, connect URL paths and install necessary dependencies specified in the requirements.txt file for the successful execution of this project.
+
+## Django Packages
+
+* [Gunicorn](https://gunicorn.org/)-  was  utilized as the server to deploy Django web application in production environment which is Heroku.
+* [Dj database url](https://pypi.org/project/dj-database-url/)- to parse the database URL from the environment variables in Heroku.
+* [Psycopg2](https://pypi.org/project/psycopg2/)- used as an adaptor for Python and PostgreSQL databases.
+* [Summernote](https://summernote.org/)- as a text editor in some Django fields.
+* [Django-Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)- used for authentication, registration, account management.
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)- was used for easy rendering  Django forms with customizable templates and layout controls.
+* [Django Jazzmine](https://django-crispy-forms.readthedocs.io/en/latest/)- a customizable Django admin theme that enhances the visual appearance and user experience of the Django administration interface.
+* [Django Widget Tweaks](https://pypi.org/project/django-widget-tweaks/)- was used to customize form widgets in Django templates.
+
+### Frameworks - Libraries - Programs Used
+
+* [Django](https://www.djangoproject.com/) was used as the framework which provides the necessary tools and functionalities for building full-stack web applications. Django enables rapid and secure development.
+* [Bootstrap](https://getbootstrap.com/)- used to style the website through its classes, add responsiveness and interactivity and use ready components.
+* [Cloudinary](https://cloudinary.com/)- was used to host the static files and media files for the website and use them in production environment, Heroku.
+* [Git](https://git-scm.com/)- used for version control by utilizing the Gitpod terminal to commit code to Git and push to GitHub.
+* [GitHub](https://github.com/)- used to store the project's code after being pushed from Git version control and to create Issues & Project Kanban.
+* [Heroku](https://id.heroku.com)- used to deploy the web application in production environment.
+* [PostgreSQL](https://www.postgresql.org/)- Database used through Heroku.
+* [Figma](https://www.figma.com/)- To build the wireframes for the project.
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
+* [Font Awesome:](https://fontawesome.com/) was used to add icons to the website to improve UX.
+
 
 # Testing
 
