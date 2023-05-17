@@ -422,13 +422,50 @@ For typography, the web app uses Google Fonts. The header font is Montserrat, wh
 
 ## Imagery
 
-All images used on this project are free copyrights. They are used to convey a message or evoke a particular emotion related to the subject of cancer. Also they are used to add visual interest to the website and to help break up text-heavy pages like about or info page. Imagery is relevant to the content and mission of the website and is also appropriately sized and optimized for web use to ensure fast page loading times.All images are in .webp format.
+All images used on this project are free copyrights. They are used to convey a message or evoke a particular emotion related to the subject of cancer. Also they are used to add visual interest to the website and to help break up text-heavy pages like about or info page. Imagery is relevant to the content and mission of the website and is also appropriately sized and optimized for web use to ensure fast page loading times. All images are in .webp format.
 
 ## Wireframes
 
-# Database Diagram
+All of the wireframes for the web app were created using [Figma](https://www.figma.com/), a popular design tool known for its versatility and collaborative features. During design stage was kept in mind the principles of UX (User Experience) and UI (User Interface) design throughout the process to ensure that our wireframes are intuitive, user-friendly, and visually appealing. Additionally, the wireframes are responsive and optimized for use on tablets and mobile devices, to provide a seamless experience across different screen sizes.
 
+<details><summary>Home Page:</summary>
+<img src="media/wireframes/home_page.webp" alt="home page wireframe">
+</details>
+<details><summary>About us Page:</summary>
+<img src="media/wireframes/about_page.webp" alt="about us page wireframe">
+</details>
+<details><summary>Info Page:</summary>
+<img src="media/wireframes/info_page.webp" alt="info page wireframe">
+</details>
+<details><summary>Blog Page:</summary>
+<img src="media/wireframes/blog_page.webp" alt="blog page wireframe">
+</details>
+<details><summary>Contact Page:</summary>
+<img src="media/wireframes/contact_page.webp" alt="contact page wireframe">
+</details>
+<details><summary>Login & Signup Page:</summary>
+<img src="media/wireframes/login_signup.webp" alt="login and signup page wireframe">
+</details>
+<details><summary>Post Details Page:</summary>
+<img src="media/wireframes/post_details.webp" alt="post details page wireframe">
+</details>
+<details><summary>Create Post Page:</summary>
+<img src="media/wireframes/create_post.webp" alt="create post page wireframe">
+</details>
+
+
+# Database Diagram
+[SmartDraw](https://www.smartdraw.com/) was used to create and design the database schema for the project. This schema served as a guiding blueprint for every database model implemented. Below, you will find the database structure for each Django app utilized in the HopeForCancer project. The schema effectively illustrates each entity and any existing relationships between them.
+
+![ER Diagram](media/readme_images/database_schema.webp)
+
+[Back to top ⇧](#content)
 # Features
+
+## Home Page
+
+### Navbar
+
 
 # Admin Panel/Superuser
 
