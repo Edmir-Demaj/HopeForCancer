@@ -52,7 +52,7 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
       - [Hero Image Contact](#hero-image-contact)
       - [Contact Form](#contact-form)
       - [FAQs](#faqs)
-    - [Accounts](#register)
+    - [Accounts](#accounts)
       - [Login](#login)
       - [Logout](#logout)
       - [Signup](#signup)
@@ -616,6 +616,27 @@ Before allowing users to log out, a confirmation message is presented to ensure 
 
 The sign-up page features a secure sign-up form created with Django allauth. This form allows users to input their registration information and incorporates built-in validation methods to increase the site's security by preventing unauthorized sign-ups.
 ![Signup](media/features/accounts/sign_up.webp)
+
+## Alert Messages
+In this project, an impressive feature is implemented to enhance the user experience: alert messages provided by the Django framework. After each user interaction, such as login, logout, signup, or performing CRUD operations, an alert message is displayed and automatically disappears after 3 seconds. These messages are also utilized within forms to indicate validation errors if encountered during form submission, they are provided from Django Allauth. This feature ensures that users receive prompt feedback and stay informed throughout their interactions with the site.Based on the status of the message a meaningful color is attached as well using Bootstrap alert classes.
+
+### Some of the alert messages used throughout the site:
+Login:
+![Login](media/features/messages/logged_in.webp)
+Logout:
+![Logout](media/features/messages/signed_out.webp)
+Post added:
+![Post added](media/features/messages/success_post.webp)
+Comment added:
+![Comment added](media/features/messages/comment_added.webp)
+Comment failed:
+![Comment failed](media/features/messages/comment_failed.webp)
+Non field errors:
+![Login failed](media/features/messages/login_failed.webp)
+Field errors:
+![Signup failed](media/features/messages/signup_failed.webp)
+
+[Back to top ⇧](#content)
 
 # Admin Panel
 
