@@ -460,12 +460,39 @@ All of the wireframes for the web app were created using [Figma](https://www.fig
 ![ER Diagram](media/readme_images/database_schema.webp)
 
 [Back to top ⇧](#content)
+
 # Features
 
 ## Home Page
 
 ### Navbar
+On the landing page, users will be presented with a visually appealing and user-friendly navbar positioned at the very top. This navbar contains all the necessary links and accessibility options for easy navigation and is fully responsive.
+![Navbar](media/features/home/navbar.webp)
 
+### Hero Image
+
+Creating a strong first impression with the user is crucial, and to achieve this, a hero image with 100% screen width and 90% screen height was employed. This hero image acts as an automated carousel, displaying three distinct images accompanied by engaging headings that effectively communicate the purpose and essence of the web app. Additionally, a prominent call-to-action (CTA) button is incorporated to encourage users to explore further and gather more information. The design is fully responsive, ensuring seamless adaptation across various screen sizes.
+![Hero Image](media/features/home/hero_section.webp)
+
+### Cancer Information
+
+In order to engage users effectively, it is essential to provide a concise introduction using cards that contain both textual content and visually meaningful images. This project extensively utilizes images as they aid in visual memorization and facilitate faster comprehension of the message being conveyed to users. Each card includes a button with an internal link, allowing users to navigate to specific sections and explore further based on their areas of interest. This approach ensures a seamless user experience and encourages users to delve deeper into the content that piques their curiosity.
+![Cancer Information](media/features/home/info_section.webp)
+
+### Understanding Cancer
+
+The "Understanding Cancer" section on the home page includes a dropdown menu with external links to trusted websites where users can access more information about cancer from professional organizations.
+![Understanding Cancer](media/features/home/understand_cancer.webp)
+
+### Latest Blog Post
+
+In this section, users can find the three most recent blog posts, fostering a deeper connection with the web app's purpose. A "Create Post" button is available, but if a user is not authenticated (not logged in), they will be redirected to the login page. Additionally, a "Read More" button is provided, allowing users to access the blog page to view additional posts and engage with the community.
+![Latest Blog Post](media/features/home/latest_posts.webp)
+
+### Footer
+
+Footer is positioned at the very bottom of the page and remains consistent across all pages to facilitate easy navigation for users. It contains contact details for reaching the website team, useful links for navigating to different pages, social media links, and copyrights information. Additionally, a Privacy Policy link is included, which opens in a modal window for ease of access.
+![Footer](media/features/home/footer.webp)
 
 # Admin Panel/Superuser
 
