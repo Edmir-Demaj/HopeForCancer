@@ -18,7 +18,7 @@
                 </div>
                 <div class="overlay"></div>
                 <img src="{% static 'images/home/hero_image_1.webp' %}" class="d-block w-100"
-                    alt="A group of woman holding hands to support cancer" />
+                    alt="A group of woman holding hands to support cancer">
             </div>
             <!-- Second carousel item -->
             <div class="carousel-item" data-bs-interval="4000">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="overlay"></div>
                 <img src="{% static 'images/home/hero_image_2.webp' %}" class="d-block w-100"
-                    alt="A group of woman showing a card with text hope to support cancer" />
+                    alt="A group of woman showing a card with text hope to support cancer">
             </div>
             <!-- Third carousel item -->
             <div class="carousel-item" data-bs-interval="4000">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="overlay"></div>
                 <img src="{% static 'images/home/hero_image_3.webp' %}" class="d-block w-100"
-                    alt="A man holding blue ribbon to support cancer" />
+                    alt="A man holding blue ribbon to support cancer">
             </div>
         </div>
         <!-- Carousel buttons -->
@@ -62,7 +62,7 @@
 
 <div class="text-center py-5 px-3">
     <h2 class="fw-bold mb-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-        We want a life <span class="orange-text">without cancer</span> <br />
+        We want a life <span class="orange-text">without cancer</span> <br>
         time to act is <span class="orange-text">now!</span>
     </h2>
 </div>
@@ -76,93 +76,80 @@
 <section>
     <div class="container p-0">
         <!-- First card -->
-        <article>
-            <div class="row card-info p-2 mx-0">
-                <div class="col-12 col-lg-6 p-0 pe-lg-5" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-once="true">
-                    <h3 class="fs-2">What is cancer?</h3>
-                    <p class="m-0">
-                        Cancer is a disease that occurs when abnormal cells in the body grow
-                        uncontrollably. These cells can form tumors or invade nearby tissues
-                        and spread to other parts of the body. While cancer can affect
-                        people of all ages, it is more common in older adults...
-                    </p>
-                    <button type="button" class="info-btn my-4">
-                        <a href="{% url 'info' %}"
-                            aria-label="button on home page which brings to cancer information page to read more what is cancer.">
-                            More about cancer</a>
-                    </button>
-                </div>
-                <div class="col-12 col-lg-6 p-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-                    <img src="{% static 'images/home/cancer_cells.webp' %}" class="card-img"
-                        alt="Image of cancer cells and normal cells inside body" />
-                </div>
+        <div class="row card-info p-2 mx-0">
+            <div class="col-12 col-lg-6 p-0 pe-lg-5" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <h3 class="fs-2">What is cancer?</h3>
+                <p class="m-0">
+                    Cancer is a disease that occurs when abnormal cells in the body grow
+                    uncontrollably. These cells can form tumors or invade nearby tissues
+                    and spread to other parts of the body. While cancer can affect
+                    people of all ages, it is more common in older adults...
+                </p>
+                <a href="{% url 'info' %}" class="info-btn my-4 d-inline-block"
+                    aria-label="button on home page which brings to cancer information page to read more what is cancer.">
+                    More about cancer</a>
             </div>
-        </article>
+            <div class="col-12 col-lg-6 p-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="{% static 'images/home/cancer_cells.webp' %}" class="card-img"
+                    alt="Image of cancer cells and normal cells inside body">
+            </div>
+        </div>
         <!-- Second card -->
-        <article>
-            <div class="row card-info p-2 mx-0 mt-5">
-                <div class="col-12 col-lg-6 p-0 order-2 order-lg-1" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-once="true">
-                    <img src="{% static 'images/home/types_of_cancer.webp' %}" class="card-img"
-                        alt="All types of cancers ribbons with different colours." />
-                </div>
-                <div class="col-12 col-lg-6 p-0 ps-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-once="true">
-                    <h3 class="fs-2">Types of cancer.</h3>
-                    <p class="m-0">
-                        There are many different types of cancer, including breast cancer,
-                        lung cancer, prostate cancer, and skin cancer. Each type of cancer
-                        has its own set of symptoms, risk factors, and treatment options.
-                        Learning about these different types of cancer can help you
-                        understand the disease better and take steps to reduce your risk...
-                    </p>
-                    <button type="button" class="info-btn my-4">
-                        <a href="{% url 'info' %}#cancer-types"
-                            aria-label="button on home page which brings to cancer information page, section cancer types.">
-                            More about cancer types</a>
-                    </button>
-                </div>
-        </article>
-        <!-- Third card -->
-        <article>
-            <div class="row card-info p-2 mx-0 mt-5">
-                <div class="col-12 col-lg-6 p-0 pe-lg-5" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-once="true">
-                    <h3 class="fs-2">Importance of early detection.</h3>
-                    <p class="m-0">
-                        Detecting cancer early is crucial to successful treatment and
-                        recovery. Regular cancer screenings and check-ups can help catch
-                        cancer in its early stages when it's easier to treat. Knowing the
-                        signs and symptoms of cancer can also help you detect the disease
-                        early and get prompt medical attention...
-                    </p>
-                    <button type="button" class="info-btn my-4">
-                        <a href="{% url 'info' %}#early-detection"
-                            aria-label="button on home page which brings to cancer information page, early detection section to learn more.">
-                            More about early detection</a>
-                    </button>
-                </div>
-                <div class="col-12 col-lg-6 p-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-                    <img src="{% static 'images/home/early_detection.webp' %}" class="card-img"
-                        alt="A female doctor checking a man patient." />
-                </div>
+        <div class="row card-info p-2 mx-0 mt-5">
+            <div class="col-12 col-lg-6 p-0 order-2 order-lg-1" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-once="true">
+                <img src="{% static 'images/home/types_of_cancer.webp' %}" class="card-img"
+                    alt="All types of cancers ribbons with different colours.">
             </div>
-        </article>
+            <div class="col-12 col-lg-6 p-0 ps-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-once="true">
+                <h3 class="fs-2">Types of cancer.</h3>
+                <p class="m-0">
+                    There are many different types of cancer, including breast cancer,
+                    lung cancer, prostate cancer, and skin cancer. Each type of cancer
+                    has its own set of symptoms, risk factors, and treatment options.
+                    Learning about these different types of cancer can help you
+                    understand the disease better and take steps to reduce your risk...
+                </p>
+                <a href="{% url 'info' %}#cancer-types" class="info-btn my-4 d-inline-block"
+                    aria-label="button on home page which brings to cancer information page, section cancer types.">
+                    More about cancer types</a>
+            </div>
+        </div>
+        <!-- Third card -->
+        <div class="row card-info p-2 mx-0 mt-5">
+            <div class="col-12 col-lg-6 p-0 pe-lg-5" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <h3 class="fs-2">Importance of early detection.</h3>
+                <p class="m-0">
+                    Detecting cancer early is crucial to successful treatment and
+                    recovery. Regular cancer screenings and check-ups can help catch
+                    cancer in its early stages when it's easier to treat. Knowing the
+                    signs and symptoms of cancer can also help you detect the disease
+                    early and get prompt medical attention...
+                </p>
+                <a href="{% url 'info' %}#early-detection" class="info-btn my-4 d-inline-block"
+                    aria-label="button on home page which brings to cancer information page, early detection section to learn more.">
+                    More about early detection</a>
+            </div>
+            <div class="col-12 col-lg-6 p-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="{% static 'images/home/early_detection.webp' %}" class="card-img"
+                    alt="A female doctor checking a man patient.">
+            </div>
+        </div>
     </div>
 </section>
 <!-- Card section end -->
 
 <!-- Understand cancer section start -->
 <section>
-    <article id="understand-cancer" class="d-flex align-items-center my-5">
+    <div id="understand-cancer" class="d-flex align-items-center my-5">
         <div class="col-10 offset-1 d-flex flex-column align-items-center text-center my-5">
             <h2 class="fw-bold"><span class="orange-text">Understanding</span> cancer</h2>
             <p class="text-muted helper-text">Understanding cancer can save lives. Check out the links below to access
                 additional resources and expand your knowledge.
             </p>
             <div>
-                <button class="dropdown-btn dropdown-toggle" type="hidden" data-bs-toggle="dropdown"
+                <button class="dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false"> What is cancer?
                 </button>
                 <!-- External resources links -->
@@ -199,7 +186,7 @@
                 </ul>
             </div>
         </div>
-    </article>
+    </div>
 </section>
 <!-- Understand cancer section end -->
 
@@ -233,16 +220,16 @@
                         aria-label="internal link when post is clicked to bring to blog post page">
                         {% if "placeholder" in post.featured_image.url %}
                         <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
-                            alt="{{ post.describe_image }}" />
+                            alt="{{ post.describe_image }}">
                         {% else %}
-                        <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.describe_image }}" />
+                        <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.describe_image }}">
                         {% endif %}
                         <div class="card-body card-context pb-0">
                             <h5 class="card-title post-title fw-bold">
                                 {{ post.title | capfirst }}
                             </h5>
                             <p class="card-text text-muted">Category# {{ post.category }}</p>
-                            <hr class="hr" />
+                            <hr class="hr">
                             <p class="card-text">
                                 {{ post.content | truncatechars:150 | safe | capfirst }}
                             </p>
@@ -273,7 +260,8 @@
                             <span><strong><i class="far fa-comments"></i> {{ post.comment_counter }}</strong></span>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Posted by: {{ post.author | title}} |</small>
+                            <small class="text-muted">Posted by: {{ post.author | title}}</small>
+                            <br>
                             <small class="text-muted">{{ post.created_date }}</small>
                         </div>
                     </a>
@@ -282,9 +270,8 @@
             {% endfor %}
             {% endif %}
             <div class="text-center">
-                <button type="button" class="info-btn my-4">
-                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">Discover Stories</a>
-                </button>
+                <a href="{% url 'blog_page' %}" class="info-btn my-4 d-inline-block"
+                    aria-label="button to bring to blog page">Discover Stories</a>
             </div>
         </div>
         <!-- Code to display 1 card with carousel for screens < 1200px, latest posts-->
@@ -310,17 +297,17 @@
                                     aria-label="internal link when post is clicked to bring to blog post page">
                                     {% if "placeholder" in post.featured_image.url %}
                                     <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
-                                        alt="{{ post.describe_image }}" />
+                                        alt="{{ post.describe_image }}">
                                     {% else %}
                                     <img src="{{ post.featured_image.url }}" class="card-img-top"
-                                        alt="{{ post.describe_image }}" />
+                                        alt="{{ post.describe_image }}">
                                     {% endif %}
                                     <div class="card-body card-context pb-0">
                                         <h4 class="card-title post-title fw-bold fs-5">
                                             {{ post.title | capfirst }}
                                         </h4>
                                         <p class="card-text text-muted">Category# {{ post.category }}</p>
-                                        <hr />
+                                        <hr>
                                         <p class="card-text">
                                             {{ post.content | truncatechars:150 | safe | capfirst }}
                                         </p>
@@ -383,9 +370,8 @@
                 </div>
             </div>
             <div class="text-center">
-                <button type="button" class="info-btn my-4">
-                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">Discover Stories</a>
-                </button>
+                <a href="{% url 'blog_page' %}" class="info-btn my-4 d-inline-block"
+                    aria-label="button to bring to blog page">Discover Stories</a>
             </div>
         </div>
     </div>
