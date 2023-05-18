@@ -186,17 +186,13 @@ footer address {
 .cta-btn {
     background-color: #f7f7f7;
     color: #8129C1;
-    padding: 5px 25px;
+    padding: 0.5rem 1rem;
     border-radius: 15px;
-    border: none;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     transition: all 0.4s ease;
-    margin-top: 40px;
-    outline: 2px solid #ffffff;
-    outline-offset: 2px;
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -4px 0px inset;
 }
 
 .cta-btn:hover {

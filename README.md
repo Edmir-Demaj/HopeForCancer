@@ -714,6 +714,7 @@ The majority of bugs encountered in this project occurred during the development
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
+| JS Code used to close automatically alert messages was showing error in console. <details><summary>Alert bug</summary><img src="media/bugs/alert_bug.webp"></details> | Update the setTimeout function, add an if statment to check if there is a message and after show and close this message. |
 | Class "Active" wasn't working properly for all nav links when they where clicked, still would stay on previous click. <details><summary>Active class bug</summary><img src="media/bugs/active_bug.webp"></details> | After searching on Google found a solution to import all URL paths at the top of base.html template and add active class based on URL clicked which fixed the problem. |
 | The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link, as well after reading https://devcenter.heroku.com/articles/django-assets i added DISABLE_COLLECSTATIC=1 to Heroku reveal config vars.|
 | Background images used in footer, about page, cancer info page and blog page were not loading in productin in Heroku. | After asking for help Student Support, we came up with idea to remove any path for this bg-images and instead get link for them directly from Cloudinary. It worked.|
