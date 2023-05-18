@@ -16,7 +16,7 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
 - [HopeForCancer - Introduction](#hopeforcancer---introduction)
   - [User Experience - UX](#user-experience---ux)
     - [Site Aims](#site-aims)
-    - [Target Audience](#site-aims)
+    - [Target Audience](#target-audience)
     - [Agile Methodology](#agile-methodology)
       - [Epics and User Stories](#epics-and-user-stories)
   - [Design](#design)
@@ -62,7 +62,7 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Django Packages](#django-packages)
-    - [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+    - [Frameworks - Libraries - Softwares Used](#frameworks---libraries---softwares-used)
   - [Testing](#testing)
       - [Validation](#validation)
       - [Manual Testing](#manual-testing)
@@ -467,7 +467,7 @@ All of the wireframes for the web app were created using [Figma](https://www.fig
 ## Home Page
 
 ### Navbar
-On the landing page, users will be presented with a visually appealing and user-friendly navbar positioned at the very top. This navbar contains all the necessary links and accessibility options for easy navigation and is fully responsive.
+On the landing page, users will be presented with a visually appealing and user-friendly navbar positioned at the very top. This navbar contains all the necessary links and accessibility options for easy navigation and is fully responsive. On the very left side is positioned the Logo of the website with link to navigate to home page.
 ![Navbar](media/features/home/navbar.webp)
 
 ### Hero Image
@@ -680,7 +680,7 @@ A customized 404 error page has been designed specifically to handle the most co
 * [Django Jazzmine](https://django-crispy-forms.readthedocs.io/en/latest/)- a customizable Django admin theme that enhances the visual appearance and user experience of the Django administration interface.
 * [Django Widget Tweaks](https://pypi.org/project/django-widget-tweaks/)- was used to customize form widgets in Django templates.
 
-### Frameworks - Libraries - Programs Used
+### Frameworks - Libraries - Softwares Used
 
 * [Django](https://www.djangoproject.com/) was used as the framework which provides the necessary tools and functionalities for building full-stack web applications. Django enables rapid and secure development.
 * [Bootstrap](https://getbootstrap.com/)- used to style the website through its classes, add responsiveness and interactivity and use ready components.
@@ -691,17 +691,137 @@ A customized 404 error page has been designed specifically to handle the most co
 * [PostgreSQL](https://www.postgresql.org/)- Database used through Heroku.
 * [Figma](https://www.figma.com/)- To build the wireframes for the project.
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
-* [Font Awesome:](https://fontawesome.com/) was used to add icons to the website to improve UX.
 
 
 # Testing
 
 # Bugs
+The majority of bugs encountered in this project occurred during the development process with Django, which was a new technology implemented for building this project. Below is a list of the identified bugs along with their respective resolutions:
 
 ## Fixed Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| Class "Active" wasn't working properly for all nav links when they where clicked, still would stay on previous click. <details><summary>Active class bug</summary><img src="media/bugs/active_bug.webp"></details> | After searching on Google found a solution to import all URL paths at the top of base.html template and add active class based on URL clicked which fixed the problem. |
+| The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link, as well after reading https://devcenter.heroku.com/articles/django-assets i added DISABLE_COLLECSTATIC=1 to Heroku reveal config vars.|
+| Background images used in footer, about page, cancer info page and blog page were not loading in productin in Heroku. | After asking for help Student Support, we came up with idea to remove any path for this bg-images and instead get link for them directly from Cloudinary. It worked.|
+| Many errors encountered were 'TemplateDoesNotExist' at /... | This problem is quite common in Django and i solved them following this steps: 1-Check the view code if renders/redirect the template which is not found. 2-Check the URL path if is correct. 3-Check syntax errors. 4-Check the Template location and path. |
+| When was trying to create a post the slugify wasn't being generated from title and was cousing this error. <details><summary>Slugify bug</summary><img src="media/bugs/slugify_error.webp"></details> | In the CreatePost view in form_valid method i added this piece of code to check if there is a slug if not generate from instance.title:
+    form.instance.author = self.request.user 
+        if not form.instance.slug:
+            form.instance.slug = slugify(form.instance.title)
+
+
+
+
 ## Unfixed Bugs
 
 # Deployment
+
+## 1. Creating the Django Project
+* Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template).
+* Click on `Use This Template` button, then create new repository.
+* Name our repository and click on `Create repository from template` button.
+* Once the template is available in your repository click on `Gitpod` button.
+* When the image for the template and the Gitpod are ready, open a new terminal to start a new Django App.
+* Install Django and gunicorn: `pip3 install 'django<4' gunicorn`.
+* Install supporting database libraries dj_database_url and psycopg2 library: `pip3 install dj_database_url==0.5.0 psycopg2`.
+* Install Cloudinary libraries to manage static files: `pip install dj-3-cloudinary-storage`.
+* Create file for requirements: `pip freeze --local > requirements.txt`.
+* Create project: `django-admin startproject <your_project_name>.`
+* Create app: `python manage.py startapp <your_app_name>`.
+* Add app to list of `installed apps` in settings.py file: `'app_name'`.
+* Migrate changes: `python manage.py migrate`.
+* Test server works locally: `python manage.py runserver`.
+* If the app has been installed correctly the window will display Django project - The install worked successfully! Congratulations!
+
+## 2. Create your Heroku app
+* Navigate to [Heroku](https://id.heroku.com).
+* Create a Heroku account by entering your email address and a password (or login if you have one already).
+* Activate the account through the authentication email sent to your email account.
+* Click the **new button** on the top right corner of the screen and select create a new app from the dropdown menu.
+* Enter a unique name for the application.
+* Select the appropriate region for the application.
+* Click create app.
+* Click Reveal Config Vars and add a new record with `DATABASE_URL`.
+* Click Reveal Config Vars and add a new record with `PORT`.
+* Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1` (note: this must be either removed or set to 0 for final deployment).
+* Next, scroll down to the Buildpack section, click `Add Buildpack` select python and click Save Changes.
+
+## 3. Set up Environment Variables
+* In you IDE create a new env.py file in the top level directory.
+* Add env.py to the .gitignore file.
+* In env.py import the os library.
+* In env.py add `os.environ["DATABASE_URL"]` = "Paste the link copied from Heroku DATABASE_URL".
+* In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`.
+* In Heroku Settings tab Config Vars enter the same `SECRET_KEY` created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
+
+## 4. Setting up settings.py
+* In your Django 'settings.py' file type:
+
+ ```
+ from pathlib import Path
+ import os
+ import dj_database_url
+
+ if os.path.isfile("env.py"):
+  import env
+ ```
+* Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: `SECRET_KEY = os.environ.get(SECRET_KEY)`
+* Comment out the `DATABASES` section in settings.py and replace with:
+```
+DATABASES = {
+  'default': 
+  dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }`
+```
+* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
+* In Heroku, click Reveal Config Vars and add a new record with the `CLOUDINARY_URL`
+* Add Cloudinary libraries to the installed apps section of settings.py file:
+ ```
+ 'cloudinary_storage'
+ 'django.contrib.staticfiles''
+ 'cloudinary'
+ ```
+* Connect Cloudinary to the Django app in `settings.py`:
+```
+STATIC_URL = '/static'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'STATIC')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE =
+'cloudinary_storage.storage.MediaCloudinaryStorage'
+* Link file to the templates directory in Heroku 
+* Place under the BASE_DIR: TEMPLATES_DIR = os.path.join(BASE_DIR,
+'templates')
+```
+* Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array: `'DIRS': [TEMPLATES_DIR]`
+* Add Heroku Hostname to ALLOWED_HOSTS: 
+```ALLOWED_HOSTS = ['<Heroku_app_name>.herokuapp.com', 'localhost']```
+* Create Procfile at the top level of the file structure and insert the following:
+    ``` web: gunicorn PROJECT_NAME.wsgi ```
+
+* Commit and push the code to the GitHub Repository.
+
+## 5. Heroku Deployment: 
+* Click Deploy tab in Heroku.
+* Select Github as the deployment method.
+* Confirm you want to connect to GitHub.
+* Search for the repository name and click the connect button to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
+* Scroll to the bottom of the deploy page and select the preferred deployment type.
+* Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
+
+## 6. Final Deployment
+In the IDE:
+* When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
+* In Heroku settings config vars change the `DISABLE_COLLECTSTATIC` value to 0
+* Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
+* To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
+
+----
+
+[Back to top ⇧](#content)
 
 # Credits
 
