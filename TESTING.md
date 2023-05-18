@@ -37,17 +37,16 @@
 
 ### HTML Validation
 The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML code used in this project.
- - Result for [Base page](./assets/testing/W3C-home-page.jpg)
- - Result for [Home page](./assets/testing/W3C-home-page.jpg)
- - Result for [About us page](./assets/testing/W3C-about-page.jpg)
- - Result for [Cancer Information page](./assets/testing/W3C-blog-page.jpg)
- - Result for [Blog page](./assets/testing/W3C-blog-page.jpg)
- - Result for [Contact page](./assets/testing/W3C-blog-page.jpg)
- - Result for [Post Detail page](./assets/testing/W3C-post-detail.jpg)
- - Result for [Create Post page](./assets/testing/W3C-user-page.jpg)
- - Result for [Delete Post page](./assets/testing/W3C-add-post.jpg)
- - Result for [Edit Comment post](./assets/testing/W3C-update-post.jpg)
- - Result for [Edit Post page](./assets/testing/W3C-delete-post.jpg)
- - Result for [404 page](./assets/testing/W3C-search-page.jpg)
+ - Result for [Home page](media/tests/validations/home_page_html.webp)
+ - Result for [About us page](media/tests/validations/about_html_validator.webp)
+ - Result for [Cancer Information page](media/tests/validations/info_html_validator.webp)
+ - Result for [Blog page]()
+ - Result for [Contact page]()
+ - Result for [Post Detail page]()
+ - Result for [Create Post page]()
+ - Result for [Delete Post page]()
+ - Result for [Edit Comment post]()
+ - Result for [Edit Post page]()
+ - Result for [404 page]()
 
 [Back to top ⇧](#content)

@@ -304,7 +304,7 @@ footer address {
     position: relative;
 }
 
-#about-hr {
+#special-line {
     border: none;
     width: 85%;
     margin: 0 auto;
@@ -366,7 +366,7 @@ footer address {
     margin: 0 auto;
 }
 
-#info-container {
+.info-container {
     background-color: #ffffff;
 }
 
@@ -374,7 +374,7 @@ ol li {
     list-style-type: decimal;
 }
 
-#oredered-text li {
+.oredered-text li {
     list-style-type: disc;
 }
 
