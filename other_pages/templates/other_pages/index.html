@@ -15,7 +15,7 @@
                     <button class="cta-btn">
                         <a href="{% url 'info' %}"
                             aria-label="call to action button on home page which brings to cancer information page">
-                            Learn more</a>
+                            Get more info</a>
                     </button>
                 </div>
                 <div class="overlay"></div>
@@ -29,7 +29,7 @@
                     <button class="cta-btn">
                         <a href="{% url 'info' %}"
                             aria-label="call to action button on home page which brings to cancer information page">
-                            Learn more</a>
+                            Get more info</a>
                     </button>
                 </div>
                 <div class="overlay"></div>
@@ -42,7 +42,7 @@
                     <h1>You are not alone we are one</h1>
                     <button class="cta-btn"><a href="{% url 'info' %}"
                             aria-label="call to action button on home page which brings to cancer information page">
-                            Learn more</a>
+                            Get more info</a>
                     </button>
                 </div>
                 <div class="overlay"></div>
@@ -95,7 +95,7 @@
                     <button type="button" class="info-btn my-4">
                         <a href="{% url 'info' %}"
                             aria-label="button on home page which brings to cancer information page to read more what is cancer.">
-                            READ MORE</a>
+                            More about cancer</a>
                     </button>
                 </div>
                 <div class="col-12 col-lg-6 p-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
@@ -125,7 +125,7 @@
                     <button type="button" class="info-btn my-4">
                         <a href="{% url 'info' %}#cancer-types"
                             aria-label="button on home page which brings to cancer information page, section cancer types.">
-                            READ MORE</a>
+                            More about cancer types</a>
                     </button>
                 </div>
         </article>
@@ -145,7 +145,7 @@
                     <button type="button" class="info-btn my-4">
                         <a href="{% url 'info' %}#early-detection"
                             aria-label="button on home page which brings to cancer information page, early detection section to learn more.">
-                            READ MORE</a>
+                            More about early detection</a>
                     </button>
                 </div>
                 <div class="col-12 col-lg-6 p-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
@@ -243,9 +243,9 @@
                         <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.describe_image }}" />
                         {% endif %}
                         <div class="card-body card-context pb-0">
-                            <h4 class="card-title post-title fw-bold fs-5">
+                            <h5 class="card-title post-title fw-bold">
                                 {{ post.title | capfirst }}
-                            </h4>
+                            </h5>
                             <p class="card-text text-muted">Category# {{ post.category }}</p>
                             <hr class="hr" />
                             <p class="card-text">
@@ -288,7 +288,7 @@
             {% endif %}
             <div class="text-center">
                 <button type="button" class="info-btn my-4">
-                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">READ MORE</a>
+                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">Discover Stories</a>
                 </button>
             </div>
         </div>
@@ -389,7 +389,7 @@
             </div>
             <div class="text-center">
                 <button type="button" class="info-btn my-4">
-                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">READ MORE</a>
+                    <a href="{% url 'blog_page' %}" aria-label="button to bring to blog page">Discover Stories</a>
                 </button>
             </div>
         </div>

@@ -695,6 +695,18 @@ A customized 404 error page has been designed specifically to handle the most co
 
 # Testing
 
+## Validation
+The code was validated using the respective links below, according to the language:
+- HTML using [W3C HTML validator](https://validator.w3.org/)
+- CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
+- Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+
+## Manual Testing
+Testing has been conducted consistently throughout the project's development, with regular testing of each view. In cases where the results did not meet expectations, debugging was performed. A comprehensive set of features was thoroughly examined across various devices and browsers. The execution of these features was tested, and screenshots showcasing how each feature is rendered can be found in the features section. All clickable links have been verified to correctly redirect to their respective pages.
+
+- Link to TESTING.md file: [Testing Results](TESTING.md)
+
+----
 # Bugs
 The majority of bugs encountered in this project occurred during the development process with Django, which was a new technology implemented for building this project. Below is a list of the identified bugs along with their respective resolutions:
 

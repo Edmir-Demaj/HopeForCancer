@@ -609,9 +609,11 @@
     <!-- javascript code for messages to close automatically -->
     <script>
         setTimeout(function () {
-            let messages = document.getElementById('msg{{ forloop.counter }}');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
+            let messages = document.getElementById('msg');
+            if (messages) {
+                let alert = new bootstrap.Alert(messages);
+                alert.close();
+            }
         }, 3000);
     </script>
     <!-- animation link -->
