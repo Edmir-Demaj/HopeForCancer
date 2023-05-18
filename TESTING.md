@@ -36,14 +36,35 @@
 ## Code Validation
 
 ### HTML Validation
-The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML code used in this project. Code was entered manually throught view page source
- - Result for [Home page](media/tests/validations/home_page_html.webp)
- - Result for [About us page](media/tests/validations/about_html_validator.webp)
- - Result for [Cancer Information page](media/tests/validations/info_html_validator.webp)
- - Result for [Blog page](media/tests/validations/blog_html_validator.webp)
- - Result for [Contact page](media/tests/validations/contact_html_validator.webp)
- - Result for [Post Detail page](media/tests/validations/post_detail_html_validator.webp)
- - Result for [Create Post page](media/tests/validations/create_post_html_validator.webp)
- - Result for [Edit Comment post](media/tests/validations/create_post_html_validator.webp)
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML code used in this project. Code was entered manually in Validate by Direct Input field.
+<details><summary>Home page</summary><img src="media/tests/validations/home_page_html.webp"></details>
+<details><summary>About us page</summary><img src="media/tests/validations/about_html_validator.webp"></details>
+<details><summary>Cancer Info page</summary><img src="media/tests/validations/info_validation.webp"></details>
+<details><summary>Blog page</summary><img src="media/tests/validations/blog_html_validation.webp"></details>
+<details><summary>Contact page</summary><img src="media/tests/validations/contact_html_validator.webp"></details>
+<details><summary>Post Detail page</summary><img src="media/tests/validations/post_detail_html_validation.webp"></details>
+<details><summary>Create Post page</summary><img src="media/tests/validations/create_post_html_validation.webp"></details>
+<details><summary>Edit comment page</summary><img src="media/tests/validations/edit_comment_html_validation.webp"></details>
+
+---
+
+### CSS Validation 
+[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. Code was entered manually in Validate by Direct Input field.
+
+<details><summary>CSS code results</summary><img src="media/tests/validations/css_validation.webp"></details>
+
+---
+### PEP8 Python Linter Test
+- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check if Python code meets PEP8 standards.
+
+#### Blog App
+<details><summary> admin.py</summary><img src="media/tests/validations/pep8/blog_admin.webp"></details>
+<details><summary> forms.py</summary><img src="media/tests/validations/pep8/blog_forms.webp"></details>
+<details><summary> models.py</summary><img src="media/tests/validations/pep8/blog_models.webp"></details>
+<details><summary> urls.py</summary><img src="media/tests/validations/pep8/blog_url.webp"></details>
+<details><summary> views.py</summary><img src="media/tests/validations/pep8/blog_view.webp"></details>
+
+
+
 
 [Back to top ⇧](#content)
