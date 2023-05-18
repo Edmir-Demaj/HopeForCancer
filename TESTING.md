@@ -19,8 +19,9 @@
 ## Performance
 
 ### Google's Lighthouse Performance
+To assess the performance of the website, the [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) tool was utilized. The website received a remarkable performance score of `99 on desktop devices`, indicating excellent performance. However, on mobile devices, the score was `88`, indicating room for improvement. The main contributing factor to this score was identified as the large size of user-uploaded images, which had a significant impact on performance. To address this issue, a future plan is to implement a feature that automatically converts images of any format to the more optimized WebP format.
 
-[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website. Categories tested are:
+During the evaluation process, the website underwent testing in various categories, including:
 - Performance
 - Accessibility
 - Best practices
@@ -36,7 +37,8 @@
 ## Code Validation
 
 ### HTML Validation
-The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML code used in this project. Code was entered manually in Validate by Direct Input field.
+The HTML code used in this project was manually entered into the [W3C Markup Validation Service](https://validator.w3.org/) for validation. After the validation process, minor errors and warnings were identified. However, they have been addressed and resolved. Below are the screenshots of each page along with the corresponding validation results:
+
 <details><summary>Home page</summary><img src="media/tests/validations/home_page_html.webp"></details>
 <details><summary>About us page</summary><img src="media/tests/validations/about_html_validator.webp"></details>
 <details><summary>Cancer Info page</summary><img src="media/tests/validations/info_validation.webp"></details>
@@ -48,14 +50,14 @@ The [W3C Markup Validation Service](https://validator.w3.org/) was used to valid
 
 ---
 
-### CSS Validation 
-[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. Code was entered manually in Validate by Direct Input field.
+### CSS Validation
+The CSS code utilized in this project was manually inputted into the [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) for validation. Following the validation process there were no errors detected in code. Presented below is the screenshot of the results: 
 
-<details><summary>CSS code results</summary><img src="media/tests/validations/css_validation.webp"></details>
+<details><summary>CSS validation results</summary><img src="media/tests/validations/css_validation.webp"></details>
 
 ---
 ### PEP8 Python Linter Test
-- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check if Python code meets PEP8 standards.
+The Python code utilized in this project was manually inputted into the [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) for validation. This validation checks if code written in Python met PEP8 requirements. Validation was divided in 3 stages, one for each app and each Python file inside. Following the validation process there were no errors detected in code. Presented below are the screenshots of each app/file with the results:
 
 #### Blog App
 <details><summary> admin.py</summary><img src="media/tests/validations/pep8/blog_admin.webp"></details>
@@ -63,6 +65,23 @@ The [W3C Markup Validation Service](https://validator.w3.org/) was used to valid
 <details><summary> models.py</summary><img src="media/tests/validations/pep8/blog_models.webp"></details>
 <details><summary> urls.py</summary><img src="media/tests/validations/pep8/blog_url.webp"></details>
 <details><summary> views.py</summary><img src="media/tests/validations/pep8/blog_view.webp"></details>
+
+---
+
+#### Contact App
+<details><summary> admin.py</summary><img src="media/tests/validations/pep8/contact_admin.webp"></details>
+<details><summary> forms.py</summary><img src="media/tests/validations/pep8/contact_forms.webp"></details>
+<details><summary> models.py</summary><img src="media/tests/validations/pep8/contact_models.webp"></details>
+<details><summary> urls.py</summary><img src="media/tests/validations/pep8/contact_urls.webp"></details>
+<details><summary> views.py</summary><img src="media/tests/validations/pep8/contact_view.webp"></details>
+
+---
+
+#### Other_Pages App
+<details><summary> admin.py</summary><img src="media/tests/validations/pep8/other_pages_admin.webp"></details>
+<details><summary> models.py</summary><img src="media/tests/validations/pep8/other_pages_models.webp"></details>
+<details><summary> urls.py</summary><img src="media/tests/validations/pep8/other_pages_urls.webp"></details>
+<details><summary> views.py</summary><img src="media/tests/validations/pep8/other_pages_view.webp"></details>
 
 
 
