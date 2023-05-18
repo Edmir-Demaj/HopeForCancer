@@ -8,7 +8,7 @@
 
 html {
     font-size: calc(15px + 0.390625vw);
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -90,6 +90,14 @@ header {
     background-color: #f7f7f7;
 }
 
+.close-offcanva:hover {
+    color: #c590e8;
+}
+
+.fa-bars:hover {
+    color: #c590e8;
+}
+
 .offcanvas {
     background-color: #f9f4fb;
 }
@@ -134,10 +142,10 @@ footer address {
 }
 
 .privacy-btn {
-    border: none;
-    background-color: transparent;
-    font-family: 'Merriweather', serif;
-    color: inherit;
+    border: none !important;
+    background-color: transparent !important;
+    font-family: 'Merriweather', serif !important;
+    color: inherit !important;
     padding-bottom: 5px;
 }
 
