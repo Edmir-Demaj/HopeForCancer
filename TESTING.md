@@ -36,17 +36,14 @@
 ## Code Validation
 
 ### HTML Validation
-The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML code used in this project.
+The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML code used in this project. Code was entered manually throught view page source
  - Result for [Home page](media/tests/validations/home_page_html.webp)
  - Result for [About us page](media/tests/validations/about_html_validator.webp)
  - Result for [Cancer Information page](media/tests/validations/info_html_validator.webp)
- - Result for [Blog page]()
- - Result for [Contact page]()
- - Result for [Post Detail page]()
- - Result for [Create Post page]()
- - Result for [Delete Post page]()
- - Result for [Edit Comment post]()
- - Result for [Edit Post page]()
- - Result for [404 page]()
+ - Result for [Blog page](media/tests/validations/blog_html_validator.webp)
+ - Result for [Contact page](media/tests/validations/contact_html_validator.webp)
+ - Result for [Post Detail page](media/tests/validations/post_detail_html_validator.webp)
+ - Result for [Create Post page](media/tests/validations/create_post_html_validator.webp)
+ - Result for [Edit Comment post](media/tests/validations/create_post_html_validator.webp)
 
 [Back to top ⇧](#content)

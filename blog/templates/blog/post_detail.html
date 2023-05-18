@@ -19,9 +19,9 @@
                     <!-- image of post or default image -->
                     {% if "placeholder" in post.featured_image.url %}
                     <img src="{% static 'images/blog_images/support_image.webp' %}" class="details-img"
-                        alt="{{ post.describe_image }}" />
+                        alt="{{ post.describe_image }}">
                     {% else %}
-                    <img src="{{ post.featured_image.url }}" class="details-img" alt="{{ post.describe_image }}" />
+                    <img src="{{ post.featured_image.url }}" class="details-img" alt="{{ post.describe_image }}">
                     {% endif %}
                 </div>
                 <div class="fs-5 mt-4">
@@ -38,27 +38,26 @@
                     {% endif %}
                 </div>
                 <div class="card-body fs-5 mt-3 mb-4">
-                    <strong class="me-4">
-                        <!-- if user is authenticated can like a post -->
-                        {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                            {% csrf_token %}
-                            {% if liked %}
-                            <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                                class="btn-like hvr-icon-pulse"><i class="fas fa-heart hvr-icon"></i></button>
-                            {% else %}
-                            <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                                class="btn-like hvr-icon-pulse"><i class="far fa-heart hvr-icon"></i></button>
-                            {% endif %}
-                        </form>
+
+                    <!-- if user is authenticated can like a post -->
+                    {% if user.is_authenticated %}
+                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}"
+                            class="btn-like hvr-icon-pulse "><i class="fas fa-heart hvr-icon"></i></button>
                         {% else %}
-                        <span><i class="far fa-heart"></i></span>
+                        <button type="submit" name="blogpost_id" value="{{post.slug}}"
+                            class="btn-like hvr-icon-pulse"><i class="far fa-heart hvr-icon"></i></button>
                         {% endif %}
-                        <!-- The number of likes -->
-                        <span>{{ post.number_of_likes }} </span>
-                    </strong>
+                    </form>
+                    {% else %}
+                    <span><i class="far fa-heart"></i></span>
+                    {% endif %}
+                    <!-- The number of likes -->
+                    <span class="me-4">{{ post.number_of_likes }} </span>
                     <!-- The number of comments -->
-                    <span><strong><i class="far fa-comments"></i> {{ post.comment_counter }}</strong></span>
+                    <span><i class="far fa-comments"></i> {{ post.comment_counter }}</span>
                 </div>
                 <div class="text-start">
                     <a class="go-back-btn px-3 mb-1 hvr-wobble-horizontal me-1" href="{% url 'blog_page' %}"
@@ -76,7 +75,7 @@
                 <h3 class="card-title fw-bold">
                     {{ post.title | capfirst }}</h3>
                 <p class="card-text text-muted mt-3">Category# {{ post.category }}</p>
-                <hr />
+                <hr>
                 <!-- Post content -->
                 <p class="card-text pt-1">
                     {{ post.content | safe }}

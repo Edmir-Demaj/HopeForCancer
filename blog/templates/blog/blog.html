@@ -48,16 +48,16 @@
                                 aria-label="internal link when post is clicked to bring to blog post page">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img src="{% static 'images/blog_images/support_image.webp' %}" class="card-img-top"
-                                    alt="{{ post.describe_image }}" />
+                                    alt="{{ post.describe_image }}">
                                 {% else %}
                                 <img src="{{ post.featured_image.url }}" class="card-img-top"
-                                    alt="{{ post.describe_image }}" />
+                                    alt="{{ post.describe_image }}">
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <h5 class="card-title post-title fw-bold">
                                         {{ post.title | capfirst }}</h5>
                                     <p class="card-text text-muted">Category# {{ post.category }}</p>
-                                    <hr />
+                                    <hr>
                                     <p class="card-text">
                                         {{ post.content | truncatechars:180 | safe | capfirst }}
                                     </p>
