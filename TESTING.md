@@ -3,6 +3,7 @@
 [Return to README.md](README.md)
 
 ## Table of Contents
+## [Content](#content)
 - [Performance](#performance)
   - [Google's Lighthouse Performance](#googles-lighthouse-performance)
 - [Automated Testing](#automated-testing)
@@ -144,6 +145,8 @@ Each device tested the site using the following browsers:
 * Microsoft Edge
 * Opera Browser
 
+[Back to top ⇧](#content)
+
 ## Features Testing
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -229,3 +232,7 @@ Each device tested the site using the following browsers:
 | Delete link | Open a new modal window to confirm comment deleting. Close link redirect to the Edit comment page and Delete link will delete comment with success message flashed. | Clicked each button | Closed modal window and when clicked Delete redirected to post detail page and flash success comment deleted. | Pass |
 | `Error Page` |
 | Need help link | Open a modal window with link to redirect the user to the home page | Clicked Need help link and after Go back home link | Redirected to home page | Pass |
+
+[Back to top ⇧](#content)
+
+[Return to README.md](README.md)

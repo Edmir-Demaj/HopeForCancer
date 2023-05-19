@@ -26,8 +26,8 @@ function moveTop() {
 
 // provide an update to copyrights year automatically based on the actual year
 function updateCopyrightYear() {
-  var currentYear = new Date().getFullYear();
-  var copyrightYearElement = document.getElementById('copyrightYear');
+  let currentYear = new Date().getFullYear();
+  let copyrightYearElement = document.getElementById('copyrightYear');
 
   if (copyrightYearElement) {
     if (currentYear > 2023) {

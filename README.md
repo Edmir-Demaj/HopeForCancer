@@ -57,18 +57,20 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
       - [Logout](#logout)
       - [Signup](#signup)
     - [Alert Messages](#alert-messages)
-    - [Error 404](#error-404)       
+    - [Error 404](#error-404) 
+  - [Features Left to Implement](#features-left-to-implement)      
   - [Admin Panel](#admin-panel)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Django Packages](#django-packages)
     - [Frameworks - Libraries - Softwares Used](#frameworks---libraries---softwares-used)
+    - [Other Technologies Used](#other-technologies-used)
   - [Testing](#testing)
       - [Validation](#validation)
       - [Manual Testing](#manual-testing)
   - [Bugs](#bugs)
       - [Fixed Bugs](#fixed-bugs)
-      - [Unfix Bugs](#unfix-bugs)
+      - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
       - [Creating the Django project](#creating-the-django-project)
       - [Creating Heroku app](#creating-heroku-app)
@@ -76,8 +78,9 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
       - [Heroku deployment](#heroku-deployment)
       - [Final Deployment](#final-deployment)
   - [Credits](#credits)
-    - [Content](#content)
+    - [Code](#code)
     - [Information Sources / Resources](#information-sources--resources)
+    - [Content and Media](#content-and-media)
   - [Acknowledgement](#acknowledgement)
 
 -----
@@ -642,6 +645,12 @@ Field errors:
 A customized 404 error page has been designed specifically to handle the most common error, ensuring a pleasant user experience (UX) with a visually appealing user interface (UI). This error page includes a "Need Help" button, which opens a modal displaying a message and a "Go back" button to return users to the home page effortlessly.
 ![Error 404](media/features/messages/error_404.webp)
 
+# Features Left to Implement
+
+* API to convert uploaded images to webp format before making public.
+* Create User page to view user posts or comments.
+* Signin with social accounts.
+
 [Back to top ⇧](#content)
 
 # Admin Panel
@@ -666,7 +675,7 @@ A customized 404 error page has been designed specifically to handle the most co
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML)- was utilized in this project to structure the web pages in a semantically meaningful way, prioritizing better accessibility.
 * [CSS3](https://en.wikipedia.org/wiki/CSS)- was used in this project to leverage its advanced styling capabilities and enhance the visual appearance of the website.
-* [JavaScript](https://www.javascript.com/)- in this project, JavaScript code is kept minimal. It is primarily utilized to automatically hide alert messages after 3 seconds and display a "Move to Top" button upon scrolling.
+* [JavaScript](https://www.javascript.com/)- in this project, JavaScript code is kept minimal. It is primarily utilized to automatically hide alert messages after 3 seconds and display a "Move to Top" button upon scrolling. another function used was to update copyrights year with actual year.
 * [Python](https://www.python.org/)- was utilized to create database models, create all the views for web app funcionality, create forms used throughout the website, connect URL paths and install necessary dependencies specified in the requirements.txt file for the successful execution of this project.
 
 ## Django Packages
@@ -691,6 +700,16 @@ A customized 404 error page has been designed specifically to handle the most co
 * [PostgreSQL](https://www.postgresql.org/)- Database used through Heroku.
 * [Figma](https://www.figma.com/)- To build the wireframes for the project.
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
+
+### Other Technologies Used
+
+* [Windows Paint](https://apps.microsoft.com/store/detail/paint/9PCFS5B6T72H)- Used to resize large images in the size wanted.
+* [Convertio](https://convertio.co/)- Used to convert any format image into webp.
+* [SmartDraw](https://www.smartdraw.com/)- Used to design Database schemas and their relationships.
+* [LOGO](https://app.logo.com/business-name)- Used to design and create the Logo of the website.
+* [Fontawesome](https://fontawesome.com/)- Used to get icons used in the website.
+* [Favicon.io](https://favicon.io/)- Used to generate favicon.
+* [Hover.css](https://ianlunn.github.io/Hover/)- Used to get ready hover styles.
 
 
 # Testing
@@ -726,9 +745,14 @@ The majority of bugs encountered in this project occurred during the development
             form.instance.slug = slugify(form.instance.title)
 
 
-
-
 ## Unfixed Bugs
+
+| **Unfixed Bugs** |
+| ----------- | 
+| When i like or dislike a post the heart icon doesn't change style based on like button status. Another bug is when I delete a comment the comment number doesn't decrease same way that increase when I add a comment in a post.
+I am not aware of any other bugs.
+
+--- 
 
 # Deployment
 
@@ -839,7 +863,36 @@ In the IDE:
 
 # Credits
 
-## Content
+## Code
+- The basic set up of the website was done by strictly following the steps as described in Code Institue Full Stack Frameworks module - Django walkthrough project `"I Think Therefore I Blog"`. As well this project was used along development for clarifying questions or problems raised during development stage.
+- Comment model was used same as in Django walkthrough project `"I Think Therefore I Blog"` for ease of building the project.
+- Some buttons shadow style was taken from [Css Scan](https://getcssscan.com/css-buttons-examples)
+- After encountering errors, snipets of codes were taken from [Django Documentation ](https://docs.djangoproject.com/en/4.2/) after reading it and finding right solution.
+
 ## Information Sources / Resources
+- Code Institutes Full Stack Framework Module, mainly the 'blog' walkthrough project.
+- Youtube videos by [Codemy](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) how to build a Django blog webapp.
+- PDF file provided from Alumni in Slack channel, "The community sessions"/PrePlanning, MVP and Common Pitfalls. It helped a lot!
+- PDF file provided from Alumni in Slack channel, "Quick Draw session"/Connecting Epics and User Stories on Github pages.
+- [Django Documentation](https://docs.djangoproject.com/en/4.2/) to better understand Django MVT framework.
+- [Google](https://www.google.com/) as a research tool.
+- [django-allauth](https://builtwithdjango.com/blog/styling-authentication-pages) how to style authentication fields.
+
+## Content and Media
+
+- [freepik](https://www.freepik.com/) all images used in this project are free copyrights and they were downloaded from freepik.
+- [World Cancer Day](https://www.worldcancerday.org/) official website of World Cancer Day was used to create an idea for initial design and to get some of the content which was used in HopeForCancer project.
+- [National Cancer Institute](https://www.cancer.gov/) an official website was used as additional resource to provide external links for users who want to expand knowledges about cancer from a professional and trusted organization.
+- [FreePrivacyPolicy](https://www.freeprivacypolicy.com/) was used to generate Privacy & Policy for the website.
+
+----
 
 # Acknowledgement
+
+- First and foremost, I want to give a special shout-out to my dad, who inspired me to create this website in his memory. He bravely fought cancer, and this project is my way of honouring his life. 
+- I also want to say a big thank you to my amazing fiancée for always supporting me, even when I spent countless hours in front of the computer. You've been my rock! 
+- A great appreciation goes out to my mentor for the invaluable advice and feedback that helped shape this project. 
+- I'm also grateful to the Code Institute Support Team for their assistance in troubleshooting code.
+- Last but not least, I want to pat myself on the back for all the hard work and dedication I put into this project. It's been an incredible journey, and I'm proud of what I've accomplished.
+
+[Back to top ⇧](#content)
