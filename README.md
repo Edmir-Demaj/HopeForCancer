@@ -749,8 +749,7 @@ The majority of bugs encountered in this project occurred during the development
 
 | **Unfixed Bugs** |
 | ----------- | 
-| When i like or dislike a post the heart icon doesn't change style based on like button status. Another bug is when I delete a comment the comment number doesn't decrease same way that increase when I add a comment in a post.
-I am not aware of any other bugs.
+| When i like or dislike a post the heart icon doesn't change style based on like button status. I am not aware of any other bugs.
 
 --- 
 

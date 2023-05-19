@@ -40,4 +40,13 @@ class CommentAdmin(admin.ModelAdmin):
         """
         Approve comments by changing its default value to True
         """
-        queryset.update(approved=True)
+        # Iterates  over selected queryset of comments and check if
+        # comment is approved
+        for comment in queryset:
+            if not comment.approved:
+                comment.approved = True
+                comment.save()
+                # Increment the comment_counter field of the associated post
+                post = comment.post
+                post.comment_counter += 1
+                post.save()

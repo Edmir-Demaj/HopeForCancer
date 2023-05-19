@@ -38,7 +38,6 @@
                     {% endif %}
                 </div>
                 <div class="card-body fs-5 mt-3 mb-4">
-
                     <!-- if user is authenticated can like a post -->
                     {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">

@@ -162,9 +162,6 @@ def add_comment(request, post_id):
         messages.success(
             request, 'Comment added successfully! Awaiting approval from Admin'
         )
-        # Increment the comment_counter field of the Post model
-        post.comment_counter += 1
-        post.save()
         return redirect(reverse('post_detail', args=(post.slug,)))
     else:
         comment_form = CommentForm()
@@ -198,8 +195,11 @@ def delete_comment(request, comment_id):
     Delete comment and provide a message to user
     """
     comment = get_object_or_404(Comment, id=comment_id)
+    post = comment.post
+    # decrease comment counter when comment is deleted
+    if comment.approved:
+        post.comment_counter -= 1
+        post.save()
     comment.delete()
     messages.success(request, 'Comment deleted successfully!')
-    return HttpResponseRedirect(
-        reverse('post_detail', args=[comment.post.slug])
-    )
+    return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
