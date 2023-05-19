@@ -149,7 +149,6 @@ Each device tested the site using the following browsers:
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | `Navbar` |
-|  |  |  |  |  |
 | HopeForCancer Logo | When clicked the user will be redirected to the home page. | Clicked Logo  | Redirected to the Home page. | Pass |
 | Home page link | When clicked the user will be redirected to the home page.| Clicked Home page link | Redirected to the Home page. | Pass |
 | About us page link | When clicked the user will be redirected to the About us page. | Clicked About us page link | Redirected to the About us page. | Pass |
@@ -161,13 +160,11 @@ Each device tested the site using the following browsers:
 | Logout page Link (Logged in users only) | When clicked the user will be redirected to Logout page to confirm they want to logout. If they confirm will redirect to Home page and a flash message displayed to let the user know they have been logged out successfully. If they don't confirm will be redirected to Home page. | Clicked Logout page link | Redirected to the Home page and a flash message displayed to let me know I have been logged out. Redirected to the Home page if I cancell logout execution. | Pass |
 | Username link (Logged in users only) | When clicked the user will be redirected to Blog page. This will be a feature to implement so user will have their own page to see their posts or comments. | Clicked Username link | Redirected to the Blog page | Pass |
 | `Footer` |
-|  |  |  |  |  |
 | Useful links | When Useful links clicked the user will be redirected to the related page clicked. | Clicked all Useful links one by one | Redirected to the related page as thier name shows. | Pass |
 | Follow us links | When Follow us links clicked the user will be redirected to the social media clicked and open in a new tab. | Clicked all Follow us links one by one | Redirected to the related socail media as thier name shows and they open in a new tab. | Pass |
 | Privacy & Policy page link | When Privacy & Policy page link clicked the user will be redirected to Privacy & Policy page and open a new modal window. | Clicked Privacy & Policy page link | Redirected to the Privacy & Policy page where a new modal window modal open. | Pass |
 | Copyright year | The copyright should display the correct year - this is a javascript function that checks what the current year is and injects it into the footer | Checked the year | Displaying the correct year | Pass |
 | `Home Page` |
-|   |   |   |   |
 | Get more info link  | When clicked the user will be redirected to the Cancer Information page. | Clicked Get more info link  | Redirected to the Cancer Information page. | Pass |
 | More about cancer link  | When clicked the user will be redirected to the Cancer Information page, what is cancer. | Clicked More about cancer link  | Redirected to the Cancer Information page, what is cancer. | Pass |
 | More about cancer types link  | When clicked the user will be redirected to the Cancer Information page, cancer types section. | Clicked More about cancer types link  | Redirected to the Cancer Information page, cancer types section. | Pass |
@@ -179,8 +176,20 @@ Each device tested the site using the following browsers:
 | Lates posts link | When clicked the user will be redirected to the Post detail page. | Clicked  on card or title | Redirected to the Post details page. | Pass |
 | `About us Page` |
 | Follow Edmir other platforms links | When clicked the user will be redirected to the other platforms and open in new tab. | Clicked on Follow Edmir other platforms links one by one | Redirected to the each social media and open in a new tab. | Pass |
-| `Cancer Information Page` |
+| `Cancer Info Page` |
 | Explore more links |  When clicked the user will be redirected to the National Cancer Institute website, to the specific sections. New site opens in a new tab. | Clicked on Explore more links one by one | Redirected to the National Cancer Institute website, to the specific sections. Opens in a new tab. | Pass |
+| | | |
+
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| `Contact Page` |
+| FAQs collapse buttons |  When clicked the user will be able to read the answers for each FAQ | Clicked on FAQs collpase buttons one by one | Opened the collapsed answers to the users. | Pass |
+| Name input - empty |  This is a required field so the contact form should not submit if empty. | Tried to submit the contact form with this field empty | Field error messages tells me 'This field is required'. | Pass |
+| Email input - empty |  This is a required field so the contact form should not submit if empty. | Tried to submit the contact form with this field empty or plain text | Field error messages tells me 'This field is required' or email @ address is required. | Pass |
+| Subject input - empty |  This is a required field so the contact form should not submit if empty. | Tried to submit the contact form with this field empty | Field error messages tells me 'This field is required'. | Pass |
+| Content input - empty |  This is a required field so the contact form should not submit if empty. | Tried to submit the contact form with this field empty | Field error messages tells me 'This field is required'. | Pass |
+| Submit button |  Send the contact form to Admin and refresh the page by cleaning form fields. Flash message shown form submitted succesfully. | Submitted form | Refresh the page, clean form fields and flash message succesfully submitted. | Pass |
 | `Login Page` |
 | Username input - empty | This is a required field so the form should not submit if empty. | Tried to submit the form with this field empty | Field error messages tells me 'This field is required'. | Pass |
 | Password input empty | This is a required field so the form should not submit if empty. | Tried to submit the form with this field empty | Field error messages tells me 'This field is required'. |  Pass |
@@ -188,7 +197,7 @@ Each device tested the site using the following browsers:
 | Incorrect username or password used | A flash message should display saying username/or password incorrect - this is defensive programming - not letting user know which input is incorrect. | Incorrect username/password entered | Message flashes to let the user know they have entered an incorrect username/or password. | Pass |
 | Link to Sign up page |  This should redirect the user to the Sign up page. | Clicked Sign up link | Redirected to the Sign up page. | Pass |
 | `Logout Page` |
-| Two links to confirm or no Logout | When 'Yes, I confirm' clicked the user will be redirected to the Home page and succesfully logged out message flashed. When "No, I don't" clicked the user will be redirected to the Home page. | Tried to click both links | Redirected to the Home page respectively. | Pass |
+| Two links to confirm or no Logout action | When 'Yes, I confirm' clicked the user will be redirected to the Home page and succesfully logged out message flashed. When "No, I don't" clicked the user will be redirected to the Home page. | Tried to click both links | Redirected to the Home page respectively. | Pass |
 | `Sign up Page` |
 | Username input - empty | The username is a required field, so should not submit with no value. | Tried to submit form with no value entered | Field error messages lets user know 'this value is required'. | Pass |
 | Username input - used already | If username is in use, message should flash to user. | Entered an in use username | Message flashed to say username already in use. | Pass|
@@ -198,7 +207,25 @@ Each device tested the site using the following browsers:
 | Password (again) | The password (again) is a required field and should match with Password field | Tried to submit form with different password values entered | Field error messages lets user know 'Password doesn't match'. | Pass |
 | Password - too common | The password should be a mixture of numbers, letters, characters. | Tried to submit form with only numeric password values (1,2,3,4,5,6,7,8) | Field error messages lets user know 'This password is too common'. | Pass |
 | Sign up button | Should redirect user to the Blog page and a registration successful message flashed | Created new user and submitted form | Redirected to the Blog in page and message flashed | Pass |
-| `Contact Page` |
-| Search feature | A search is performed when the user enters a search term | Searched for rabbits | The search returns book results | Pass |
+| `Create Post Page` |
+| Title input - empty | The Title is a required field, so should not submit with no value. | Tried to submit form with no value entered | Field error messages lets user know 'This value is required'. | Pass |
+| Title input - over 60 char | Title is a field with no more than 60 char. | Tried to enter over 60 char | Title field won't allow users to write more than 60 chars. | Pass |
+| Choose File input | This field is optional for users to upload an image in their post. | Clicked Choose File | The OS window to select an image to upload will open. | Pass |
+| Category selected - empty | The Category is a required field, so should not submit with no value. | Tried to submit form with no value selected | Field error messages lets user know 'This value is required'. | Pass |
+| Content input - empty | The Content is a required field, so should not submit with no value. | Tried to submit form with no value entered | Field error messages lets user know 'This value is required'. | Pass |
+| Create Post button | Should create the post sending for aproval, redirect user to the Blog page and a create post successful message flashed | Tried to submit form | Redirected to Blog page and successfull message flashed, post was waiting approval. | Pass |
+| `Post Detail Page` |
+| Go Back link | When clicked the user will be redirected to the Blog page | Clicked Go Back link | Redirected to the Blog page | Pass |
+| Like button (if user loggedin) | When clicked Like button the user will be able to like/dislike a post and a successfull liked/disliked message flashe | Clicked Like button 2 times | Increased number of likes beside heart icon or decreased when disliked, both cases showed respective message. | Pass |
+| Edit post link (when loggedin user is author of post) | When clicked redirect to edit post page. | Clicked Edit post link when I logged in and to a post I created | Redirected to edit post page. | Pass |
+| Delete post link (when loggedin user is author of post) | When clicked redirect to delete post page. | Clicked Delete link when I logged in and to a post I created | Redirected to Delete post page. | Pass |
+| Edit link (when loggedin user is author of comment) | When clicked redirect to edit comment page. | Clicked Edit link when I logged in and to a comment I created | Redirected to edit comment page. | Pass |
+| Submit comment button ( loggedin users ) | When clicked Submit comment button flash success message and send comment for approval to Admin | Clicked Submit link | Flashed success message that form is sent for approval, once approved I can see it in the post commented. | Pass |
+| `Delete Post Page` |
+| No I don't link | Redirect to Post detail page | Clicked No I don't link | Redirected to Post detail page | Pass |
+| Yes, I confirm link | Redirect to Blog page, delete post and success message flash | Clicked Yes, I confirm link | Redirected to Blog page, success message flashed, post deleted. | Pass |
+| `Edit comment Page` |
+| Update link | Update comment content and redirect to Post detail page flash success message | Clicked Update link | Redirected to Post detail page and updated the comment. Flashed a success update message. | Pass |
+| Delete link | Open a new modal window to confirm comment deleting. Close link redirect to the Edit comment page and Delete link will delete comment with success message flashed. | Clicked each button | Closed modal window and when clicked Delete redirected to post detail page and flash success comment deleted. | Pass |
 | `Error Page` |
-| Home page link | Redirects the user to the home page | Clicked link | Redirected to home page | Pass |
+| Need help link | Open a modal window with link to redirect the user to the home page | Clicked Need help link and after Go back home link | Redirected to home page | Pass |
