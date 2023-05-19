@@ -350,7 +350,7 @@ Please find my GitHub Kanban Board with all Epics, User Stories and Tasks [here.
 ---
 
 ### User Story 7.1: Register an account.
-- As a **Site User**, I want to **register an account**, so that I ** can interact with the content by commenting and liking posts.**
+- As a **Site User**, I want to **register an account**, so that I **can interact with the content by commenting and liking posts.**
 
 ### Tasks:
 * Create a user registration page with appropriate input fields for username, email, and password.
@@ -716,7 +716,7 @@ The majority of bugs encountered in this project occurred during the development
 | ----------- | ----------- |
 | JS Code used to close automatically alert messages was showing error in console. <details><summary>Alert bug</summary><img src="media/bugs/alert_bug.webp"></details> | Update the setTimeout function, add an if statment to check if there is a message and after show and close this message. |
 | Class "Active" wasn't working properly for all nav links when they where clicked, still would stay on previous click. <details><summary>Active class bug</summary><img src="media/bugs/active_bug.webp"></details> | After searching on Google found a solution to import all URL paths at the top of base.html template and add active class based on URL clicked which fixed the problem. |
-| The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link, as well after reading https://devcenter.heroku.com/articles/django-assets i added DISABLE_COLLECSTATIC=1 to Heroku reveal config vars.|
+| The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link, as well after reading https://devcenter.heroku.com/articles/django-assets i added DISABLE_COLLECSTATIC=0 to Heroku reveal config vars.|
 | Background images used in footer, about page, cancer info page and blog page were not loading in productin in Heroku. | After asking for help Student Support, we came up with idea to remove any path for this bg-images and instead get link for them directly from Cloudinary. It worked.|
 | At the Contact page, FAQs section when i clicked a collapse btn would expand all cards same time as they are populated from database. | After data-bs-target="#collapseExample" i added {{ faqs.id }} so it will open only the id clicked.|
 | Many errors encountered were 'TemplateDoesNotExist' at /... | This problem is quite common in Django and i solved them following this steps: 1-Check the view code if renders/redirect the template which is not found. 2-Check the URL path if is correct. 3-Check syntax errors. 4-Check the Template location and path. |
