@@ -73,9 +73,9 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
       - [Unfixed Bugs](#unfixed-bugs)
   - [Deployment](#deployment)
       - [Creating the Django project](#creating-the-django-project)
-      - [Creating Heroku app](#creating-heroku-app)
+      - [Create your Heroku app](#create-your-heroku-app)
       - [Set up Environment Variables](#set-up-environment-variables)
-      - [Heroku deployment](#heroku-deployment)
+      - [Heroku Deployment](#heroku-deployment)
       - [Final Deployment](#final-deployment)
   - [Credits](#credits)
     - [Code](#code)
@@ -522,7 +522,7 @@ Our team feature provides information about the person behind this website, crea
 
 [Back to top ⇧](#content)
 
-## Cancer Information
+## Cancer Info Page
 
 ### Hero Image Info
 
@@ -738,6 +738,7 @@ The majority of bugs encountered in this project occurred during the development
 | The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link, as well after reading https://devcenter.heroku.com/articles/django-assets i added DISABLE_COLLECSTATIC=0 to Heroku reveal config vars.|
 | Background images used in footer, about page, cancer info page and blog page were not loading in productin in Heroku. | After asking for help Student Support, we came up with idea to remove any path for this bg-images and instead get link for them directly from Cloudinary. It worked.|
 | At the Contact page, FAQs section when i clicked a collapse btn would expand all cards same time as they are populated from database. | After data-bs-target="#collapseExample" i added {{ faqs.id }} so it will open only the id clicked.|
+| Automated Test wasn't running due to PostgreSQL permission. | During the proccess of automated testing uncomment the local Django database (db.sqlite3) and use it and in deployment use PostgreSQL database. |
 | Many errors encountered were 'TemplateDoesNotExist' at /... | This problem is quite common in Django and i solved them following this steps: 1-Check the view code if renders/redirect the template which is not found. 2-Check the URL path if is correct. 3-Check syntax errors. 4-Check the Template location and path. |
 | When was trying to create a post the slugify wasn't being generated from title and was cousing this error. <details><summary>Slugify bug</summary><img src="media/bugs/slugify_error.webp"></details> | In the CreatePost view in form_valid method i added this piece of code to check if there is a slug if not generate from instance.title:
     form.instance.author = self.request.user 
@@ -755,7 +756,7 @@ The majority of bugs encountered in this project occurred during the development
 
 # Deployment
 
-## 1. Creating the Django Project
+## Creating the Django Project
 * Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template).
 * Click on `Use This Template` button, then create new repository.
 * Name our repository and click on `Create repository from template` button.
@@ -772,7 +773,7 @@ The majority of bugs encountered in this project occurred during the development
 * Test server works locally: `python manage.py runserver`.
 * If the app has been installed correctly the window will display Django project - The install worked successfully! Congratulations!
 
-## 2. Create your Heroku app
+## Create your Heroku app
 * Navigate to [Heroku](https://id.heroku.com).
 * Create a Heroku account by entering your email address and a password (or login if you have one already).
 * Activate the account through the authentication email sent to your email account.
@@ -785,7 +786,7 @@ The majority of bugs encountered in this project occurred during the development
 * Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1` (note: this must be either removed or set to 0 for final deployment).
 * Next, scroll down to the Buildpack section, click `Add Buildpack` select python and click Save Changes.
 
-## 3. Set up Environment Variables
+## Set up Environment Variables
 * In you IDE create a new env.py file in the top level directory.
 * Add env.py to the .gitignore file.
 * In env.py import the os library.
@@ -793,7 +794,7 @@ The majority of bugs encountered in this project occurred during the development
 * In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`.
 * In Heroku Settings tab Config Vars enter the same `SECRET_KEY` created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
 
-## 4. Setting up settings.py
+## Setting up settings.py
 * In your Django 'settings.py' file type:
 
  ```
@@ -841,7 +842,7 @@ DEFAULT_FILE_STORAGE =
 
 * Commit and push the code to the GitHub Repository.
 
-## 5. Heroku Deployment: 
+## Heroku Deployment 
 * Click Deploy tab in Heroku.
 * Select Github as the deployment method.
 * Confirm you want to connect to GitHub.
@@ -849,8 +850,8 @@ DEFAULT_FILE_STORAGE =
 * Scroll to the bottom of the deploy page and select the preferred deployment type.
 * Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
-## 6. Final Deployment
-In the IDE:
+## Final Deployment
+
 * When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
 * In Heroku settings config vars change the `DISABLE_COLLECTSTATIC` value to 0
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
@@ -866,7 +867,7 @@ In the IDE:
 - The basic set up of the website was done by strictly following the steps as described in Code Institue Full Stack Frameworks module - Django walkthrough project `"I Think Therefore I Blog"`. As well this project was used along development for clarifying questions or problems raised during development stage.
 - Comment model was used same as in Django walkthrough project `"I Think Therefore I Blog"` for ease of building the project.
 - Some buttons shadow style was taken from [Css Scan](https://getcssscan.com/css-buttons-examples)
-- After encountering errors, snipets of codes were taken from [Django Documentation ](https://docs.djangoproject.com/en/4.2/) after reading it and finding right solution.
+- After encountering errors, snipets of codes were taken from [Django Documentation ](https://docs.djangoproject.com/en/4.2/) after reading it and finding the right solutions.
 
 ## Information Sources / Resources
 - Code Institutes Full Stack Framework Module, mainly the 'blog' walkthrough project.
