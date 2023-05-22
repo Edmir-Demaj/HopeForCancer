@@ -4,7 +4,7 @@ from blog.models import *
 from blog.views import *
 
 
-class BlogPageTestView(TestCase):
+class BlogAppTestViews(TestCase):
     """
     This class test all BlogPage attributes
     """

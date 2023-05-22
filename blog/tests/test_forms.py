@@ -3,7 +3,7 @@ from blog.forms import *
 from blog.models import Category
 
 
-class TestBlogAppForms(TestCase):
+class BlogAppTestForms(TestCase):
     """
     This class test all forms used in blog app first when they have data
     inserted and secondly when they don't have data inserted
