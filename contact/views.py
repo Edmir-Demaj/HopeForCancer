@@ -13,6 +13,8 @@ def contact(request):
     faq = FAQ.objects.all()
     if request.method == 'POST':
         form = ContactForm(request.POST)
+        # validate form and if is valid save it in db and provide user
+        # with success message
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message was sent successfully!')
