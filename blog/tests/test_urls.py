@@ -3,7 +3,7 @@ from django.urls import reverse, resolve
 from blog.views import *
 
 
-class BlogAppTest(TestCase):
+class BlogAppTestUrls(TestCase):
     """
     Subclass which inherits from TestCase class and tests all urls
     """
