@@ -88,12 +88,11 @@ The Python code utilized in this project was manually inputted into the [PEP8 CI
 [Back to top ⇧](#content)
 
 ### Django Automated Testing
-Automated tests have been created and executed for each app within this project, covering various aspects such as URL routing, views, models, and forms. These tests ensure that different components of the application are functioning correctly and help maintain the desired behavior and integrity of the project.
+Automated tests have been created and executed for each app within this project, covering various aspects such as URL routing, models, and forms. These tests ensure that different components of the application are functioning correctly and help maintain the desired behavior and integrity of the project.
 
-#### Blog App
+Please note that while automated testing has been implemented for the majority of this project, it does not provide complete coverage. The tests cover several of the main functionalities, but there may be areas that have not been thoroughly tested.
 
-<details><summary> Blog App Tests</summary><img src="media/tests/automated/blog_app_test_urls.webp"></details>
-Nine tests were successfully created and passed for all the URL routes in the Blog app. These tests confirm that the correct view class or function is resolved when each URL is triggered.
+<details><summary> Blog App Tests</summary><img src="media/tests/automated_tests.webp"></details>
 
 ## Manual Testing (BDD)
 
