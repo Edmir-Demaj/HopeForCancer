@@ -111,7 +111,7 @@
                             {% if user.is_authenticated and comment.name == request.user.username%}
                             <small id="edit-comment">
                                 <a href="{% url 'edit_comment' comment.pk  %}" aria-label="link to edit comment page"
-                                    class="create-post-btn d-inline-block hvr-float-shadow">Edit</a>
+                                    class="edit-comment-btn d-inline-block hvr-float-shadow">Edit</a>
                             </small>
                             {% endif %}
                         </div>
