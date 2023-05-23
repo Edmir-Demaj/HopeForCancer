@@ -33,7 +33,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['hope-for-cancer.herokuapp.com', '*']
+ALLOWED_HOSTS = ['hope-for-cancer.herokuapp.com', 'localhost']
 
 # Application definition
 

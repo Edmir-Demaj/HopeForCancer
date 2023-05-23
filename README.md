@@ -4,7 +4,7 @@
 This is an informational blog webapp created using the Django Framework and related contemporary technologies, as a component of Portfolio Project 4 for my Diploma in Full Stack Software Development at Code Institute.
 
 **Our Story**  
-HopeForCancer is a web application that aims to raise awareness about cancer and provide resources to those affected by it. The idea for the project originated from a personal experience: the founder, **Edmir Demaj**, lost his father to cancer in November 2022. Recognizing the need for a comprehensive and user-friendly resource for those affected by cancer, Edmir set out to create a platform that would do just that. The mission of HopeForCancer is to provide support and information to cancer patients, survivors, and their families, and to spread awareness about the importance of early detection and prevention.
+HopeForCancer is a web application that aims to raise awareness about cancer and provide resources to those affected by it. The idea for the project originated from a personal experience: the author, **Edmir Demaj**, lost his father to cancer in November 2022. Recognizing the need for a comprehensive and user-friendly resource for those affected by cancer, Edmir set out to create a platform that would do just that. The mission of HopeForCancer is to provide support and information to cancer patients, survivors, and their families, and to spread awareness about the importance of early detection and prevention.
 
 You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokuapp.com/)
 
@@ -23,7 +23,7 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
     - [Colours](#colours)
     - [Typography](#typography)
     - [Imagery](#imagery)
-    - [Wireframes](#wireframes)
+    - [Mock Up Designs](#mock-up-designs)
   - [Database Diagram](#database-diagram)
   - [Features](#features)
     - [Home Page](#home-page)
@@ -104,7 +104,7 @@ You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokua
 * Individuals who are at high risk of developing cancer
 
 **Secondary Target Audience:**
-* General audience interested in learning about cancer prevention and treatment
+* General audience interested in learning about cancer, prevention and treatment
 * Healthcare professionals and cancer organizations
 
 ## Agile Methodology
@@ -428,9 +428,9 @@ For typography, the web app uses Google Fonts. The header font is Montserrat, wh
 
 All images used on this project are free copyrights. They are used to convey a message or evoke a particular emotion related to the subject of cancer. Also they are used to add visual interest to the website and to help break up text-heavy pages like about or info page. Imagery is relevant to the content and mission of the website and is also appropriately sized and optimized for web use to ensure fast page loading times. All images are in .webp format.
 
-## Wireframes
+## Mock Up Designs
 
-All of the wireframes for the web app were created using [Figma](https://www.figma.com/), a popular design tool known for its versatility and collaborative features. During design stage was kept in mind the principles of UX (User Experience) and UI (User Interface) design throughout the process to ensure that our wireframes are intuitive, user-friendly, and visually appealing. Additionally, the wireframes are responsive and optimized for use on tablets and mobile devices, to provide a seamless experience across different screen sizes.
+All of the mock up designs for the web app were created using [Figma](https://www.figma.com/), a popular design tool known for its versatility and collaborative features. During design stage was kept in mind the principles of UX (User Experience) and UI (User Interface) design throughout the process to ensure that designs are intuitive, user-friendly, and visually appealing. Additionally, the mock up designs are responsive and optimized for use on tablets and mobile devices, to provide a seamless experience across different screen sizes.
 
 <details><summary>Home Page:</summary>
 <img src="media/wireframes/home_page.webp" alt="home page wireframe">
@@ -470,12 +470,12 @@ All of the wireframes for the web app were created using [Figma](https://www.fig
 ## Home Page
 
 ### Navbar
-On the landing page, users will be presented with a visually appealing and user-friendly navbar positioned at the very top. This navbar contains all the necessary links and accessibility options for easy navigation and is fully responsive. On the very left side is positioned the Logo of the website with link to navigate to home page.
+On the landing page, users will be presented with a visually appealing and user-friendly navbar positioned at the very top. This navbar contains all the necessary links and accessibility options for easy navigation and is fully responsive. On the very left side is positioned the Logo of the website with link to navigate to home page. Navbar is kept same in all the pages for ease of navigation.
 ![Navbar](media/features/home/navbar.webp)
 
 ### Hero Image
 
-Creating a strong first impression with the user is crucial, and to achieve this, a hero image with 100% screen width and 90% screen height was employed. This hero image acts as an automated carousel, displaying three distinct images accompanied by engaging headings that effectively communicate the purpose and essence of the web app. Additionally, a prominent call-to-action (CTA) button is incorporated to encourage users to explore further and gather more information. The design is fully responsive, ensuring seamless adaptation across various screen sizes.
+Creating a strong first impression with the user is crucial, and to achieve this, a hero image with 100% screen width and 90% screen height was employed. This hero image acts as an automated carousel, displaying three distinct images accompanied by engaging headings that effectively communicate the purpose and essence of the web app. Additionally, a call-to-action (CTA) button is incorporated to encourage users to explore further and gather more information. The design is fully responsive, ensuring seamless adaptation across various screen sizes.
 ![Hero Image](media/features/home/hero_section.webp)
 
 ### Cancer Information
@@ -650,6 +650,8 @@ A customized 404 error page has been designed specifically to handle the most co
 * API to convert uploaded images to webp format before making public.
 * Create User page to view user posts or comments.
 * Signin with social accounts.
+* Filter function in Blog page so user can filter posts they want to see.
+* Create automated test during development stage.
 
 [Back to top ⇧](#content)
 
@@ -675,8 +677,8 @@ A customized 404 error page has been designed specifically to handle the most co
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML)- was utilized in this project to structure the web pages in a semantically meaningful way, prioritizing better accessibility.
 * [CSS3](https://en.wikipedia.org/wiki/CSS)- was used in this project to leverage its advanced styling capabilities and enhance the visual appearance of the website.
-* [JavaScript](https://www.javascript.com/)- in this project, JavaScript code is kept minimal. It is primarily utilized to automatically hide alert messages after 3 seconds and display a "Move to Top" button upon scrolling. another function used was to update copyrights year with actual year.
-* [Python](https://www.python.org/)- was utilized to create database models, create all the views for web app funcionality, create forms used throughout the website, connect URL paths and install necessary dependencies specified in the requirements.txt file for the successful execution of this project.
+* [JavaScript](https://www.javascript.com/)- in this project, JavaScript code is kept minimal. It is primarily utilized to automatically hide alert messages after 3 seconds and display a "Move to Top" button upon scrolling. Another function used was to update copyrights year with actual year.
+* [Python](https://www.python.org/)- was utilized to create database models, create all the views for web app funcionality, create forms used throughout the website, connect URL paths and install necessary dependencies specified in the requirements.txt file for the successful execution of this project. Python was used to write automated tests as well.
 
 ## Django Packages
 
@@ -693,12 +695,14 @@ A customized 404 error page has been designed specifically to handle the most co
 
 * [Django](https://www.djangoproject.com/) was used as the framework which provides the necessary tools and functionalities for building full-stack web applications. Django enables rapid and secure development.
 * [Bootstrap](https://getbootstrap.com/)- used to style the website through its classes, add responsiveness and interactivity and use ready components.
+* [AOS](https://michalsnik.github.io/aos/)- used to add animation on scroll style to different components and sections on the site.
 * [Cloudinary](https://cloudinary.com/)- was used to host the static files and media files for the website and use them in production environment, Heroku.
 * [Git](https://git-scm.com/)- used for version control by utilizing the Gitpod terminal to commit code to Git and push to GitHub.
+* [GitPod](https://www.gitpod.io/)- used as an IDE workspace to write code for this project.
 * [GitHub](https://github.com/)- used to store the project's code after being pushed from Git version control and to create Issues & Project Kanban.
 * [Heroku](https://id.heroku.com)- used to deploy the web application in production environment.
 * [PostgreSQL](https://www.postgresql.org/)- Database used through Heroku.
-* [Figma](https://www.figma.com/)- To build the wireframes for the project.
+* [Figma](https://www.figma.com/)- To build the mock ups for the project.
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
 
 ### Other Technologies Used
@@ -735,7 +739,8 @@ The majority of bugs encountered in this project occurred during the development
 | ----------- | ----------- |
 | JS Code used to close automatically alert messages was showing error in console. <details><summary>Alert bug</summary><img src="media/bugs/alert_bug.webp"></details> | Update the setTimeout function, add an if statment to check if there is a message and after show and close this message. |
 | Class "Active" wasn't working properly for all nav links when they where clicked, still would stay on previous click. <details><summary>Active class bug</summary><img src="media/bugs/active_bug.webp"></details> | After searching on Google found a solution to import all URL paths at the top of base.html template and add active class based on URL clicked which fixed the problem. |
-| The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link, as well after reading https://devcenter.heroku.com/articles/django-assets i added DISABLE_COLLECSTATIC=0 to Heroku reveal config vars.|
+| The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link.|
+| Heroku failed to deploy and showing Keyerror: 'etag' on Build Log. This bug happened several times <details><summary>'etag' bug</summary><img src="media/bugs/animation_bug.webp"></details> | Contacted Student Support for help and the problem was solved by deleting CSS folder from Cloudinary and remove DISABLE_COLLECSTATIC from Heroku reveal config vars to avoid files override. Redeploy and solved. |
 | Background images used in footer, about page, cancer info page and blog page were not loading in productin in Heroku. | After asking for help Student Support, we came up with idea to remove any path for this bg-images and instead get link for them directly from Cloudinary. It worked.|
 | At the Contact page, FAQs section when i clicked a collapse btn would expand all cards same time as they are populated from database. | After data-bs-target="#collapseExample" i added {{ faqs.id }} so it will open only the id clicked.|
 | Automated Test wasn't running due to PostgreSQL permission. | During the proccess of automated testing uncomment the local Django database (db.sqlite3) and use it and in deployment use PostgreSQL database. |
@@ -868,6 +873,7 @@ DEFAULT_FILE_STORAGE =
 - Comment model was used same as in Django walkthrough project `"I Think Therefore I Blog"` for ease of building the project.
 - Some buttons shadow style was taken from [Css Scan](https://getcssscan.com/css-buttons-examples)
 - After encountering errors, snipets of codes were taken from [Django Documentation ](https://docs.djangoproject.com/en/4.2/) after reading it and finding the right solutions.
+- To learn Django automated Tests was followed [Django Testing Tutorial ](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM).
 
 ## Information Sources / Resources
 - Code Institutes Full Stack Framework Module, mainly the 'blog' walkthrough project.
@@ -889,7 +895,7 @@ DEFAULT_FILE_STORAGE =
 
 # Acknowledgement
 
-- First and foremost, I want to give a special shout-out to my dad, who inspired me to create this website in his memory. He bravely fought cancer, and this project is my way of honouring his life. 
+- First and foremost, I want to give a special shout-out to my Dad, who inspired me to create this website in his memory. He bravely fought cancer, and this project is my way of honouring his life. 
 - I also want to say a big thank you to my amazing fiancée for always supporting me, even when I spent countless hours in front of the computer. You've been my rock! 
 - A great appreciation goes out to my mentor for the invaluable advice and feedback that helped shape this project. 
 - I'm also grateful to the Code Institute Support Team for their assistance in troubleshooting code.
