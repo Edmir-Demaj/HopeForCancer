@@ -432,10 +432,15 @@ ol li {
 
 /* --------------------------------------------------- Post Detail page */
 .image-container-details {
-    height: 25rem;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
 }
 
 .details-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
