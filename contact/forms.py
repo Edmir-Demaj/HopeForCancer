@@ -17,7 +17,7 @@ class ContactForm(forms.ModelForm):
     )
     email = forms.EmailField(
         label='Email',
-        widget=forms.TextInput(
+        widget=forms.EmailInput(
             attrs={
                 'placeholder': 'Enter your email',
                 }
@@ -27,7 +27,17 @@ class ContactForm(forms.ModelForm):
         label='Subject',
         widget=forms.TextInput(
             attrs={
-                'placeholder': 'Please provide a subject for your message',
+                'placeholder': 'Enter a subject for your message',
+                }
+            )
+    )
+
+    content = forms.CharField(
+        label='Message',
+        widget=forms.Textarea(
+            attrs={
+                'placeholder': 'Enter your message',
+                'rows': 7
                 }
             )
     )
