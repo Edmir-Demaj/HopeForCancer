@@ -8,7 +8,7 @@ HopeForCancer is a web application that aims to raise awareness about cancer and
 
 You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokuapp.com/)
 
-![Screenshot showcasing the responsive design of my web app](image/path)
+![Screenshot showcasing the responsive design of my web app](media/readme_images/all_devices.webp)
 
 ----
 
@@ -433,28 +433,28 @@ All images used on this project are free copyrights. They are used to convey a m
 All of the mock up designs for the web app were created using [Figma](https://www.figma.com/), a popular design tool known for its versatility and collaborative features. During design stage was kept in mind the principles of UX (User Experience) and UI (User Interface) design throughout the process to ensure that designs are intuitive, user-friendly, and visually appealing. Additionally, the mock up designs are responsive and optimized for use on tablets and mobile devices, to provide a seamless experience across different screen sizes.
 
 <details><summary>Home Page:</summary>
-<img src="media/wireframes/home_page.webp" alt="home page wireframe">
+<img src="media/mock_up_designs/home_page.webp" alt="home page mock up design">
 </details>
 <details><summary>About us Page:</summary>
-<img src="media/wireframes/about_page.webp" alt="about us page wireframe">
+<img src="media/mock_up_designs/about_page.webp" alt="about us page mock up design">
 </details>
 <details><summary>Info Page:</summary>
-<img src="media/wireframes/info_page.webp" alt="info page wireframe">
+<img src="media/mock_up_designs/info_page.webp" alt="info page mock up design">
 </details>
 <details><summary>Blog Page:</summary>
-<img src="media/wireframes/blog_page.webp" alt="blog page wireframe">
+<img src="media/mock_up_designs/blog_page.webp" alt="blog page mock up design">
 </details>
 <details><summary>Contact Page:</summary>
-<img src="media/wireframes/contact_page.webp" alt="contact page wireframe">
+<img src="media/mock_up_designs/contact_page.webp" alt="contact page mock up design">
 </details>
 <details><summary>Login & Signup Page:</summary>
-<img src="media/wireframes/login_signup.webp" alt="login and signup page wireframe">
+<img src="media/mock_up_designs/login_signup.webp" alt="login and signup page mock up design">
 </details>
 <details><summary>Post Details Page:</summary>
-<img src="media/wireframes/post_details.webp" alt="post details page wireframe">
+<img src="media/mock_up_designs/post_details.webp" alt="post details page mock up design">
 </details>
 <details><summary>Create Post Page:</summary>
-<img src="media/wireframes/create_post.webp" alt="create post page wireframe">
+<img src="media/mock_up_designs/create_post.webp" alt="create post page mock up design">
 </details>
 
 
@@ -710,7 +710,8 @@ A customized 404 error page has been designed specifically to handle the most co
 * [Windows Paint](https://apps.microsoft.com/store/detail/paint/9PCFS5B6T72H)- Used to resize large images in the size wanted.
 * [Convertio](https://convertio.co/)- Used to convert any format image into webp.
 * [SmartDraw](https://www.smartdraw.com/)- Used to design Database schemas and their relationships.
-* [LOGO](https://app.logo.com/business-name)- Used to design and create the Logo of the website.
+* [Logo](https://app.logo.com/business-name)- Used to design and create the Logo of the website.
+* [Coolors](https://coolors.co/)- Used to generate colour palette used in this website.
 * [Fontawesome](https://fontawesome.com/)- Used to get icons used in the website.
 * [Favicon.io](https://favicon.io/)- Used to generate favicon.
 * [Hover.css](https://ianlunn.github.io/Hover/)- Used to get ready hover styles.
@@ -739,7 +740,7 @@ The majority of bugs encountered in this project occurred during the development
 | ----------- | ----------- |
 | JS Code used to close automatically alert messages was showing error in console. <details><summary>Alert bug</summary><img src="media/bugs/alert_bug.webp"></details> | Update the setTimeout function, add an if statment to check if there is a message and after show and close this message. |
 | Class "Active" wasn't working properly for all nav links when they where clicked, still would stay on previous click. <details><summary>Active class bug</summary><img src="media/bugs/active_bug.webp"></details> | After searching on Google found a solution to import all URL paths at the top of base.html template and add active class based on URL clicked which fixed the problem. |
-| The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. <details><summary>Animation bug</summary><img src="media/bugs/animation_bug.webp"></details> | I removed the link provided in library documentation how to install it and instead i used a CDN link.|
+| The animation library AOS, was cousing problem during deployment because Cloudinary didn't regonize it when was collecting static files. | I removed the link provided in library documentation how to install it and instead i used a CDN link.|
 | Heroku failed to deploy and showing Keyerror: 'etag' on Build Log. This bug happened several times <details><summary>'etag' bug</summary><img src="media/bugs/animation_bug.webp"></details> | Contacted Student Support for help and the problem was solved by deleting CSS folder from Cloudinary and remove DISABLE_COLLECSTATIC from Heroku reveal config vars to avoid files override. Redeploy and solved. |
 | Background images used in footer, about page, cancer info page and blog page were not loading in productin in Heroku. | After asking for help Student Support, we came up with idea to remove any path for this bg-images and instead get link for them directly from Cloudinary. It worked.|
 | At the Contact page, FAQs section when i clicked a collapse btn would expand all cards same time as they are populated from database. | After data-bs-target="#collapseExample" i added {{ faqs.id }} so it will open only the id clicked.|
@@ -882,6 +883,7 @@ DEFAULT_FILE_STORAGE =
 - PDF file provided from Alumni in Slack channel, "Quick Draw session"/Connecting Epics and User Stories on Github pages.
 - [Django Documentation](https://docs.djangoproject.com/en/4.2/) to better understand Django MVT framework.
 - [Google](https://www.google.com/) as a research tool.
+- [Create a Simple Django Blog](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) used as an instructor how to create a Django Blog webapp.
 - [django-allauth](https://builtwithdjango.com/blog/styling-authentication-pages) how to style authentication fields.
 
 ## Content and Media

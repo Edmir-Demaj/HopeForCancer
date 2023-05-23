@@ -162,7 +162,7 @@ footer address {
     height: 100%;
     z-index: 2;
     background-color: #080d15;
-    opacity: 0.55;
+    opacity: 0.6;
 }
 
 .cta {
@@ -393,7 +393,7 @@ ol li {
 }
 
 .create-post-btn {
-    background-image: radial-gradient(100% 100% at 100% 0, #dca8ff 20%, #8129C1 100%);
+    background-image: radial-gradient(100% 100% at 100% 0, #dca8ff 10%, #8129C1 100%);
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
     text-transform: uppercase;
     font-weight: 600;
@@ -463,7 +463,7 @@ ol li {
 }
 
 .submit-btn {
-    background-image: radial-gradient(100% 100% at 100% 0, #acffa8 20%, #168f1e 100%);
+    background-image: radial-gradient(100% 100% at 100% 0, #81de7c 20%, #168f1e 100%);
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
     text-transform: uppercase;
     font-weight: 600;
