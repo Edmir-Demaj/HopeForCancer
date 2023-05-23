@@ -64,6 +64,7 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = 'blog_page'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_ADAPTER = 'hope_for_cancer.adapter.UsernameMaxAdapter'
 
 MESSAGE_TAGS = {
     messages.DEBUG: "alert-info",

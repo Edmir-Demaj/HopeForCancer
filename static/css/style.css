@@ -65,7 +65,6 @@ header {
 
 .navbar-nav {
     font-size: 1.1rem;
-    padding-right: 40px;
 }
 
 .header-bg {
@@ -665,6 +664,10 @@ input[type="file"] {
 
     .cta {
         width: 700px;
+    }
+
+    .navbar-nav {
+        padding-right: 40px;
     }
 }
 

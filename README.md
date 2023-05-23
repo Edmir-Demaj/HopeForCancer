@@ -875,6 +875,7 @@ DEFAULT_FILE_STORAGE =
 - Some buttons shadow style was taken from [Css Scan](https://getcssscan.com/css-buttons-examples)
 - After encountering errors, snipets of codes were taken from [Django Documentation ](https://docs.djangoproject.com/en/4.2/) after reading it and finding the right solutions.
 - To learn Django automated Tests was followed [Django Testing Tutorial ](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM).
+- In order to add max length to username field in SignUp form was used this code [Stack overflow ](https://stackoverflow.com/questions/50548685/how-to-add-max-length-to-allauth-username).
 
 ## Information Sources / Resources
 - Code Institutes Full Stack Framework Module, mainly the 'blog' walkthrough project.

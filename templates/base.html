@@ -70,7 +70,7 @@
                             <i class="fa-solid fa-xmark"></i>
                         </button>
                         <!-- Navbar links -->
-                        <ul class="navbar-nav mx-auto text-center">
+                        <ul class="navbar-nav mx-auto text-center align-items-center">
                             <li class="nav-item">
                                 <a class="nav-link hvr-underline-from-center {% if request.path == index %} active {% endif %}"
                                     id="home" href="{% url 'index' %}" aria-label="navbar link to home page">Home</a>
@@ -94,7 +94,7 @@
                             </li>
                             <!-- Depending on user status display authentication links aswell -->
                             {% if user.is_authenticated %}
-                            <li class="nav-item ms-0 ms-xl-5">
+                            <li class="nav-item ms-0 ms-xl-4">
                                 <a class="nav-link hvr-underline-from-center {% if request.path == logout %} active {% endif %}"
                                     href="{% url 'account_logout' %}"
                                     aria-label="navbar link to log out page">Logout</a>

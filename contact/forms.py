@@ -40,3 +40,27 @@ class ContactForm(forms.ModelForm):
             'subject',
             'content',
         )
+
+
+def clean_name(self):
+    # Remove all whitespace characters from name field
+    name = self.cleaned_data.get('name')
+    if name:
+        name = name.replace(' ', '')
+    return name
+
+
+def clean_email(self):
+    # Remove all whitespace characters from email field
+    email = self.cleaned_data.get('email')
+    if email:
+        email = email.replace(' ', '')
+    return email
+
+
+def clean_subject(self):
+    # Remove all whitespace characters from subject field
+    subject = self.cleaned_data.get('subject')
+    if subject:
+        subject = subject.replace(' ', '')
+    return subject
