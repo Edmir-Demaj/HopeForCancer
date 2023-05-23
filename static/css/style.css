@@ -65,6 +65,7 @@ header {
 
 .navbar-nav {
     font-size: 1.1rem;
+    padding-right: 40px;
 }
 
 .header-bg {
@@ -399,7 +400,7 @@ ol li {
     font-weight: 600;
     color: #f7f7f7;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     line-height: 2rem;
     padding: 0 25px;
 }
@@ -460,18 +461,6 @@ ol li {
     border-radius: 10px;
     background-color: #fcfcfc;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-}
-
-.submit-btn {
-    background-image: radial-gradient(100% 100% at 100% 0, #81de7c 20%, #168f1e 100%);
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #f7f7f7;
-    border: none;
-    border-radius: 20px;
-    line-height: 2rem;
-    padding: 0 30px;
 }
 
 #edit-comment {
@@ -555,7 +544,7 @@ ol li {
     font-weight: 600;
     color: #f7f7f7;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     line-height: 2rem;
 }
 
@@ -619,7 +608,7 @@ input[type="file"] {
     font-weight: 600;
     color: #f7f7f7;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     line-height: 2rem;
     padding: 0 30px;
 }

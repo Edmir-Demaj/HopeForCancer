@@ -128,8 +128,7 @@
                     <!-- comment form and button to submit -->
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="submit-btn hvr-float-shadow"
-                        aria-label="button to submit a comment">Submit</button>
+                    <button type="submit" class="info-btn" aria-label="button to submit a comment">Submit</button>
                 </form>
                 {% endif %}
             </div>
