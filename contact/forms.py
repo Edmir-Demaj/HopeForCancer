@@ -37,7 +37,7 @@ class ContactForm(forms.ModelForm):
         widget=forms.Textarea(
             attrs={
                 'placeholder': 'Enter your message',
-                'rows': 7
+                'rows': 8
                 }
             )
     )
