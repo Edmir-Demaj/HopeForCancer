@@ -8,7 +8,7 @@ HopeForCancer is a web application that aims to raise awareness about cancer and
 
 You can view the live site here: [HopeForCancer](https://hope-for-cancer.herokuapp.com/)
 
-![Screenshot showcasing the responsive design of my web app](media/readme_images/all_devices.webp)
+![Screenshot showcasing the responsive design of my web app](media/readme_images/responsive_design.webp)
 
 ----
 
@@ -430,7 +430,7 @@ All images used on this project are free copyrights. They are used to convey a m
 
 ## Mock Up Designs
 
-All of the mock up designs for the web app were created using [Figma](https://www.figma.com/), a popular design tool known for its versatility and collaborative features. During design stage was kept in mind the principles of UX (User Experience) and UI (User Interface) design throughout the process to ensure that designs are intuitive, user-friendly, and visually appealing. Additionally, the mock up designs are responsive and optimized for use on tablets and mobile devices, to provide a seamless experience across different screen sizes.
+All of the mock up designs for the web app were created using [Figma](https://www.figma.com/), a popular design tool known for its versatility and collaborative features. During design stage was kept in mind the principles of UX (User Experience) and UI (User Interface) design throughout the process to ensure that designs are intuitive, user-friendly, and visually appealing. Additionally, the mock up designs are responsive and optimized for use on tablets and mobile devices, to provide a seamless experience across different screen sizes. Personally, I find it very helpful to create a mockup design rather than a wireframe when I began a project, it helps a lot with styling, colours, layout during development.
 
 <details><summary>Home Page:</summary>
 <img src="media/mock_up_designs/home_page.webp" alt="home page mock up design">
@@ -648,7 +648,7 @@ A customized 404 error page has been designed specifically to handle the most co
 # Features Left to Implement
 
 * API to convert uploaded images to webp format before making public.
-* Create User page to view user posts or comments.
+* Create User page to view user posts or comments all in one page.
 * Signin with social accounts.
 * Filter function in Blog page so user can filter posts they want to see.
 * Create automated test during development stage.
@@ -875,7 +875,7 @@ DEFAULT_FILE_STORAGE =
 - Some buttons shadow style was taken from [Css Scan](https://getcssscan.com/css-buttons-examples)
 - After encountering errors, snipets of codes were taken from [Django Documentation ](https://docs.djangoproject.com/en/4.2/) after reading it and finding the right solutions.
 - To learn Django automated Tests was followed [Django Testing Tutorial ](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM).
-- In order to add max length to username field in SignUp form was used this code [Stack overflow ](https://stackoverflow.com/questions/50548685/how-to-add-max-length-to-allauth-username).
+- In order to add min and max length to username field in SignUp form was used this code [Stack overflow ](https://stackoverflow.com/questions/50548685/how-to-add-max-length-to-allauth-username).
 
 ## Information Sources / Resources
 - Code Institutes Full Stack Framework Module, mainly the 'blog' walkthrough project.

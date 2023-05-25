@@ -81,9 +81,9 @@ header {
 }
 
 .close-offcanva {
-    position: relative;
-    top: -44%;
-    left: 87%;
+    position: absolute;
+    top: 1%;
+    left: 86%;
     font-size: 2.5em;
     border: none;
     color: #8129c1;
@@ -187,7 +187,7 @@ footer address {
     background-color: #f7f7f7;
     color: #8129C1;
     padding: 0.5rem 1rem;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -664,10 +664,6 @@ input[type="file"] {
 
     .cta {
         width: 700px;
-    }
-
-    .navbar-nav {
-        padding-right: 40px;
     }
 }
 
