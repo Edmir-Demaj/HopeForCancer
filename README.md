@@ -756,7 +756,7 @@ The majority of bugs encountered in this project occurred during the development
 
 | **Unfixed Bugs** |
 | ----------- | 
-| When i like or dislike a post the heart icon doesn't change style based on like button status. I am not aware of any other bugs.
+| Doesn't show liked/disliked post status to users on blog page, only if they click on a post and go to post detail page can see the icon updated based on status. I am not aware of any other bugs.
 
 --- 
 

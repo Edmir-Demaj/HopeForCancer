@@ -32,6 +32,12 @@ def postDetail(request, slug):
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
+    liked = False
+    # check if user request is from authenticated user to change the
+    # icon of a liked/disliked post
+    if request.user.is_authenticated:
+        if post.likes.filter(id=request.user.id).exists():
+            liked = True
     comments = (Comment.objects
                 .filter(post=post)
                 .filter(approved=True)
@@ -40,6 +46,7 @@ def postDetail(request, slug):
         'post': post,
         'comments': comments,
         'user': request.user,
+        'liked': liked,
         'comment_form': CommentForm(),
     }
     return render(request, 'blog/post_detail.html', context)
@@ -143,6 +150,9 @@ class PostLike(View):
                 '<i class="fa-regular fa-face-smile"></i>'
             )
         messages.success(request, message)
+        # context = {
+        #     'liked': liked,
+        # }
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
