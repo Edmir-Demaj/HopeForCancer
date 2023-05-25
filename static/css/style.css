@@ -135,17 +135,15 @@ footer {
     padding: 0;
 }
 
-footer p,
-footer li,
-footer address {
-    font-size: 0.9rem;
+.footer-contact-link {
+    display: block;
+    margin-bottom: 0.8rem;
 }
 
 .privacy-btn {
-    border: none !important;
-    background-color: transparent !important;
-    font-family: 'Merriweather', serif !important;
-    color: inherit !important;
+    border: none;
+    background-color: transparent;
+    color: inherit;
     padding-bottom: 5px;
 }
 
