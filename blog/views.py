@@ -9,7 +9,6 @@ from django.utils.html import format_html
 from django.http import HttpResponseRedirect
 from datetime import datetime
 from django.core.validators import MaxLengthValidator
-from allauth.account.forms import SignupForm
 from .models import *
 from .forms import *
 
@@ -205,9 +204,3 @@ def delete_comment(request, comment_id):
     comment.delete()
     messages.success(request, 'Comment deleted successfully!')
     return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
-
-
-class CustomSignupForm(SignupForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['username'].validators.append(MaxLengthValidator(10))

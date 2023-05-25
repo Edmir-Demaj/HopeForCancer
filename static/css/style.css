@@ -61,6 +61,7 @@ header {
 .nav-item a {
     color: #010b13;
     margin: 0 5px;
+    text-overflow: ellipsis;
 }
 
 .navbar-nav {
@@ -126,7 +127,7 @@ header {
 footer {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("https://res.cloudinary.com/dxlqthpli/image/upload/v1683567179/static/images/base_images/footer_img.da8f2c0ff5b4.webp") center center/cover no-repeat;
-    min-height: 300px;
+    min-height: 15rem;
     margin-top: auto;
 }
 
