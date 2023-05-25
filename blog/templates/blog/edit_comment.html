@@ -17,7 +17,7 @@
           <!-- Update or delete comment form and button to submit -->
           {{ form | crispy }}
           {% csrf_token %}
-          <button type="submit" class="submit-btn hvr-float-shadow me-3"
+          <button type="submit" class="create-post-btn hvr-float-shadow me-3"
             aria-label="button to update comment">Update</button>
           <button type="button" class="delete-post-btn hvr-float-shadow"
             aria-label="button to open delete comment modal" data-bs-toggle="modal"
@@ -35,7 +35,8 @@
                   Are you sure you want to delete your comment?
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="submit-btn hvr-float-shadow me-3" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="create-post-btn hvr-float-shadow me-3"
+                    data-bs-dismiss="modal">Close</button>
                   <a href="{% url 'delete_comment' comment.id %}" class="delete-post-btn hvr-float-shadow"
                     aria-label="Delete Comment">Delete</a>
                 </div>

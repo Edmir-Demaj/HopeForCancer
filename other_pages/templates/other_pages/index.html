@@ -339,11 +339,13 @@
                                         </strong>
                                         <!-- The number of comments -->
                                         <span>
-                                            <strong><i class="far fa-comments"></i>{{ post.comment_counter }}</strong>
+                                            <strong><i
+                                                    class="far fa-comments me-1"></i>{{ post.comment_counter }}</strong>
                                         </span>
                                     </div>
                                     <div class="card-footer">
-                                        <small class="text-muted">Posted by: {{ post.author | title}} |</small>
+                                        <small class="text-muted">Posted by: {{ post.author | title}}</small>
+                                        <br>
                                         <small class="text-muted">{{ post.created_date }}</small>
                                     </div>
                                 </a>
