@@ -21,7 +21,8 @@ class BlogAppTestForms(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_create_post_form_novalid_data(self):
-        # test the form when has no data inserted
+        # test the form when has no data inserted and check if number
+        # of errors is same with fields required.
         form = CreatePostForm(data={})
         self.assertFalse(form.is_valid())
         self.assertEquals(len(form.errors), 4)
@@ -39,7 +40,8 @@ class BlogAppTestForms(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_update_post_form_novalid_data(self):
-        # test the form when has no data inserted
+        # test the form when has no data inserted and check if number
+        # of errors is same with fields required.
         form = CreatePostForm(data={})
         self.assertFalse(form.is_valid())
         self.assertEquals(len(form.errors), 4)
@@ -52,7 +54,8 @@ class BlogAppTestForms(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_comment_form_novalid_data(self):
-        # test the form when has no data inserted
+        # test the form when has no data inserted and check if number
+        # of errors is same with fields required.
         form = CommentForm(data={})
         self.assertFalse(form.is_valid())
         self.assertEquals(len(form.errors), 1)

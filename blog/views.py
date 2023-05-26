@@ -150,9 +150,6 @@ class PostLike(View):
                 '<i class="fa-regular fa-face-smile"></i>'
             )
         messages.success(request, message)
-        # context = {
-        #     'liked': liked,
-        # }
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 

@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 {% block title %} Post Details {% endblock %}
 {% block content %}
+
 <!-- Hero section for post detail page -->
 <section id="blog-hero-section" class="text-center d-flex align-items-center justify-content-center mb-5">
     <h1 class="fw-bold text-white mx-2">
@@ -16,7 +17,7 @@
         <div class="row">
             <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <div class="image-container-details">
-                    <!-- image of post or default image -->
+                    <!-- Image of post or default image -->
                     {% if "placeholder" in post.featured_image.url %}
                     <img src="{% static 'images/blog_images/support_image.webp' %}" class="details-img"
                         alt="{{ post.describe_image }}">
@@ -25,12 +26,12 @@
                     {% endif %}
                 </div>
                 <div class="fs-5 mt-4">
-                    <!-- post details: author, date -->
+                    <!-- Post details: author, date -->
                     <small class="text-muted me-4"><strong>Posted by:</strong> {{ post.author | title}}</small>
                     <br>
                     <small class="text-muted"><strong>Created on:</strong> {{ post.created_date }}</small>
                     <br>
-                    <!-- check if post is updated -->
+                    <!-- Check if post is updated and display actual date -->
                     {% if post.updated_date == post.created_date %}
                     <small class="text-muted"><strong>Created on:</strong> {{ post.created_date }}</small>
                     {% elif post.updated_date != post.created_date %}
@@ -38,7 +39,7 @@
                     {% endif %}
                 </div>
                 <div class="card-body fs-5 mt-3 mb-4">
-                    <!-- if user is authenticated can like a post -->
+                    <!-- If user is authenticated can like a post -->
                     {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                         {% csrf_token %}
@@ -79,7 +80,7 @@
                 <p class="card-text pt-1">
                     {{ post.content | safe }}
                 </p>
-                <!-- if user is same as post author show edit and delete button -->
+                <!-- If user is same as post author show edit and delete buttons -->
                 {% if user.is_authenticated and post.author == request.user%}
                 <div class="card-footer">
                     <a href="{% url 'update-post' post.slug %}" aria-label="link to edit this post"
@@ -96,18 +97,18 @@
             <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <h3 class="mb-3">Comments:</h3>
                 <div class="card-body">
-                    <!-- message for user if there are no comments -->
+                    <!-- Message for user if there are no comments -->
                     {% if not comments %}
                     <h5 class="mt-4">No comments yet!</h5>
                     {% else %}
-                    <!-- Iterate throught comments related to this post to display them -->
+                    <!-- Iterate throught all comments related to this post to display them -->
                     {% for comment in comments %}
                     <div class="comment mb-2">
                         <span class="fw-semibold">{{ comment.name }}</span>
                         <p class="my-2">{{ comment.body | capfirst }}</p>
                         <div class="d-flex justify-content-between">
                             <small class="text-muted mt-2 d-inline-block">{{ comment.created_date }}</small>
-                            <!-- if user is authenticated and is same with comment author can edit comment -->
+                            <!-- If user is authenticated and is same with comment author can edit comment -->
                             {% if user.is_authenticated and comment.name == request.user.username%}
                             <small id="edit-comment">
                                 <a href="{% url 'edit_comment' comment.pk  %}" aria-label="link to edit comment page"
@@ -122,10 +123,10 @@
             </div>
             <div class="col-12 col-lg-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 {% if user.is_authenticated %}
-                <!-- if user is loggedin can leave a comment -->
+                <!-- If user is loggedin can leave a comment -->
                 <p class="lead">Commenting as: {{ user.username }}</p>
                 <form method="post" action="{% url 'add_comment' post.id %}">
-                    <!-- comment form and button to submit -->
+                    <!-- Comment form and button to submit -->
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="info-btn" aria-label="button to submit a comment">Submit</button>

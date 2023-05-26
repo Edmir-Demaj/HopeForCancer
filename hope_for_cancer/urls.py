@@ -19,6 +19,7 @@ from django.urls import path, include
 # Customize Header and Title on admin panel
 admin.site.site_header = 'HopeForCancer'
 admin.site.site_title = 'HopeForCancer'
+
 # urls from other apps conected with project
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -15,6 +15,7 @@
             <p class="mt-3 mb-5 text-center">Please modify the fields you wish to update and then click on the
                 <strong> 'Update Post'</strong> button below.</p>
             <div class="form-group p-3" id="create-post">
+                <!-- Return the form the fields to update the post -->
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ update_form | crispy  }}
