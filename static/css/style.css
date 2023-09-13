@@ -302,7 +302,7 @@ footer {
     position: relative;
 }
 
-#special-line {
+.special-line {
     border: none;
     width: 85%;
     margin: 0 auto;
