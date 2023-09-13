@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from django.utils.html import format_html
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseForbidden
 from datetime import datetime
 from django.core.validators import MaxLengthValidator
 from .models import *
@@ -89,6 +89,14 @@ def update_post(request, slug):
     requires user to be loggedin and provide message to user.
     """
     post = get_object_or_404(Post, slug=slug)
+
+    # Check if the current user is the author of the post
+    if post.author != request.user:
+        # If the current user is not the author, raise a 403 Forbidden error.
+        return HttpResponseForbidden(
+            "You don't have permission to edit this post!"
+        )
+
     if request.method == 'POST':
         form = UpdatePostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
@@ -110,7 +118,7 @@ def update_post(request, slug):
     return render(request, 'blog/update_post.html', context)
 
 
-class DeletePost(generic.DeleteView):
+class DeletePost(LoginRequiredMixin, generic.DeleteView):
     """
     View to allow users to delete a post and provide a message.
     """
@@ -118,6 +126,15 @@ class DeletePost(generic.DeleteView):
     template_name = 'blog/delete_post.html'
 
     def delete(self, request, *args, **kwargs):
+        # Get the post to be deleted
+        post = self.get_object()
+
+        # Check if the current user is the author of the post
+        if post.author != self.request.user:
+            # If the current user is not the author, raise a 403 error
+            return HttpResponseForbidden(
+                "You don't have permission to delete this post!"
+            )
         messages.success(request, 'Post deleted successfully.')
         return super(DeletePost, self).delete(request, *args, **kwargs)
 
@@ -129,7 +146,7 @@ class DeletePost(generic.DeleteView):
         return reverse('blog_page')
 
 
-class PostLike(View):
+class PostLike(LoginRequiredMixin, View):
     """
     View to make possible for users to like a post displaying a message.
     Has url to redirect as well.
@@ -153,6 +170,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+@login_required()
 def add_comment(request, post_id):
     """
     In this view we get the post where the comment is related to and save the
@@ -180,7 +198,7 @@ def add_comment(request, post_id):
     return redirect(reverse('post_detail', args=(post.slug,)))
 
 
-class EditComment(SuccessMessageMixin, generic.UpdateView):
+class EditComment(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     """
     View to edit a comment and provide a message if update is successfull
     """
@@ -198,6 +216,7 @@ class EditComment(SuccessMessageMixin, generic.UpdateView):
         return reverse('post_detail', args=[post.slug])
 
 
+@login_required()
 def delete_comment(request, comment_id):
     """
     Delete comment and provide a message to user
