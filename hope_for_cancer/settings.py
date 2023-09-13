@@ -29,11 +29,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['hope-for-cancer.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['hope-for-cancer.herokuapp.com', '*']
 
 # Application definition
 
@@ -109,14 +109,6 @@ WSGI_APPLICATION = 'hope_for_cancer.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
