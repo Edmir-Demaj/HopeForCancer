@@ -751,6 +751,13 @@ The majority of bugs encountered in this project occurred during the development
         if not form.instance.slug:
             form.instance.slug = slugify(form.instance.title)
 
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| Criterion 1.7 - Fails to pass HTML validation | I removed the spaces from hyperlink URL tel: and revalidate using HTML validator all pages. Pass with success.|
+| Duplicated id in About page | Replaced the id with class in order to be used more than one time in the code.|
+| Criterion 3.3 - Lack of defensive design | A detailed check is done for CRUD funcionality for Posts/Comments and likes. Added login_required() decorators for function views or LoginRequiredMixin for Class based views. Conditional statements inside views and in HTML code to check if author of a post or comment is same as the user logged in. Tested aswell for non-loggedin users. Several manual tests are done to double-check defensive desing.|
+| Criterion 6.2 - 	Some commented code is present | Double check again all files in root directory for any possible commented code. Remove where it was present.|
+
 
 ## Unfixed Bugs
 
