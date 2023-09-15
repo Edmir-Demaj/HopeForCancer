@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- Only users who are authenticated can update a post -->
-{% if user.is_authenticated and post.author == request.user%}
+{% if user.is_authenticated and post.author == request.user %}
 <div class="container">
     <div class="row my-5">
         <div class="col-xl-10 mx-auto px-0 px-md-4">
@@ -24,6 +24,13 @@
             </div>
         </div>
     </div>
+</div>
+{% else %}
+<div class="col-12 col-lg-6 mx-auto text-center">
+    <h3 class="fw-semibold mt-5 text-danger-emphasis">
+        You don't have permission to update this post!
+        Please go back.
+    </h3>
 </div>
 {% endif %}
 {% endblock %}

@@ -109,7 +109,7 @@
                         <div class="d-flex justify-content-between">
                             <small class="text-muted mt-2 d-inline-block">{{ comment.created_date }}</small>
                             <!-- If user is authenticated and is same with comment author can edit comment -->
-                            {% if user.is_authenticated and comment.name == request.user.username%}
+                            {% if user.is_authenticated and comment.name == request.user.username %}
                             <small id="edit-comment">
                                 <a href="{% url 'edit_comment' comment.pk  %}" aria-label="link to edit comment page"
                                     class="edit-comment-btn d-inline-block hvr-float-shadow">Edit</a>

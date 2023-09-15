@@ -26,12 +26,11 @@
     </div>
   </div>
 </div>
-{% endif %}
-{% if user.is_authenticated and post.author != request.user%}
-<div class="col-12 col-lg-6 mx-auto">
+{% else %}
+<div class="col-12 col-lg-6 mx-auto text-center">
   <h3 class="fw-semibold mt-5 text-danger-emphasis">
     You don't have permission to delete this post!
-    Please go back and delete only your posts.
+    Please go back.
   </h3>
 </div>
 {% endif %}

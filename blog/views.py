@@ -224,6 +224,7 @@ def delete_comment(request, comment_id):
     """
     comment = get_object_or_404(Comment, id=comment_id)
     post = comment.post
+    name = comment.name
     # decrease comment counter when comment is deleted
     if comment.approved:
         post.comment_counter -= 1

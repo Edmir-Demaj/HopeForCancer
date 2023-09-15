@@ -4,6 +4,8 @@
 {% block title %} Edit Comment {% endblock %}
 {% block content %}
 
+<!-- Only users who are authenticated can edit a comment -->
+{% if user.is_authenticated and comment.name == request.user.username %}
 <!-- Update or delete comment page -->
 <section>
   <div class="container my-5">
@@ -49,4 +51,12 @@
     </div>
   </div>
 </section>
+{% else %}
+<div class="col-12 col-lg-6 mx-auto text-center">
+  <h3 class="fw-semibold mt-5 text-danger-emphasis">
+    You don't have permission to edit this comment!
+    Please go back.
+  </h3>
+</div>
+{% endif %}
 {% endblock %}
