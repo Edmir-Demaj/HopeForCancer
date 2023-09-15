@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- Only users who are authenticated can update a post -->
-{% if user.is_authenticated %}
+{% if user.is_authenticated and post.author == request.user%}
 <div class="container">
     <div class="row my-5">
         <div class="col-xl-10 mx-auto px-0 px-md-4">

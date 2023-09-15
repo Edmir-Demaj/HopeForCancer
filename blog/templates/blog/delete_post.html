@@ -4,6 +4,8 @@
 {% block title %}Delete Post{% endblock title %}
 {% block content %}
 
+<!-- Only users who are authenticated can delete a post -->
+{% if user.is_authenticated and post.author == request.user%}
 <!-- Delete post page -->
 <div class="container-fluid my-5">
   <div class="row d-flex justify-content-center align-items-center text-center">
@@ -24,4 +26,13 @@
     </div>
   </div>
 </div>
+{% endif %}
+{% if user.is_authenticated and post.author != request.user%}
+<div class="col-12 col-lg-6 mx-auto">
+  <h3 class="fw-semibold mt-5 text-danger-emphasis">
+    You don't have permission to delete this post!
+    Please go back and delete only your posts.
+  </h3>
+</div>
+{% endif %}
 {% endblock %}

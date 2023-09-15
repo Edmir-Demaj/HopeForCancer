@@ -95,6 +95,7 @@ def update_post(request, slug):
         # If the current user is not the author, raise a 403 Forbidden error.
         return HttpResponseForbidden(
             "You don't have permission to edit this post!"
+            " Please return back and edit only your posts."
         )
 
     if request.method == 'POST':
