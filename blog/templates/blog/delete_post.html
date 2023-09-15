@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- Only users who are authenticated can delete a post -->
-{% if user.is_authenticated and post.author == request.user%}
+{% if user.is_authenticated and post.author == request.user %}
 <!-- Delete post page -->
 <div class="container-fluid my-5">
   <div class="row d-flex justify-content-center align-items-center text-center">
